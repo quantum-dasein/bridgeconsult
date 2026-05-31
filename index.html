@@ -57,11 +57,16 @@
     </script>
     </head>
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe selection:text-white">
-
+<!-- ПРЕМИАЛЬНЫЙ ПРЕЛОАДЕР -->
+<div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
+    <div class="overflow-hidden">
+        <img src="bridge 2.svg" alt="Bridge Consult Loading" class="h-12 md:h-16 object-contain transform translate-y-full opacity-0 transition-all duration-1000 ease-out" id="preloader-logo" style="filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(350deg) brightness(0.8);">
+    </div>
+</div>
     <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[101]">
             <a href="#" class="block relative z-[101]">
-                <img src="bridge 2.png" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
+                <img src="bridge 2.svg" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
             </a>
             
             <nav class="hidden md:flex space-x-8">
@@ -126,33 +131,28 @@
             </div>
         </div>
     </section>
-<!-- СТАТИСТИКА (НАПЛЫВАЮЩИЙ БЛОК) -->
-<!-- СТАТИСТИКА (ПРЕМИАЛЬНАЯ ЛЕНТА ДОВЕРИЯ) -->
+
 <section class="py-14 bg-bridge-dark border-b border-bridge-taupe/20 relative z-20">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 divide-x-0 md:divide-x divide-white/10 text-center">
-            <!-- Счетчик 1 -->
             <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="50">
                 <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex items-baseline">
                     <span class="counter" data-target="20">0</span><span class="text-2xl md:text-3xl ml-1">+</span>
                 </div>
                 <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Лет опыта</span>
             </div>
-            <!-- Счетчик 2 -->
             <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex items-baseline">
                     <span class="counter" data-target="50">0</span><span class="text-2xl md:text-3xl ml-1">+</span>
                 </div>
                 <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Масштабных проектов</span>
             </div>
-            <!-- Счетчик 3 -->
             <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex items-baseline">
                     <span class="counter" data-target="4">0</span>
                 </div>
                 <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Проформы FIDIC</span>
             </div>
-            <!-- Счетчик 4 -->
             <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex items-baseline">
                     <span class="counter" data-target="100">0</span><span class="text-2xl md:text-3xl ml-1">%</span>
@@ -162,17 +162,18 @@
         </div>
     </div>
 </section>
+
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div data-aos="fade-right" data-aos-duration="1000">
                     <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">О компании</div>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark mb-8 leading-tight">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark mb-8 leading-tight" data-aos="fade-up">
                         Независимая экспертиза <br>международного уровня
                     </h2>
                     <div class="space-y-6 text-gray-600 font-light text-lg">
                         <p><strong class="font-bold text-bridge-dark">BRIDGE CONSULT</strong> — независимая консалтинговая компания, специализирующаяся на контрактном инжиниринге, администрировании строительных контрактов и разрешении споров в международных инфраструктурных проектах.</p>
-                        <p>Компания предоставляет экспертную поддержку государственному сектору, международным финансовым институтам, инвесторам и подрядчикам в реализации масштабных инфраструктурных проектов, включая проекты, финансируемые международными банками развития.</p>
+                        <p>Компания предоставляет экспертную поддержку государственному сектору, международным финансовым институтам, инвесторам и подрядчикам в реализации масштабных инфраструктурных проектов, включая проектов, финансируемых международными банками развития.</p>
                         <p class="text-sm font-medium text-bridge-taupe pt-4 border-t border-gray-100">Компания основана в 2016 году и зарегистрирована в Республике Узбекистан.</p>
                     </div>
                 </div>
@@ -202,9 +203,7 @@
                 <p class="text-gray-400 text-lg font-light mt-6 md:mt-0 max-w-md">Комплексные консультационные услуги на стыке права, инженерии и финансов.</p>
             </div>
 
-            <!-- Современная Bento-сетка -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Большая карточка (Контрактный инжиниринг) -->
                 <div class="md:col-span-2 glass-card rounded-3xl p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-bridge-taupe rounded-full mix-blend-screen filter blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
                     <h3 class="text-3xl font-serif font-bold text-white mb-6 relative z-10">Контрактный инжиниринг</h3>
@@ -220,7 +219,6 @@
                     </div>
                 </div>
 
-                <!-- Высокая карточка (Разрешение споров) -->
                 <div class="glass-card rounded-3xl p-10 hover-float flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <h3 class="text-2xl font-serif font-bold text-white mb-4">Разрешение споров</h3>
@@ -233,13 +231,11 @@
                     </div>
                 </div>
 
-                <!-- Карточка управления -->
                 <div class="glass-card rounded-3xl p-10 hover-float" data-aos="fade-up" data-aos-delay="300">
                     <h3 class="text-xl font-serif font-bold text-white mb-4">Управление контрактами</h3>
                     <p class="text-gray-400 font-light text-sm mb-4">Claims Management, контроль сроков, бюджета и качества на этапе реализации.</p>
                 </div>
 
-                <!-- Карточка аналитики -->
                 <div class="md:col-span-2 glass-card rounded-3xl p-10 hover-float flex flex-col justify-center" data-aos="fade-up" data-aos-delay="400">
                     <h3 class="text-xl font-serif font-bold text-white mb-4">Аналитическая экспертиза</h3>
                     <div class="flex flex-wrap gap-3">
@@ -251,7 +247,7 @@
             </div>
         </div>
     </section>
-<!-- МЕТОДОЛОГИЯ / ИНСТРУМЕНТАРИЙ (АККОРДЕОН) -->
+
 <section class="py-32 bg-bridge-dark relative overflow-hidden">
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-bridge-taupe/20 rounded-full blur-[150px] pointer-events-none"></div>
 
@@ -338,6 +334,7 @@
         </div>
     </div>
 </section>
+
     <section class="py-24 bg-bridge-dark relative overflow-hidden">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#8B8178 1px, transparent 1px); background-size: 30px 30px;"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -457,8 +454,6 @@
         </div>
     </section>
 
-   <!-- КОМАНДА (РАСШИРЕННАЯ ВЕРСИЯ С ПОЛНЫМ ОПИСАНИЕМ) -->
-<!-- КОМАНДА (ОБНОВЛЕННАЯ: БЕЗ ОЙБЕКА, ПРАВИЛЬНЫЙ 3D ЭФФЕКТ НА ФОТО) -->
 <section id="team" class="py-32 bg-bridge-light">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20" data-aos="fade-up">
@@ -467,10 +462,8 @@
             <p class="text-gray-500 max-w-3xl mx-auto text-lg font-light">Фундамент BRIDGE CONSULT — это уникальный опыт наших специалистов. Мы объединили профессионалов с десятилетиями практики в инженерном деле, юриспруденции и международном арбитраже.</p>
         </div>
 
-        <!-- Лариса Белоусова (Главный блок) -->
         <div class="bg-white rounded-3xl p-8 md:p-12 premium-shadow mb-10 flex flex-col lg:flex-row gap-10 hover-float" data-aos="fade-up" data-aos-delay="100">
             <div class="lg:w-1/3">
-                <!-- 3D-эффект теперь только здесь, на самой фотографии! -->
                 <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden photo-reveal tilt-card">
                     <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Лариса Белоусова" class="w-full h-full object-cover">
                 </div>
@@ -486,13 +479,10 @@
             </div>
         </div>
 
-        <!-- Остальные эксперты (Сетка) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             
-            <!-- Анна Убайдуллаева -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-6 mb-8">
-                    <!-- 3D-эффект на круглом фото -->
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Анна Убайдуллаева" class="w-full h-full object-cover">
                     </div>
@@ -505,10 +495,8 @@
                 <p class="text-gray-600 font-light leading-relaxed">Особый фокус на внесудебном урегулировании сложных инфраструктурных конфликтов посредством медиации и процедур DAAB.</p>
             </div>
 
-            <!-- Ольга Митрофанова -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center gap-6 mb-8">
-                    <!-- 3D-эффект на круглом фото -->
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200 photo-reveal tilt-card">
                         <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Ольга Митрофанова" class="w-full h-full object-cover">
                     </div>
@@ -521,10 +509,8 @@
                 <p class="text-gray-600 font-light leading-relaxed">Обеспечивает строжайший технический надзор за соответствием выполняемых строительно-монтажных работ техническим спецификациям контракта, ГОСТам и международным строительным нормам. Гарант нулевой толерантности к строительному браку.</p>
             </div>
 
-            <!-- Луция Ахмедиева -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="400">
                 <div class="flex items-center gap-6 mb-8">
-                    <!-- 3D-эффект на круглом фото -->
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200 photo-reveal tilt-card">
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Луция Ахмедиева" class="w-full h-full object-cover grayscale">
                     </div>
@@ -541,29 +527,24 @@
     </div>
 </section>
 
-    <!-- БЛОК ПАРТНЕРЫ / МФИ (С РЕАЛЬНЫМИ ЛОГОТИПАМИ) -->
     <section class="py-20 bg-white border-t border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6">
             <p class="text-center text-xs font-bold text-bridge-taupe uppercase tracking-widest mb-12" data-aos="fade-up">Опыт работы с международными финансовыми институтами</p>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 items-center opacity-60" data-aos="fade-up" data-aos-delay="100">
                 
-                <!-- World Bank -->
                 <div class="flex justify-center grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/The_World_Bank_logo.svg" alt="World Bank" class="h-10 md:h-14 object-contain">
                 </div>
                 
-                <!-- EBRD -->
                 <div class="flex justify-center grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/EBRD_logo.svg" alt="EBRD" class="h-8 md:h-12 object-contain">
                 </div>
                 
-                <!-- ADB -->
                 <div class="flex justify-center grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Asian_Development_Bank_logo.svg" alt="Asian Development Bank" class="h-8 md:h-12 object-contain">
                 </div>
                 
-                <!-- Tashkent Invest (Текст, стилизованный под лого) -->
                 <div class="flex justify-center grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105">
                     <span class="font-serif font-bold text-2xl md:text-3xl text-bridge-dark text-center leading-none tracking-tighter">Tashkent<br><span class="text-bridge-taupe">Invest</span></span>
                 </div>
@@ -572,32 +553,42 @@
         </div>
     </section>
 
-    <section id="contact-form" class="py-24 bg-white relative">
+    <section id="contact-form" class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="bg-bridge-dark rounded-3xl p-10 md:p-16 shadow-2xl">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Оставьте заявку</h2>
-                    <p class="text-gray-400 font-light">Свяжитесь с нами для предварительной оценки вашего запроса.</p>
+            <!-- Главная плашка плавно всплывает -->
+            <div class="bg-bridge-dark rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Декоративный блик для глубины (как правильный свет в рендере) -->
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-bridge-taupe rounded-full opacity-20 blur-3xl"></div>
+
+                <div class="text-center mb-10 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4" data-aos="fade-down" data-aos-delay="200">Оставьте заявку</h2>
+                    <p class="text-gray-400 font-light" data-aos="fade-up" data-aos-delay="300">Свяжитесь с нами для предварительной оценки вашего запроса.</p>
                 </div>
                 
-                <form action="https://formspree.io/f/meedwzjw" method="POST" class="space-y-6">
+                <form action="https://formspree.io/f/meedwzjw" method="POST" class="space-y-6 relative z-10">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
+                        <!-- Поле Имя выезжает слева -->
+                        <div data-aos="fade-right" data-aos-delay="400">
                             <label class="block text-sm font-medium text-gray-300 mb-2">Ваше имя</label>
-                            <input type="text" name="name" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe transition-colors" placeholder="Введите ваше имя">
+                            <input type="text" name="name" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe focus:bg-white/10 transition-all duration-300" placeholder="Введите ваше имя">
                         </div>
-                        <div>
+                        <!-- Поле Email выезжает справа -->
+                        <div data-aos="fade-left" data-aos-delay="500">
                             <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                            <input type="email" name="email" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe transition-colors" placeholder="info@company.com">
+                            <input type="email" name="email" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe focus:bg-white/10 transition-all duration-300" placeholder="info@company.com">
                         </div>
                     </div>
-                    <div>
+                    <!-- Поле Сообщения выезжает снизу -->
+                    <div data-aos="fade-up" data-aos-delay="600">
                         <label class="block text-sm font-medium text-gray-300 mb-2">Сообщение или суть запроса</label>
-                        <textarea name="message" rows="4" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe transition-colors" placeholder="Опишите вашу ситуацию..."></textarea>
+                        <textarea name="message" rows="4" required class="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-bridge-taupe focus:bg-white/10 transition-all duration-300" placeholder="Опишите вашу ситуацию..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-300 mt-4">
-                        Отправить запрос
-                    </button>
+                    <!-- Кнопка эффектно увеличивается -->
+                    <div data-aos="zoom-in" data-aos-delay="700" class="pt-2">
+                        <button type="submit" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(138,123,102,0.6)] hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.6)]">
+                            Отправить запрос
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -647,7 +638,6 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script>
