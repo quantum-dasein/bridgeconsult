@@ -63,3 +63,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// Логика переключения мобильного меню
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
+            if (isOpen) {
+                // Закрываем меню
+                mobileMenu.classList.replace('translate-x-0', 'translate-x-full');
+                document.body.style.overflow = 'auto';
+                
+                // Анимация бургера обратно в исходное состояние
+                document.querySelector('.burger-line-1').style.transform = 'none';
+                document.querySelector('.burger-line-2').style.opacity = '1';
+                document.querySelector('.burger-line-3').style.transform = 'none';
+            } else {
+                // Открываем меню
+                mobileMenu.classList.replace('translate-x-full', 'translate-x-0');
+                document.body.style.overflow = 'hidden';
+                
+                // Превращаем бургер в крестик
+                document.querySelector('.burger-line-1').style.transform = 'rotate(45deg) scaleX(1.2)';
+                document.querySelector('.burger-line-2').style.opacity = '0';
+                document.querySelector('.burger-line-3').style.transform = 'rotate(-45deg) scaleX(1.2)';
+            }
+        });
+
+        // Автоматическое закрытие меню при клике на якорные ссылки
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.replace('translate-x-0', 'translate-x-full');
+                document.body.style.overflow = 'auto';
+                document.querySelector('.burger-line-1').style.transform = 'none';
+                document.querySelector('.burger-line-2').style.opacity = '1';
+                document.querySelector('.burger-line-3').style.transform = 'none';
+            });
+        });
+    }
+});

@@ -28,6 +28,33 @@
         </script>
         
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+        <meta name="description" content="BRIDGE CONSULT — независимая консалтинговая компания в Узбекистане. Профессиональный контрактный инжиниринг, администрирование строительных контрактов FIDIC/EPC, Claims Management и разрешение споров в международных инфраструктурных проектах.">
+    <meta name="keywords" content="FIDIC Узбекистан, EPC контракты Ташкент, контрактный инжиниринг, международный арбитраж, управление претензиями РУз, строительный аудит, Bridge Consult, Лариса Белоусова">
+    
+    <meta property="og:title" content="Bridge Consult | Инфраструктурные контракты и разрешение споров">
+    <meta property="og:description" content="Независимая экспертиза международного уровня в сфере контрактного инжиниринга и МФИ-проектов в Республике Узбекистан.">
+    <meta property="og:image" content="hero-bg.png">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Bridge Consult",
+      "description": "Независимый консалтинг в сфере инфраструктурных контрактов FIDIC/EPC и международного арбитража в Узбекистане.",
+      "url": "https://bridgeconsult.uz",
+      "telephone": "+998330001530",
+      "email": "info@bridgeconsult.uz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ташкент",
+        "addressRegion": "Юнусабадский район",
+        "streetAddress": "ул. Ахмада Дониша, 12 квартал, дом 20А",
+        "postalCode": "100180",
+        "addressCountry": "UZ"
+      }
+    }
+    </script>
     </head>
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe selection:text-white">
 
@@ -38,16 +65,35 @@
             </a>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-sm font-medium hover:text-bridge-taupe transition-colors">О компании</a>
-                <a href="#services" class="text-sm font-medium hover:text-bridge-taupe transition-colors">Услуги</a>
+                <a href="#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">О компании</a>
+                <a href="#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Услуги</a>
                 <a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Опыт проектов</a>
-                <a href="#team" class="text-sm font-medium hover:text-bridge-taupe transition-colors">Команда</a>
-                <a href="#contact-form" class="text-sm font-medium hover:text-bridge-taupe transition-colors">Контакты</a>
+                <a href="#team" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Команда</a>
+                <a href="#contact-form" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Контакты</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-6">
                 <a href="tel:+998330001530" class="text-sm font-semibold text-bridge-dark hover:text-bridge-taupe">+998 33 000 15 30</a>
                 <a href="#contact-form" class="bg-bridge-taupe text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-dark transition-colors shadow-md">Связаться</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 text-bridge-dark focus:outline-none z-50 cursor-pointer">
+                <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-1"></span>
+                <span class="w-full h-[2px] bg-current transition-all duration-300 burger-line-2"></span>
+                <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-3"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 top-20 bg-white z-40 flex flex-col p-8 space-y-6 transition-all duration-500 translate-x-full md:hidden border-t border-gray-100 shadow-2xl">
+            <a href="#about" class="mobile-nav-link text-xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4 hover:text-bridge-taupe transition-colors">О компании</a>
+            <a href="#services" class="mobile-nav-link text-xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4 hover:text-bridge-taupe transition-colors">Услуги</a>
+            <a href="projects.html" class="text-xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4 hover:text-bridge-taupe transition-colors">Опыт проектов</a>
+            <a href="#team" class="mobile-nav-link text-xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4 hover:text-bridge-taupe transition-colors">Команда</a>
+            <a href="#contact-form" class="mobile-nav-link text-xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4 hover:text-bridge-taupe transition-colors">Контакты</a>
+            
+            <div class="pt-6 flex flex-col space-y-4">
+                <a href="tel:+998330001530" class="text-lg font-semibold text-bridge-dark text-center">+998 33 000 15 30</a>
+                <a href="#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Связаться с нами</a>
             </div>
         </div>
     </header>
