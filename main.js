@@ -151,3 +151,16 @@ window.addEventListener('load', () => {
 
 // Если окно грузится слишком долго (баг браузера), убиваем прелоадер через 2.5 секунды принудительно
 setTimeout(hidePreloader, 2500);
+// Автоматическое закрытие мобильного меню при клике на ссылку
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Закрываем меню (убираем класс translate-x-0 и возвращаем translate-x-full)
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+        });
+    });
+});
