@@ -126,7 +126,44 @@
             </div>
         </div>
     </section>
-
+<!-- СТАТИСТИКА (НАПЛЫВАЮЩИЙ БЛОК) -->
+<section class="relative z-20 -mt-16 max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-delay="200">
+    <div class="bg-bridge-dark rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_-10px_rgba(41,39,36,0.5)] border border-white/5 relative overflow-hidden">
+        <!-- Блик на фоне -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-bridge-taupe/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 relative z-10 text-center divide-x-0 md:divide-x divide-white/10">
+            <!-- Счетчик 1 -->
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex">
+                    <span class="counter" data-target="20">0</span>+
+                </div>
+                <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Лет опыта</span>
+            </div>
+            <!-- Счетчик 2 -->
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex">
+                    <span class="counter" data-target="50">0</span>+
+                </div>
+                <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Масштабных проектов</span>
+            </div>
+            <!-- Счетчик 3 -->
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex">
+                    <span class="counter" data-target="4">0</span>
+                </div>
+                <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Проформы FIDIC</span>
+            </div>
+            <!-- Счетчик 4 -->
+            <div class="flex flex-col items-center justify-center">
+                <div class="text-4xl md:text-5xl font-serif font-bold text-bridge-taupe mb-2 flex">
+                    <span class="counter" data-target="100">0</span>%
+                </div>
+                <span class="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest">Защита интересов</span>
+            </div>
+        </div>
+    </div>
+</section>
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -338,8 +375,8 @@
                     <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark leading-tight">Избранный опыт проектов</h2>
                 </div>
                 <div class="mt-6 md:mt-0">
-                    <a href="#contact-form" class="inline-flex items-center text-bridge-taupe font-bold uppercase tracking-wider hover:text-bridge-dark transition-colors">
-                        Запросить полный референс-лист
+                    <a href="projects.html" class="inline-flex items-center bg-bridge-dark text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-lg hover-float">
+                        Смотреть детальные кейсы
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
                 </div>
@@ -423,98 +460,88 @@
     </section>
 
    <!-- КОМАНДА (РАСШИРЕННАЯ ВЕРСИЯ С ПОЛНЫМ ОПИСАНИЕМ) -->
-    <section id="team" class="py-32 bg-bridge-light">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20" data-aos="fade-up">
-                <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">Экспертиза</div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark mb-6">Лица компании</h2>
-                <p class="text-gray-500 max-w-3xl mx-auto text-lg font-light">Фундамент BRIDGE CONSULT — это уникальный опыт наших специалистов. Мы объединили профессионалов с десятилетиями практики в инженерном деле, юриспруденции и международном арбитраже.</p>
-            </div>
+<!-- КОМАНДА (ОБНОВЛЕННАЯ: БЕЗ ОЙБЕКА, ПРАВИЛЬНЫЙ 3D ЭФФЕКТ НА ФОТО) -->
+<section id="team" class="py-32 bg-bridge-light">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">Экспертиза</div>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark mb-6">Лица компании</h2>
+            <p class="text-gray-500 max-w-3xl mx-auto text-lg font-light">Фундамент BRIDGE CONSULT — это уникальный опыт наших специалистов. Мы объединили профессионалов с десятилетиями практики в инженерном деле, юриспруденции и международном арбитраже.</p>
+        </div>
 
-            <!-- Лариса Белоусова (Главный блок) -->
-            <div class="bg-white rounded-3xl p-8 md:p-12 premium-shadow mb-10 flex flex-col lg:flex-row gap-10 hover-float" data-aos="fade-up" data-aos-delay="100">
-                <div class="lg:w-1/3">
-                    <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden photo-reveal">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Лариса Белоусова" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="lg:w-2/3 flex flex-col justify-center">
-                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-2">Основатель и Директор</span>
-                    <h3 class="text-3xl font-serif font-bold text-bridge-dark mb-6">Лариса Константиновна Белоусова</h3>
-                    <div class="space-y-4 text-gray-600 font-light leading-relaxed">
-                        <p>Ведущий эксперт в области контрактного инжиниринга и администрирования международных строительных проектов. Обладает глубокой экспертизой в применении проформ контрактов FIDIC (Красная, Желтая, Серебряная, Розовая книги) и сложных EPC-контрактов.</p>
-                        <p>Имеет многолетний подтвержденный опыт работы с проектами, финансируемыми международными финансовыми институтами (МФИ), такими как Всемирный банк (World Bank), Азиатский банк развития (ADB) и Европейский банк реконструкции и развития (EBRD).</p>
-                        <p>Ключевая специализация: стратегическое управление претензиями (Claims Management), предотвращение споров, судебная строительно-техническая экспертиза и оценка рисков на всех этапах жизненного цикла крупномасштабной инфраструктуры.</p>
-                    </div>
+        <!-- Лариса Белоусова (Главный блок) -->
+        <div class="bg-white rounded-3xl p-8 md:p-12 premium-shadow mb-10 flex flex-col lg:flex-row gap-10 hover-float" data-aos="fade-up" data-aos-delay="100">
+            <div class="lg:w-1/3">
+                <!-- 3D-эффект теперь только здесь, на самой фотографии! -->
+                <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden photo-reveal tilt-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Лариса Белоусова" class="w-full h-full object-cover">
                 </div>
             </div>
-
-            <!-- Остальные эксперты (Сетка) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                
-                <!-- Анна Убайдуллаева -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float photo-reveal flex flex-col" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-6 mb-8">
-                        <div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Анна Убайдуллаева" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Партнер / Правовой консультант</span>
-                            <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Д-р Анна Убайдуллаева</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 font-light leading-relaxed mb-4">Доктор юридических наук. Специалист высочайшего класса в сфере международного права, разрешения коммерческих и строительных споров. Обеспечивает надежную правовую защиту интересов клиентов в международных арбитражных инстанциях.</p>
-                    <p class="text-gray-600 font-light leading-relaxed">Особый фокус на внесудебном урегулировании сложных инфраструктурных конфликтов посредством медиации и процедур DAAB.</p>
+            <div class="lg:w-2/3 flex flex-col justify-center">
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-2">Основатель и Директор</span>
+                <h3 class="text-3xl font-serif font-bold text-bridge-dark mb-6">Лариса Константиновна Белоусова</h3>
+                <div class="space-y-4 text-gray-600 font-light leading-relaxed">
+                    <p>Ведущий эксперт в области контрактного инжиниринга и администрирования международных строительных проектов. Обладает глубокой экспертизой в применении проформ контрактов FIDIC (Красная, Желтая, Серебряная, Розовая книги) и сложных EPC-контрактов.</p>
+                    <p>Имеет многолетний подтвержденный опыт работы с проектами, финансируемыми международными финансовыми институтами (МФИ), такими как Всемирный банк (World Bank), Азиатский банк развития (ADB) и Европейский банк реконструкции и развития (EBRD).</p>
+                    <p>Ключевая специализация: стратегическое управление претензиями (Claims Management), предотвращение споров, судебная строительно-техническая экспертиза и оценка рисков на всех этапах жизненного цикла крупномасштабной инфраструктуры.</p>
                 </div>
-
-                <!-- Ойбек Ахмедов -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float photo-reveal flex flex-col" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center gap-6 mb-8">
-                        <div class="w-24 h-24 rounded-full overflow-hidden shrink-0">
-                            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=400&q=80" alt="Ойбек Ахмедов" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Партнер / Правовой консультант</span>
-                            <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Ойбек Ахмедов</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 font-light leading-relaxed mb-4">Авторитетный эксперт по правовому сопровождению комплексных инфраструктурных проектов. Обладает глубоким пониманием локального законодательства Республики Узбекистан и механизмов его бесшовной интеграции с международными стандартами.</p>
-                    <p class="text-gray-600 font-light leading-relaxed">Специализируется на разработке надежной корпоративной и правовой базы для международных совместных предприятий (Joint Ventures) и консорциумов.</p>
-                </div>
-
-                <!-- Ольга Митрофанова -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float photo-reveal flex flex-col" data-aos="fade-up" data-aos-delay="400">
-                    <div class="flex items-center gap-6 mb-8">
-                        <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Ольга Митрофанова" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Руководитель отдела контроля качества</span>
-                            <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Ольга Митрофанова</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 font-light leading-relaxed mb-4">Беспрецедентный профессиональный опыт — <strong class="font-semibold text-bridge-dark">более 50 лет</strong> в сфере контроля качества инфраструктурных и сложных промышленных объектов.</p>
-                    <p class="text-gray-600 font-light leading-relaxed">Обеспечивает строжайший технический надзор за соответствием выполняемых строительно-монтажных работ техническим спецификациям контракта, ГОСТам и международным строительным нормам. Гарант нулевой толерантности к строительному браку.</p>
-                </div>
-
-                <!-- Луция Ахмедиева -->
-                <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float photo-reveal flex flex-col" data-aos="fade-up" data-aos-delay="500">
-                    <div class="flex items-center gap-6 mb-8">
-                        <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Луция Ахмедиева" class="w-full h-full object-cover grayscale">
-                        </div>
-                        <div>
-                            <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Руководитель сметного отдела</span>
-                            <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Луция Ахмедиева</h3>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 font-light leading-relaxed mb-4">Уникальный профессиональный стаж — <strong class="font-semibold text-bridge-dark">более 40 лет</strong> в ценообразовании, финансовом планировании и сметном нормировании в крупном строительстве.</p>
-                    <p class="text-gray-600 font-light leading-relaxed">Отвечает за проведение сложнейших финансовых расчетов (Quantum Calculation), детальный анализ стоимостных показателей строительных претензий и оценку контрактных вариаций (Variations). Надежно защищает финансовые интересы заказчиков от необоснованных переплат.</p>
-                </div>
-
             </div>
         </div>
-    </section>
+
+        <!-- Остальные эксперты (Сетка) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- Анна Убайдуллаева -->
+            <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center gap-6 mb-8">
+                    <!-- 3D-эффект на круглом фото -->
+                    <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Анна Убайдуллаева" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Партнер / Правовой консультант</span>
+                        <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Д-р Анна Убайдуллаева</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 font-light leading-relaxed mb-4">Доктор юридических наук. Специалист высочайшего класса в сфере международного права, разрешения коммерческих и строительных споров. Обеспечивает надежную правовую защиту интересов клиентов в международных арбитражных инстанциях.</p>
+                <p class="text-gray-600 font-light leading-relaxed">Особый фокус на внесудебном урегулировании сложных инфраструктурных конфликтов посредством медиации и процедур DAAB.</p>
+            </div>
+
+            <!-- Ольга Митрофанова -->
+            <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-6 mb-8">
+                    <!-- 3D-эффект на круглом фото -->
+                    <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200 photo-reveal tilt-card">
+                        <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Ольга Митрофанова" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Руководитель отдела контроля качества</span>
+                        <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Ольга Митрофанова</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 font-light leading-relaxed mb-4">Беспрецедентный профессиональный опыт — <strong class="font-semibold text-bridge-dark">более 50 лет</strong> в сфере контроля качества инфраструктурных и сложных промышленных объектов.</p>
+                <p class="text-gray-600 font-light leading-relaxed">Обеспечивает строжайший технический надзор за соответствием выполняемых строительно-монтажных работ техническим спецификациям контракта, ГОСТам и международным строительным нормам. Гарант нулевой толерантности к строительному браку.</p>
+            </div>
+
+            <!-- Луция Ахмедиева -->
+            <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center gap-6 mb-8">
+                    <!-- 3D-эффект на круглом фото -->
+                    <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 bg-gray-200 photo-reveal tilt-card">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Луция Ахмедиева" class="w-full h-full object-cover grayscale">
+                    </div>
+                    <div>
+                        <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Руководитель сметного отдела</span>
+                        <h3 class="text-2xl font-serif font-bold text-bridge-dark leading-tight">Луция Ахмедиева</h3>
+                    </div>
+                </div>
+                <p class="text-gray-600 font-light leading-relaxed mb-4">Уникальный профессиональный стаж — <strong class="font-semibold text-bridge-dark">более 40 лет</strong> в ценообразовании, финансовом планировании и сметном нормировании в крупном строительстве.</p>
+                <p class="text-gray-600 font-light leading-relaxed">Отвечает за проведение сложнейших финансовых расчетов (Quantum Calculation), детальный анализ стоимостных показателей строительных претензий и оценку контрактных вариаций (Variations). Надежно защищает финансовые интересы заказчиков от необоснованных переплат.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- БЛОК ПАРТНЕРЫ / МФИ (С РЕАЛЬНЫМИ ЛОГОТИПАМИ) -->
     <section class="py-20 bg-white border-t border-b border-gray-100">
@@ -594,7 +621,7 @@
                     <ul class="space-y-4 text-gray-400 font-light">
                         <li><a href="#about" class="hover:text-bridge-taupe transition-colors">О компании</a></li>
                         <li><a href="#services" class="hover:text-bridge-taupe transition-colors">Наши Услуги</a></li>
-                        <li><a href="#portfolio" class="hover:text-bridge-taupe transition-colors">Опыт Проектов</a></li>
+                        <li><a href="#portfolio" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Опыт проектов</a></li>
                         <li><a href="#team" class="hover:text-bridge-taupe transition-colors">Эксперты</a></li>
                     </ul>
                 </div>

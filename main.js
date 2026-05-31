@@ -105,3 +105,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// Анимация бегущих счетчиков (Статистика)
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // Скорость анимации
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    }
+
+    // Intersection Observer запускает анимацию только когда блок виден на экране
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target); // Останавливаем слежение после отработки
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
