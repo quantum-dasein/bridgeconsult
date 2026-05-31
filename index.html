@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridge Consult | Инфраструктурные контракты и разрешение споров</title>
     
-    <!-- Open Graph для красивых превью в Telegram -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bridge Consult | Инфраструктурные контракты и разрешение споров">
     <meta property="og:description" content="Независимая экспертиза международного уровня. Сопровождение проектов FIDIC и EPC.">
@@ -39,7 +38,6 @@
 </head>
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe/20">
 
-<!-- ПРЕМИАЛЬНЫЙ ПРЕЛОАДЕР -->
 <div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
     <div class="relative overflow-visible flex items-center justify-center">
         <div class="absolute inset-0 bg-bridge-taupe/30 blur-[40px] rounded-full scale-150"></div>
@@ -53,7 +51,6 @@
             <img src="bridge 2.svg" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
         </a>
         
-        <!-- Основная навигация -->
         <nav class="hidden lg:flex space-x-8">
             <a href="#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">О компании</a>
             <a href="#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Услуги</a>
@@ -61,7 +58,6 @@
             <a href="#team" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Команда</a>
         </nav>
 
-        <!-- ПРЕМИАЛЬНЫЙ БЛОК КОНТАКТОВ В ШАПКЕ -->
         <div class="hidden lg:flex items-center space-x-6 ml-4">
             <div class="flex items-center space-x-3 pr-6 border-r border-gray-200">
                 <a href="https://www.linkedin.com/in/larissalk" target="_blank" class="w-10 h-10 rounded-full bg-bridge-light flex items-center justify-center text-bridge-taupe hover:bg-bridge-taupe hover:text-white transition-all duration-300 shadow-sm hover:shadow-md" title="LinkedIn">
@@ -100,7 +96,6 @@
     </div>
 </header>
 
-<!-- ГЛАВНЫЙ ЭКРАН -->
 <section class="relative w-full bg-cover bg-center" style="background-image: url('hero-bg.png'); background-color: #1a1a1a;">
     <div class="absolute inset-0 bg-gradient-to-r from-bridge-dark/95 via-bridge-dark/80 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bridge-dark/80 z-0"></div>
@@ -127,7 +122,6 @@
     </div>
 </section>
 
-<!-- СТАТИСТИКА -->
 <section class="relative z-20 max-w-7xl mx-auto px-4 md:px-6 -mt-20 md:-mt-24 mb-16 md:mb-24">
     <div class="bg-bridge-dark/85 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-3xl shadow-[0_20px_50px_-10px_rgba(26,35,50,0.5)] p-8 md:p-12 relative overflow-hidden" data-aos="fade-up" data-aos-delay="400">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
@@ -153,7 +147,6 @@
     </div>
 </section>
 
-<!-- О КОМПАНИИ -->
 <section id="about" class="py-24 bg-white font-sans">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -181,7 +174,6 @@
     </div>
 </section>
 
-<!-- УСЛУГИ -->
 <section id="services" class="py-32 bg-bridge-dark noise-bg relative font-sans">
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row justify-between items-end mb-20" data-aos="fade-up">
@@ -232,7 +224,6 @@
     </div>
 </section>
 
-<!-- ИННОВАЦИОННЫЙ ПОДХОД -->
 <section class="py-32 bg-bridge-dark relative overflow-hidden">
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-bridge-taupe/20 rounded-full blur-[150px] pointer-events-none"></div>
     <div class="max-w-5xl mx-auto px-6 relative z-10">
@@ -308,7 +299,6 @@
     </div>
 </section>
 
-<!-- ПОЧЕМУ МЫ (ВИДЕО) -->
 <section class="py-32 relative overflow-hidden bg-bridge-dark">
     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-70">
         <source src="elegant-video.mp4" type="video/mp4">
@@ -340,7 +330,6 @@
     </div>
 </section>
 
-<!-- ПОРТФОЛИО -->
 <section id="portfolio" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16" data-aos="fade-up">
@@ -356,62 +345,73 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 font-sans">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 font-sans">
             <!-- Проект 1: Олимпийский -->
-            <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
+                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
                     <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="olympic city.jpg" alt="Олимпийский городок" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="olympic city.jpg" alt="Олимпийский городок" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                     <div class="absolute top-4 left-4 z-20 flex gap-2">
                         <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">EPC+F</span>
                         <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Олимпийский городок (Olympic City)</h3>
-                <p class="text-gray-600 font-light mb-2">Строительство современных спортивных объектов для проведения IV Летних Азиатских юношеских игр в г. Ташкенте.</p>
-                <p class="text-sm font-medium text-gray-500 mb-2">Заказчик: Министерство строительства и ЖКХ РУз</p>
+                <p class="text-gray-600 font-light mb-4">Строительство современных спортивных объектов для проведения IV Летних Азиатских юношеских игр в г. Ташкенте.</p>
+                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
             </div>
 
             <!-- Проект 2: Tashkent Invest -->
-            <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
+                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
                     <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Tashkent Invest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                     <div class="absolute top-4 left-4 z-20 flex gap-2">
                         <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">White Book</span>
                         <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2025-Наст. время</span>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">АО «Tashkent Invest Company»</h3>
-                <p class="text-gray-600 font-light mb-2">Разработка и внедрение системы закупок и управления контрактами для инфраструктурных проектов по модели EPC+F.</p>
+                <p class="text-gray-600 font-light mb-6">Разработка и внедрение системы закупок и управления контрактами для проектов по модели EPC+F.</p>
+                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
             </div>
 
             <!-- Проект 3: Азербайджан -->
-            <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openModal('azerbaijan')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('azerbaijan')">
+                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
                     <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=800&q=80" alt="Азербайджан" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=800&q=80" alt="Азербайджан" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                     <div class="absolute top-4 left-4 z-20 flex gap-2">
                         <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">FIDIC Red Book</span>
                         <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">АБР</span>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Реконструкция дорог (Азербайджан)</h3>
-                <p class="text-gray-600 font-light mb-2">Реконструкция 107 км автомобильных дорог 4R105 и 4R100. Заказчик: Азербайджанская компания.</p>
+                <p class="text-gray-600 font-light mb-6">Реконструкция 107 км автомобильных дорог 4R105 и 4R100. Заказчик: Азербайджанская компания.</p>
+                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
             </div>
 
             <!-- Проект 4: Камчик -->
-            <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openModal('kamchik')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative">
+            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="400" onclick="openModal('kamchik')">
+                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
                     <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="kamchik.avif" alt="Камчик" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="kamchik.avif" alt="Камчик" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                     <div class="absolute top-4 left-4 z-20 flex gap-2">
                         <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">MDB Harmonised</span>
                         <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2016-2022</span>
                     </div>
                 </div>
                 <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Автодорога А-373 (Перевал Камчик)</h3>
-                <p class="text-gray-600 font-light mb-2">Транспортный коридор ЦАРЭС 2. Заказчик: АО EVRASCON.</p>
+                <p class="text-gray-600 font-light mb-6">Транспортный коридор ЦАРЭС 2. Заказчик: АО EVRASCON.</p>
+                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
             </div>
         </div>
         
@@ -435,7 +435,6 @@
     </div>
 </section>
 
-<!-- КОМАНДА -->
 <section id="team" class="py-32 bg-bridge-light">
     <div class="max-w-7xl mx-auto px-6">
         
@@ -476,7 +475,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- 1. Анна -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -494,7 +492,7 @@
                         <li>Международный арбитр Ташкентского международного арбитражного центра (TIAC) и Венского международного арбитражного центра (VIAC).</li>
                         <li>Резидент Азиатского международного арбитражного центра (AIAC).</li>
                         <li>Консультант в проектах Всемирного банка по правовым и институциональным реформам.</li>
-                        <li>Член Рабочей группы при Министерстве высшего образования, науки и инноваций Республики Узбекистан по разработке правовых основ цифровой экономики и искусственного интеллекта.</li>
+                        <li>Член Рабочей группы при Министерстве высшего образования, науки и инноваций Республики Узбекистан по разработке правовых основы цифровой экономики и искусственного интеллекта.</li>
                     </ul>
                     <p class="font-bold text-bridge-dark mb-2">Профессиональная практика включает:</p>
                     <ul class="list-disc pl-5 space-y-1">
@@ -506,7 +504,6 @@
                 </div>
             </div>
 
-            <!-- 2. Эрнест -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center gap-6 mb-8">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -521,7 +518,6 @@
                 <p class="text-gray-600 font-light leading-relaxed">Эрнест Белоусов — эксперт в области управления международными строительными контрактами, специализирующийся на сопровождении сложных инфраструктурных проектов. Обладая глубокими компетенциями в работе с проформами FIDIC (Red, Yellow, Silver Books), Эрнест обеспечивает эффективное администрирование контрактов, профессиональное управление претензиями (Claims Management) и строгое соблюдение международных инженерных стандартов.</p>
             </div>
 
-            <!-- 3. Люция -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="400">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -539,7 +535,6 @@
                 </div>
             </div>
 
-            <!-- 4. Ольга -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="500">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -562,7 +557,6 @@
     </div> 
 </section>
 
-<!-- МФИ -->
 <section class="py-32 bg-white relative overflow-hidden font-sans">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-bridge-taupe/10 rounded-full blur-[100px] pointer-events-none"></div>
     
@@ -598,7 +592,6 @@
     </div>
 </section>
 
-<!-- КОНТАКТЫ (WEB3FORMS) -->
 <section id="contact-form" class="py-32 bg-white relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 relative z-10">
         <div class="bg-bridge-dark rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
@@ -686,9 +679,12 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="main.js"></script>
 <script>
     AOS.init({ once: true, offset: 50 });
-    VanillaTilt.init(document.querySelectorAll(".tilt-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.2 });
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+        max: 5, speed: 400, glare: true, "max-glare": 0.2
+    });
 </script>
 
 <div id="projectModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
@@ -697,9 +693,9 @@
         <button onclick="closeModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full p-2 transition-colors z-10">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        <div class="p-10">
+        <div class="p-10 font-sans">
             <span id="modalTag" class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-2 block">Категория</span>
-            <h3 id="modalTitle" class="text-3xl font-serif font-bold text-bridge-dark mb-6">Название проекта</h3>
+            <h3 id="modalTitle" class="text-3xl font-bold text-bridge-dark mb-6">Название проекта</h3>
             <div id="modalBody" class="space-y-4 text-gray-600 font-light leading-relaxed"></div>
         </div>
     </div>
@@ -758,6 +754,5 @@
         document.body.style.overflow = 'auto';
     }
 </script>
-<script src="main.js"></script>
 </body>
 </html>
