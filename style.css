@@ -12,6 +12,10 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #B89B72; /* Золотой при наведении */
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Защита от наезжающей шапки */
+}
 
 /* Цвет выделения текста (когда клиент выделяет текст мышкой) */
 ::selection {
@@ -126,3 +130,5 @@
 .logo-wrapper:hover::before {
     opacity: 1;
 }
+/* Убираем гигантские цифры с фона в проектах */
+.chapter-number { display: none !important; }
