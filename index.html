@@ -623,7 +623,19 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        
+        // Инициализация 3D эффекта для карточек
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+            max: 5,           // Максимальный угол наклона
+            speed: 400,       // Скорость возврата
+            glare: true,      // Эффект блика света
+            "max-glare": 0.2, // Прозрачность блика
+        });
+    </script>
 
     <div id="projectModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
