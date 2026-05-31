@@ -26,3 +26,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// Буттери-смуф анимация для аккордеона (60fps)
+document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-btn');
+
+    accordions.forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.closest('.accordion-item');
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.vertical-line');
+            
+            // Логика закрытия всех остальных вкладок
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('is-open')) {
+                    otherItem.classList.remove('is-open');
+                    otherItem.querySelector('.accordion-content').style.gridTemplateRows = '0fr';
+                    otherItem.querySelector('.vertical-line').style.transform = 'scaleY(1)';
+                    otherItem.classList.remove('border-bridge-taupe');
+                }
+            });
+
+            // Открытие / Закрытие текущей вкладки
+            if (item.classList.contains('is-open')) {
+                // Закрываем
+                item.classList.remove('is-open');
+                content.style.gridTemplateRows = '0fr';
+                icon.style.transform = 'scaleY(1)';
+                item.classList.remove('border-bridge-taupe');
+            } else {
+                // Открываем
+                item.classList.add('is-open');
+                content.style.gridTemplateRows = '1fr';
+                icon.style.transform = 'scaleY(0)'; // Красиво убираем вертикальную палочку (плюс превращается в минус)
+                item.classList.add('border-bridge-taupe');
+            }
+        });
+    });
+});

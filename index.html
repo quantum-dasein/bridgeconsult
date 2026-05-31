@@ -169,56 +169,88 @@
         </div>
     </section>
 <!-- МЕТОДОЛОГИЯ / ИНСТРУМЕНТАРИЙ (АККОРДЕОН) -->
-<section class="py-24 bg-white relative overflow-hidden">
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">Методология</div>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark mb-6">Применяемые стандарты</h2>
+<section class="py-32 bg-bridge-dark relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-bridge-taupe/20 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <span class="text-bridge-taupe font-bold tracking-widest uppercase text-sm mb-4 block animate-pulse">Инновационный подход</span>
+            <h2 class="text-5xl md:text-6xl font-serif font-bold text-white mb-6">
+                Стандарты <span class="text-transparent bg-clip-text bg-gradient-to-r from-bridge-taupe to-[#D4C3A3]">высшей лиги</span>
+            </h2>
+            <p class="text-gray-400 text-lg font-light max-w-2xl mx-auto">Интеграция лучших мировых практик урегулирования споров в реальные условия проектов.</p>
         </div>
 
         <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
             
-            <details class="group bg-white rounded-3xl border border-gray-100 overflow-hidden cursor-pointer premium-shadow transition-all duration-300 hover:border-bridge-taupe/30">
-                <summary class="flex items-center justify-between p-8 font-serif text-xl md:text-2xl font-bold text-bridge-dark outline-none bg-bridge-light/30 hover:bg-bridge-light/80 transition-colors">
-                    Проформы контрактов FIDIC
-                    <span class="transition-transform duration-500 group-open:rotate-180 text-bridge-taupe bg-white rounded-full p-2 shadow-sm">
-                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </span>
-                </summary>
-                <div class="p-8 pt-6 text-gray-600 font-light text-lg leading-relaxed bg-white border-t border-gray-50">
-                    <p class="mb-4">Международная федерация инженеров-консультантов (FIDIC) предоставляет золотой стандарт типовых контрактов. Мы обладаем глубокой экспертизой в применении:</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start"><span class="text-bridge-taupe mr-3 text-xl leading-none">&bull;</span> <span><strong class="text-bridge-dark font-medium">Red Book:</strong> Строительство, проектируемое Заказчиком.</span></li>
-                        <li class="flex items-start"><span class="text-bridge-taupe mr-3 text-xl leading-none">&bull;</span> <span><strong class="text-bridge-dark font-medium">Yellow Book:</strong> Проектирование и строительство (Plant and Design-Build).</span></li>
-                        <li class="flex items-start"><span class="text-bridge-taupe mr-3 text-xl leading-none">&bull;</span> <span><strong class="text-bridge-dark font-medium">Silver Book:</strong> EPC/Turnkey проекты под ключ.</span></li>
-                        <li class="flex items-start"><span class="text-bridge-taupe mr-3 text-xl leading-none">&bull;</span> <span><strong class="text-bridge-dark font-medium">Pink Book:</strong> Гармонизированное издание для банков развития (MDB).</span></li>
-                    </ul>
+            <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
+                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Проформы контрактов FIDIC</span>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    </div>
+                </button>
+                <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
+                    <div class="overflow-hidden">
+                        <div class="px-8 pb-10 pt-2 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                            <p class="mb-6">Международная федерация инженеров-консультантов (FIDIC) предоставляет золотой стандарт типовых контрактов. Мы обладаем глубокой экспертизой в применении:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                    <strong class="text-bridge-taupe block text-xl mb-1">Red Book</strong>
+                                    <span class="text-sm">Строительство, проектируемое Заказчиком</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                    <strong class="text-bridge-taupe block text-xl mb-1">Yellow Book</strong>
+                                    <span class="text-sm">Проектирование и строительство</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                    <strong class="text-bridge-taupe block text-xl mb-1">Silver Book</strong>
+                                    <span class="text-sm">EPC/Turnkey проекты под ключ</span>
+                                </div>
+                                <div class="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
+                                    <strong class="text-bridge-taupe block text-xl mb-1">Pink Book</strong>
+                                    <span class="text-sm">Гармонизированное издание для МБР</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
-            <details class="group bg-white rounded-3xl border border-gray-100 overflow-hidden cursor-pointer premium-shadow transition-all duration-300 hover:border-bridge-taupe/30">
-                <summary class="flex items-center justify-between p-8 font-serif text-xl md:text-2xl font-bold text-bridge-dark outline-none bg-bridge-light/30 hover:bg-bridge-light/80 transition-colors">
-                    Forensic Delay Analysis (FDA)
-                    <span class="transition-transform duration-500 group-open:rotate-180 text-bridge-taupe bg-white rounded-full p-2 shadow-sm">
-                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </span>
-                </summary>
-                <div class="p-8 pt-6 text-gray-600 font-light text-lg leading-relaxed bg-white border-t border-gray-50">
-                    Применяется для ретроспективного анализа задержек в строительстве. Мы используем методы Society of Construction Law (SCL) Protocol, включая Time Impact Analysis и Time Slice Analysis, чтобы доказать или опровергнуть право подрядчика на продление сроков (EOT) и компенсацию затрат.
+            <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
+                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Forensic Delay Analysis (FDA)</span>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    </div>
+                </button>
+                <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
+                    <div class="overflow-hidden">
+                        <div class="px-8 pb-10 pt-6 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                            Применяется для ретроспективного анализа задержек в строительстве. Мы используем методы <strong class="text-white">Society of Construction Law (SCL) Protocol</strong>, включая Time Impact Analysis и Time Slice Analysis, чтобы доказать или опровергнуть право подрядчика на продление сроков (EOT) и компенсацию затрат.
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
-            <details class="group bg-white rounded-3xl border border-gray-100 overflow-hidden cursor-pointer premium-shadow transition-all duration-300 hover:border-bridge-taupe/30">
-                <summary class="flex items-center justify-between p-8 font-serif text-xl md:text-2xl font-bold text-bridge-dark outline-none bg-bridge-light/30 hover:bg-bridge-light/80 transition-colors">
-                    Dispute Avoidance / Adjudication Board (DAAB)
-                    <span class="transition-transform duration-500 group-open:rotate-180 text-bridge-taupe bg-white rounded-full p-2 shadow-sm">
-                        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                    </span>
-                </summary>
-                <div class="p-8 pt-6 text-gray-600 font-light text-lg leading-relaxed bg-white border-t border-gray-50">
-                    Инструмент досудебного урегулирования споров. Мы помогаем структурировать работу Советов (DAAB), подготавливаем позиционные документы (Position Papers) и представляем интересы клиентов на слушаниях Совета, минимизируя риски передачи дела в дорогостоящий международный арбитраж.
+            <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
+                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Dispute Avoidance Board (DAAB)</span>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    </div>
+                </button>
+                <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
+                    <div class="overflow-hidden">
+                        <div class="px-8 pb-10 pt-6 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                            Инструмент досудебного урегулирования споров. Мы помогаем структурировать работу Советов (DAAB), подготавливаем позиционные документы (Position Papers) и представляем интересы клиентов на слушаниях Совета, минимизируя риски передачи дела в дорогостоящий международный арбитраж.
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
         </div>
     </div>
