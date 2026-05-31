@@ -105,44 +105,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-// Анимация бегущих счетчиков (Статистика)
+// Идеальная анимация счетчиков (Плавность 60fps)
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
-    const speed = 200; // Скорость анимации
+    const animationDuration = 2500; // Ровно 2.5 секунды для всех цифр
 
     const animateCounters = () => {
         counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const inc = target / speed;
+            const target = +counter.getAttribute('data-target');
+            const startTime = performance.now();
 
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(updateCount, 20);
+            const step = (currentTime) => {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / animationDuration, 1);
+                
+                // Физика плавного торможения в конце (easeOutExpo)
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                
+                counter.innerText = Math.floor(easeProgress * target);
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
                 } else {
                     counter.innerText = target;
                 }
             };
-            updateCount();
+            requestAnimationFrame(step);
         });
     }
 
-    // Intersection Observer запускает анимацию только когда блок виден на экране
-    const observerOptions = {
-        threshold: 0.5
-    };
-
+    // Запускаем только когда блок появляется на экране
+    const observerOptions = { threshold: 0.5 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounters();
-                observer.unobserve(entry.target); // Останавливаем слежение после отработки
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
+    counters.forEach(counter => observer.observe(counter));
 });
