@@ -94,3 +94,35 @@
     pointer-events: none;
     z-index: 1;
 }
+/* --- АНИМАЦИИ ДЛЯ ЛОГОТИПОВ --- */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Рассинхрон, чтобы они "дышали" вразнобой */
+.logo-float-1 { animation: float-slow 4s ease-in-out infinite; }
+.logo-float-2 { animation: float-slow 5.5s ease-in-out infinite 1s; }
+.logo-float-3 { animation: float-slow 4.5s ease-in-out infinite 0.5s; }
+.logo-float-4 { animation: float-slow 5s ease-in-out infinite 1.5s; }
+
+/* Золотое свечение на фоне при наведении */
+.logo-wrapper {
+    position: relative;
+    z-index: 10;
+}
+.logo-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140%; height: 140%;
+    background: radial-gradient(circle, rgba(138,123,102,0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+.logo-wrapper:hover::before {
+    opacity: 1;
+}
