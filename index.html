@@ -63,7 +63,24 @@
             <a href="#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">О компании</a>
             <a href="#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Услуги</a>
             <a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Опыт проектов</a>
-            <a href="#team" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Команда</a>
+        
+            <!-- Dropdown -->
+            <div class="relative group">
+                <button class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors flex items-center gap-1 cursor-pointer">
+                    Компания
+                    <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div class="absolute top-full left-0 mt-3 w-52 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <a href="#team" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1">
+                        Команда и Обучение
+                    </a>
+                    <a href="#media" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1">
+                        СМИ и Публикации
+                    </a>
+                </div>
+            </div>
         </nav>
 
         <div class="hidden lg:flex items-center space-x-6 ml-4">
@@ -107,7 +124,8 @@
             <a href="#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">О компании</a>
             <a href="#services" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Услуги</a>
             <a href="projects.html" class="text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Опыт проектов</a>
-            <a href="#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Команда</a>
+            <a href="#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Команда и Обучение</a>
+            <a href="#media" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">СМИ и Публикации</a>
             <a href="#contact-form" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Контакты</a>
         </div>
         <div class="mt-12 flex flex-col space-y-4 font-sans">
