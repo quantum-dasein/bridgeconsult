@@ -174,57 +174,66 @@
     </div>
 </section>
 
-<section id="services" class="py-32 bg-bridge-dark relative font-sans overflow-hidden">
+<section id="services" class="py-16 md:py-32 bg-bridge-dark relative font-sans overflow-hidden">
     
     <!-- ФОНОВОЕ ВИДЕО ДЛЯ УСЛУГ -->
     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
-        <!-- Не забудь потом вписать правильное название сгенерированного файла -->
-        <source src="ultra bridge.mp4" type="video/mp4">
+        <source src="твой_новый_видос.mp4" type="video/mp4">
     </video>
     
     <!-- Градиентное затемнение, чтобы белый текст читался идеально -->
     <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/95 via-bridge-dark/70 to-bridge-dark/95 z-[1]"></div>
     
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-20" data-aos="fade-up">
+        <!-- Исправлено: items-start для мобилок, mb-12 для мобилок -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20" data-aos="fade-up">
             <div class="max-w-2xl">
                 <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4 flex items-center">
                     <span class="w-8 h-px bg-bridge-taupe mr-4"></span> 2 // SERVICES OVERVIEW
                 </div>
-                <h2 class="text-4xl md:text-5xl font-sans font-bold text-white leading-tight">Обзор услуг</h2>
+                <h2 class="text-3xl md:text-5xl font-sans font-bold text-white leading-tight">Обзор услуг</h2>
             </div>
-            <p class="text-gray-400 text-lg font-light mt-6 md:mt-0 max-w-md">Bridge Consult предоставляет консультационные услуги в международных инфраструктурных проектах.</p>
+            <p class="text-gray-400 text-base md:text-lg font-light mt-4 md:mt-0 max-w-md">Bridge Consult предоставляет консультационные услуги в международных инфраструктурных проектах.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card rounded-3xl p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-sans font-bold text-white mb-6 relative z-10">Контрактный инжиниринг (FIDIC / EPC)</h3>
-                <ul class="space-y-4 text-gray-300 font-light text-sm relative z-10">
+        <!-- Исправлено: gap-5 для мобилок, gap-6 для ПК -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+            <!-- Контрактный инжиниринг -->
+            <!-- Исправлено: p-6 для мобилок, p-10 для ПК. Закругления тоже стали чуть аккуратнее на телефоне -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Контрактный инжиниринг (FIDIC / EPC)</h3>
+                <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Структурирование, документация и тендеры:</strong> Подготовка полного пакета документации для закупочных процедур, включая технические спецификации и критерии оценки.</li>
                     <li><strong class="text-white">Тендерный инжиниринг:</strong> Анализ заявок, выявление скрытых рисков в тендерной документации.</li>
                     <li><strong class="text-white">Разработка контрактов:</strong> Разработка и адаптация международных строительных контрактов (FIDIC и EPC).</li>
                     <li><strong class="text-white">Аудит контрактной стратегии:</strong> Оценка и выбор оптимальной модели контракта.</li>
                 </ul>
             </div>
-            <div class="glass-card rounded-3xl p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-2xl font-sans font-bold text-white mb-6 relative z-10">Администрирование строительных контрактов</h3>
-                <ul class="space-y-4 text-gray-300 font-light text-sm relative z-10">
+
+            <!-- Администрирование контрактов -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Администрирование строительных контрактов</h3>
+                <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Управление претензиями:</strong> Профессиональный анализ, подготовка и защита позиции клиента, превентивные меры по недопущению споров.</li>
                     <li><strong class="text-white">Управление рисками и изменениями:</strong> Идентификация рисков, регламентация всех модификаций по объему, срокам и стоимости.</li>
                     <li><strong class="text-white">Управление бюджетом и качеством:</strong> Контроль бюджета, закупок и качества согласно техническим и нормативным требованиям.</li>
                 </ul>
             </div>
-            <div class="glass-card rounded-3xl p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-2xl font-sans font-bold text-white mb-6 relative z-10">Разрешение споров и Арбитраж</h3>
-                <ul class="space-y-4 text-gray-300 font-light text-sm relative z-10">
+
+            <!-- Разрешение споров -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Разрешение споров и Арбитраж</h3>
+                <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Советы по урегулированию споров (DAAB/DAB):</strong> Представительство сторон, консультационная поддержка и предоставление экспертов.</li>
                     <li><strong class="text-white">Медиация:</strong> Применение процедур медиации для достижения внесудебного урегулирования.</li>
                     <li><strong class="text-white">Поддержка в арбитраже:</strong> Экспертная поддержка и подготовка доказательной базы в рамках процедур Claims & Arbitration.</li>
                 </ul>
             </div>
-            <div class="glass-card rounded-3xl p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-2xl font-sans font-bold text-white mb-6 relative z-10">Аналитическая экспертиза и Обучение</h3>
-                <ul class="space-y-4 text-gray-300 font-light text-sm relative z-10">
+
+            <!-- Аналитическая экспертиза и обучение -->
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Аналитическая экспертиза и Обучение</h3>
+                <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Оценка финансовых рисков:</strong> Forensic Delay Analysis (анализ задержек) и Quantum Calculation (расчет вариаций и убытков).</li>
                     <li><strong class="text-white">Локальная адаптация:</strong> Приведение условий международных контрактов в соответствие с законодательством Республики Узбекистан.</li>
                     <li><strong class="text-white">Институциональное развитие:</strong> Проведение семинаров и тренингов по эффективному администрированию контрактов и управлению претензиями.</li>
