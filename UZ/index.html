@@ -13,8 +13,8 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     
     <script>
         tailwind.config = {
@@ -49,14 +49,14 @@
 <div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
     <div class="relative overflow-visible flex items-center justify-center">
         <div class="absolute inset-0 bg-bridge-taupe/30 blur-[40px] rounded-full scale-150"></div>
-        <img src="bridge 2.png" alt="Bridge Consult Loading" class="relative z-10 h-12 md:h-16 object-contain transform translate-y-full opacity-0 transition-all duration-1000 ease-out" id="preloader-logo" style="filter: brightness(0) invert(60%) sepia(20%) saturate(1000%) hue-rotate(350deg) drop-shadow(0px 0px 20px rgba(138,123,102,0.8));">
+        <img src="../bridge 2.png" alt="Bridge Consult Loading" class="relative z-10 h-12 md:h-16 object-contain transform translate-y-full opacity-0 transition-all duration-1000 ease-out" id="preloader-logo" style="filter: brightness(0) invert(60%) sepia(20%) saturate(1000%) hue-rotate(350deg) drop-shadow(0px 0px 20px rgba(138,123,102,0.8));">
     </div>
 </div>
 
 <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[101]">
         <a href="#" class="block relative z-[101]">
-            <img src="bridge 2.svg" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
+            <img src="../bridge 2.svg" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
         </a>
         
         <nav class="hidden lg:flex space-x-8">
@@ -82,7 +82,7 @@
                 <span class="text-gray-200">|</span>
                 <a href="../EN/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">EN</a>
                 <span class="text-gray-200">|</span>
-                <a href="index.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">UZ</a>
+                <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">UZ</a>
             </div>
             
             <div class="flex items-center space-x-5">
@@ -99,11 +99,10 @@
     </div>
 
     <div id="mobile-menu" class="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col p-8 transition-transform duration-500 translate-x-full lg:hidden pt-28 overflow-y-auto">
-        <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ (МОБИЛКА) -->
         <div class="flex items-center justify-center space-x-6 mb-10 pb-6 border-b border-gray-100 font-bold text-sm uppercase tracking-widest font-sans">
             <a href="../index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">RU</a>
             <a href="../EN/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">EN</a>
-            <a href="index.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">UZ</a>
+            <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">UZ</a>
         </div>
 
         <div class="flex flex-col space-y-6 font-sans">
@@ -120,7 +119,7 @@
     </div>
 </header>
 
-<section class="relative w-full bg-cover bg-center" style="background-image: url('hero-bg.png'); background-color: #1a1a1a;">
+<section class="relative w-full bg-cover bg-center" style="background-image: url('../hero-bg.png'); background-color: #1a1a1a;">
     <div class="absolute inset-0 bg-gradient-to-r from-bridge-dark/95 via-bridge-dark/80 to-transparent"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bridge-dark/80 z-0"></div>
 
@@ -200,7 +199,7 @@
 
 <section id="services" class="py-16 md:py-32 bg-bridge-dark relative font-sans overflow-hidden">
     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
-        <source src="ultra-bridge.mp4" type="video/mp4">
+        <source src="../ultra-bridge.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/95 via-bridge-dark/70 to-bridge-dark/95 z-[1]"></div>
     
@@ -331,150 +330,6 @@
     </div>
 </section>
 
-<section class="py-32 relative overflow-hidden bg-bridge-dark font-sans">
-    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-70">
-        <source src="elegant-video.mp4" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-gradient-to-t from-bridge-dark via-bridge-dark/60 to-bridge-dark/95 z-[1]"></div>
-    
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-20" data-aos="fade-up">
-            <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">Bizning yondashuvimiz</div>
-            <h2 class="text-4xl md:text-5xl font-sans font-bold text-white mb-6">Nima uchun Bridge Consult'ni tanlashadi</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-bridge-dark/30 border border-white/10 p-10 rounded-3xl backdrop-blur-md hover:bg-white/10 hover:border-bridge-taupe/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-bridge-taupe text-5xl font-sans font-bold mb-6 opacity-50">01</div>
-                <h3 class="text-xl font-bold text-white mb-4">Xalqaro standartlar</h3>
-                <p class="text-gray-400 font-light leading-relaxed">FIDIC proformalari, EPC shartnomalari va xalqaro moliya institutlarining qat'iy talablarini chuqur tushunish.</p>
-            </div>
-            <div class="bg-bridge-dark/30 border border-white/10 p-10 rounded-3xl backdrop-blur-md hover:bg-white/10 hover:border-bridge-taupe/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-bridge-taupe text-5xl font-sans font-bold mb-6 opacity-50">02</div>
-                <h3 class="text-xl font-bold text-white mb-4">Mahalliy moslashtirish</h3>
-                <p class="text-gray-400 font-light leading-relaxed">Xalqaro shartnomalarni yuridik kuchini yo'qotmagan holda O'zbekiston Respublikasi huquqiy maydoniga integratsiya qilish.</p>
-            </div>
-            <div class="bg-bridge-dark/30 border border-white/10 p-10 rounded-3xl backdrop-blur-md hover:bg-white/10 hover:border-bridge-taupe/50 transition-all duration-500 hover:-translate-y-2 shadow-2xl" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-bridge-taupe text-5xl font-sans font-bold mb-6 opacity-50">03</div>
-                <h3 class="text-xl font-bold text-white mb-4">Kompleks himoya</h3>
-                <p class="text-gray-400 font-light leading-relaxed">Mijoz manfaatlarini barcha darajalarda himoya qilish: smeta auditidan tortib arbitrajdagi vakillikkacha.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="portfolio" class="py-24 bg-white font-sans">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="flex flex-col md:flex-row md:items-center justify-between mb-16 w-full" data-aos="fade-up">
-            <div class="w-full md:w-auto mb-8 md:mb-0">
-                <div class="flex items-center gap-4 mb-4">
-                    <span class="w-10 h-[2px] bg-bridge-taupe shrink-0"></span>
-                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs shrink-0">Portfel</span>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-sans font-bold text-bridge-dark leading-tight break-words">Tanlangan loyihalar tajribasi</h2>
-            </div>
-            
-            <div class="hidden md:block flex-grow h-[1px] bg-gray-200 mx-10"></div>
-            
-            <div class="w-full md:w-auto shrink-0">
-                <a href="projects.html" class="group flex items-center justify-center w-full md:w-auto bg-bridge-dark text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-xl hover:shadow-bridge-taupe/20 hover:-translate-y-1">
-                    Batafsil keyslarni ko'rish
-                    <svg class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            <!-- Loyiha 1 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
-                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
-                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="olympic city.jpg" alt="Olimpiya shaharchasi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">EPC+F</span>
-                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2022-2025</span>
-                    </div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Olimpiya shaharchasi (Olympic City)</h3>
-                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">Toshkent shahrida IV yozgi Osiyo o'smirlar o'yinlarini o'tkazish uchun zamonaviy sport inshootlarini qurish.</p>
-                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Batafsil keys</span>
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Loyiha 2 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
-                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
-                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">Oq kitob</span>
-                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2025-Hozirgi vaqt</span>
-                    </div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">"Tashkent Invest Company" AJ</h3>
-                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">EPC+F modeli bo'yicha infratuzilma loyihalari uchun xaridlar va shartnomalarni boshqarish tizimini ishlab chiqish hamda joriy etish.</p>
-                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Batafsil keys</span>
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Loyiha 3 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('kamchik')">
-                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
-                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="kamchik.avif" alt="Qamchiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">MDB Uyg'unlashtirilgan</span>
-                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2016-2022</span>
-                    </div>
-                </div>
-                <div class="p-8 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">A-373 Avtomobil yo'li (Qamchiq dovoni)</h3>
-                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">CAREC 2 Transport yo'lagi. Buyurtmachi: EVRASCON AJ.</p>
-                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Batafsil keys</span>
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-16 bg-gray-50 rounded-[2rem] border border-gray-100 p-8 md:p-10" data-aos="fade-up">
-            <h3 class="text-xl md:text-2xl font-bold text-bridge-dark mb-8">Suv ta'minoti tizimi loyihalari <span class="text-base font-medium text-gray-500 block md:inline md:ml-2 mt-1 md:mt-0">(Buyurtmachi: "Suv-Taraqqiyot" MChJ)</span></h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="flex flex-col">
-                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
-                    <p class="font-bold text-bridge-dark text-base mb-2">Yangiyo'l va Jiydakapa</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Suv ta'minoti tizimlarini rekonstruksiya qilish. Moliyalashtirish: Jahon banki, YTTB. FIDIC Sariq kitob.</p>
-                </div>
-                <div class="flex flex-col">
-                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
-                    <p class="font-bold text-bridge-dark text-base mb-2">Namangan</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Shaharning shimoliy qismini suv bilan ta'minlash (60.07 km quvur). Moliyalashtirish: OPEK Jamg'armasi.</p>
-                </div>
-                <div class="flex flex-col">
-                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
-                    <p class="font-bold text-bridge-dark text-base mb-2">Samarqand viloyati</p>
-                    <p class="text-sm text-gray-600 leading-relaxed">Suv olish inshootlarini qurish. Moliyalashtirish: OTB.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="team" class="py-32 bg-bridge-light font-sans">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20" data-aos="fade-up">
@@ -486,7 +341,7 @@
         <div class="bg-white rounded-3xl p-8 md:p-12 premium-shadow mb-10 flex flex-col lg:flex-row gap-10 hover-float" data-aos="fade-up" data-aos-delay="100">
             <div class="lg:w-1/3">
                 <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden photo-reveal tilt-card">
-                    <img src="larisa-belousova.jpg" alt="Larisa Konstantinovna Belousova" class="w-full h-full object-cover object-top">
+                    <img src="../larisa-belousova.jpg" alt="Larisa Konstantinovna Belousova" class="w-full h-full object-cover object-top">
                 </div>
             </div>
             <div class="lg:w-2/3 flex flex-col justify-center font-sans">
@@ -517,7 +372,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
-                        <img src="anna.png" alt="Doktor Anna Vladimirovna Ubaydullaeva" class="w-full h-full object-cover object-top">
+                        <img src="../anna.png" alt="Doktor Anna Vladimirovna Ubaydullaeva" class="w-full h-full object-cover object-top">
                     </div>
                     <div>
                         <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Kompaniya Hamkori va Yuridik maslahatchi</span>
@@ -546,7 +401,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center gap-6 mb-8">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
-                        <img src="ernest.jpg" alt="Ernest Belousov" class="w-full h-full object-cover object-top">
+                        <img src="../ernest.jpg" alt="Ernest Belousov" class="w-full h-full object-cover object-top">
                     </div>
                     <div>
                         <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block font-sans">Yetakchi mutaxassis</span>
@@ -560,7 +415,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="400">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
-                        <img src="lucia.jpg" alt="Lyutsiya Shamilyevna Axmediyeva" class="w-full h-full object-cover object-top">
+                        <img src="../lucia.jpg" alt="Lyutsiya Shamilyevna Axmediyeva" class="w-full h-full object-cover object-top">
                     </div>
                     <div>
                         <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Smeta bo'limi rahbari</span>
@@ -577,7 +432,7 @@
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="500">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
-                        <img src="olga.jpg" alt="Mitrofanova Olga Nikolaevna" class="w-full h-full object-cover">
+                        <img src="../olga.jpg" alt="Mitrofanova Olga Nikolaevna" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <span class="text-bridge-taupe font-bold tracking-widest uppercase text-[10px] mb-1 block">Sifat nazorati bo'limi rahbari</span>
@@ -595,14 +450,14 @@
         </div>
     </div> 
 </section>
-<!-- O'QUV VA TRENINGLAR (YANGI BLOK) -->
+
+<!-- O'QUV VA TRENINGLAR -->
 <section class="py-24 bg-bridge-dark relative overflow-hidden font-sans border-y border-bridge-taupe/20">
     <div class="absolute top-1/2 right-0 transform -translate-y-1/2 w-[600px] h-[600px] bg-bridge-taupe/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            <!-- Chap matn qismi -->
             <div data-aos="fade-right">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="w-8 h-px bg-bridge-taupe"></span>
@@ -613,7 +468,6 @@
                     Biz nafaqat loyihalarni kuzatib boramiz, balki jamoalar malakasini ham oshiramiz. Bridge Consult ekspertlari buyurtmachilar va muhandislar uchun FIDIC proformalarini amaliyotda qo'llash, xavflarni boshqarish va shartnomalarni ma'muriylashtirish bo'yicha maxsus seminarlar o'tkazadilar.
                 </p>
 
-                <!-- Afzalliklar plashkalari -->
                 <div class="flex flex-col sm:flex-row gap-6">
                     <div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl p-4 w-full hover:bg-white/10 transition-colors">
                         <div class="w-10 h-10 rounded-full bg-bridge-taupe/20 flex items-center justify-center shrink-0">
@@ -630,13 +484,11 @@
                 </div>
             </div>
 
-            <!-- Video qismi -->
             <div class="relative group" data-aos="fade-left">
                 <div class="absolute -inset-4 bg-bridge-taupe/20 rounded-[2rem] blur-xl transition-all duration-500 group-hover:bg-bridge-taupe/40"></div>
-                
                 <div class="relative rounded-[1.5rem] overflow-hidden border border-white/10 shadow-2xl bg-black aspect-video z-10">
                     <video controls playsinline class="w-full h-full object-cover">
-                        <source src="fidic-training.mp4" type="video/mp4">
+                        <source src="../fidic-training.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -644,6 +496,61 @@
         </div>
     </div>
 </section>
+
+<!-- MEDIA & PUBLICATIONS -->
+<section id="media" class="py-32 bg-bridge-light relative overflow-hidden font-sans border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-8 h-px bg-bridge-taupe"></span>
+                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs">Media va Ekspertiza</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-bridge-dark">Biz haqimizda maqolalar</h2>
+            </div>
+            <div class="hidden md:block pb-2">
+                <p class="text-gray-500 font-light text-lg">Ekspert fikri va kompetensiyalar profili</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Article 1: UzReport -->
+            <a href="https://uzreport.news/economy/what-is-fidic-and-does-uzbekistan-need-it-" target="_blank" class="group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-72 overflow-hidden bg-bridge-dark shrink-0 flex items-center justify-center">
+                    <img src="../larisa-belousova-uznews.png" alt="Larisa Belousova" class="w-full h-full object-contain p-4 grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute top-6 left-6 z-20">
+                        <span class="bg-white text-bridge-dark text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">UzReport.news</span>
+                    </div>
+                </div>
+                <div class="p-10 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-4 group-hover:text-bridge-taupe transition-colors leading-tight">FIDIC nima va u O'zbekistonga kerakmi?</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">BRIDGE CONSULT direktori Larisa Belousova bilan mamlakat infratuzilma loyihalari uchun xalqaro standartlarning ahamiyati haqida keng qamrovli intervyu.</p>
+                    <div class="flex items-center text-bridge-taupe text-sm font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        Intervyuni o'qish <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Article 2: Career Centre -->
+            <a href="https://careercentre.uz/about-company.php?id=610" target="_blank" class="group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-72 overflow-hidden bg-gray-50 shrink-0 border-b border-gray-100 flex items-center justify-center">
+                    <img src="../careercentreuz.svg" alt="Career Centre" class="w-2/3 h-1/2 object-contain transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute top-6 left-6 z-20">
+                        <span class="bg-bridge-dark text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">CareerCentre.uz</span>
+                    </div>
+                </div>
+                <div class="p-10 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-4 group-hover:text-bridge-taupe transition-colors leading-tight">BRIDGE Consult kompetensiyalar profili</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">Korporativ ekspertizaning batafsil mustaqil sharhi: shartnomalarni tuzilmaga solish va Forensic Delay Analysis'dan tortib, nizolarni hal qilish va mediatsiyagacha.</p>
+                    <div class="flex items-center text-bridge-taupe text-sm font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        Profilni o'rganish <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section class="py-32 bg-white relative overflow-hidden font-sans">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] md:w-[800px] h-[100vw] md:h-[400px] max-w-[800px] max-h-[400px] bg-bridge-taupe/10 rounded-full blur-[100px] pointer-events-none"></div>
     
@@ -664,13 +571,13 @@
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-20 items-center justify-items-center" data-aos="fade-up" data-aos-delay="200">
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-1">
-                <img src="wb.webp" alt="World Bank" class="h-16 md:h-20 w-auto object-contain">
+                <img src="../wb.webp" alt="World Bank" class="h-16 md:h-20 w-auto object-contain">
             </div>
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-2">
-                <img src="EBRD-Logo-1991.webp" alt="EBRD" class="h-20 md:h-28 w-auto object-contain">
+                <img src="../EBRD-Logo-1991.webp" alt="EBRD" class="h-20 md:h-28 w-auto object-contain">
             </div>
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-3">
-                <img src="ADB logo stacked.png" alt="Asian Development Bank" class="h-24 md:h-32 w-auto object-contain">
+                <img src="../ADB logo stacked.png" alt="Asian Development Bank" class="h-24 md:h-32 w-auto object-contain">
             </div>
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-4">
                 <span class="font-sans font-bold text-3xl md:text-4xl text-bridge-dark text-center leading-none tracking-tighter flex flex-col">Tashkent<span class="text-bridge-taupe">Invest</span></span>
@@ -738,9 +645,10 @@
                 <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Navigatsiya</h4>
                 <ul class="space-y-3 md:space-y-4 text-gray-400 font-light text-sm">
                     <li><a href="#about" class="hover:text-bridge-taupe transition-colors">Kompaniya haqida</a></li>
-                    <li><a href="#services" class="hover:text-bridge-taupe transition-colors">Xizmatlar</a></li>
+                    <li><a href="#services" class="hover:text-bridge-taupe transition-colors">Xizmatlar va Standartlar</a></li>
                     <li><a href="projects.html" class="hover:text-bridge-taupe transition-colors">Loyihalar tajribasi</a></li>
-                    <li><a href="#team" class="hover:text-bridge-taupe transition-colors">Jamoa</a></li>
+                    <li><a href="#team" class="hover:text-bridge-taupe transition-colors">Jamoa va Ta'lim</a></li>
+                    <li><a href="#media" class="hover:text-bridge-taupe transition-colors">OAV va Nashrlar</a></li>
                 </ul>
             </div>
             
@@ -772,7 +680,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-<script src="main.js"></script>
+<script src="../main.js"></script>
 <script>
     AOS.init({ once: true, offset: 50 });
     VanillaTilt.init(document.querySelectorAll(".tilt-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.2 });
