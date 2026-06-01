@@ -76,7 +76,17 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.84 1.18-5.2 3.45-.49.33-.94.5-1.35.49-.45-.01-1.3-.25-1.94-.46-.78-.26-1.4-.4-1.34-.84.03-.23.36-.47.98-.72 3.85-1.68 6.42-2.78 7.71-3.32 3.67-1.53 4.43-1.8 4.93-1.81.11 0 .36.03.49.13.11.09.14.22.15.34.01.07.01.18 0 .22z"/></svg>
                 </a>
             </div>
+            <!-- НОВЫЙ БЛОК: ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ (ПК) -->
+            <div class="flex items-center space-x-2 pr-6 border-r border-gray-200 font-bold text-xs uppercase tracking-widest">
+                <a href="index.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">RU</a>
+                <span class="text-gray-200">|</span>
+                <a href="en/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">EN</a>
+                <span class="text-gray-200">|</span>
+                <a href="uz/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">UZ</a>
+            </div>
             
+            <div class="flex items-center space-x-5">
+                <!-- Твой телефон и кнопка "Оставить заявку" здесь -->
             <div class="flex items-center space-x-5">
                 <a href="tel:+998330001530" class="text-sm font-bold text-bridge-dark hover:text-bridge-taupe transition-colors tracking-wide">+998 33 000 15 30</a>
                 <a href="#contact-form" class="bg-bridge-dark text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md hover:-translate-y-0.5">Оставить заявку</a>
@@ -91,16 +101,24 @@
     </div>
 
     <div id="mobile-menu" class="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col p-8 transition-transform duration-500 translate-x-full lg:hidden pt-28 overflow-y-auto">
-        <div class="flex flex-col space-y-6">
-            <a href="#about" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">О компании</a>
-            <a href="#services" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Услуги</a>
-            <a href="projects.html" class="text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Опыт проектов</a>
-            <a href="#team" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Команда</a>
-            <a href="#contact-form" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Контакты</a>
+        
+        <!-- НОВЫЙ БЛОК: ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ (МОБИЛКА) -->
+        <div class="flex items-center justify-center space-x-6 mb-10 pb-6 border-b border-gray-100 font-bold text-sm uppercase tracking-widest font-sans">
+            <a href="index.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">RU</a>
+            <a href="en/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">EN</a>
+            <a href="uz/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">UZ</a>
         </div>
-        <div class="mt-12 flex flex-col space-y-4">
+
+        <div class="flex flex-col space-y-6 font-sans">
+            <a href="index.html#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">О компании</a>
+            <a href="index.html#services" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Услуги</a>
+            <a href="projects.html" class="text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Опыт проектов</a>
+            <a href="index.html#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Команда</a>
+            <a href="index.html#contact-form" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Контакты</a>
+        </div>
+        <div class="mt-12 flex flex-col space-y-4 font-sans">
             <a href="tel:+998330001530" class="text-xl font-semibold text-bridge-dark text-center">+998 33 000 15 30</a>
-            <a href="#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Связаться с нами</a>
+            <a href="index.html#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Связаться с нами</a>
         </div>
     </div>
 </header>
