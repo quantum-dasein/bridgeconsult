@@ -174,7 +174,17 @@
     </div>
 </section>
 
-<section id="services" class="py-32 bg-bridge-dark noise-bg relative font-sans">
+<section id="services" class="py-32 bg-bridge-dark relative font-sans overflow-hidden">
+    
+    <!-- ФОНОВОЕ ВИДЕО ДЛЯ УСЛУГ -->
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+        <!-- Не забудь потом вписать правильное название сгенерированного файла -->
+        <source src="ultra bridge.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Градиентное затемнение, чтобы белый текст читался идеально -->
+    <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/95 via-bridge-dark/70 to-bridge-dark/95 z-[1]"></div>
+    
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row justify-between items-end mb-20" data-aos="fade-up">
             <div class="max-w-2xl">
@@ -330,105 +340,140 @@
     </div>
 </section>
 
-<section id="portfolio" class="py-24 bg-white">
+<section id="portfolio" class="py-24 bg-white font-sans">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16" data-aos="fade-up">
-            <div>
-                <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4">Портфолио</div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-bridge-dark leading-tight">Избранный опыт проектов</h2>
+        
+        <!-- ПРЕМИАЛЬНАЯ ПЛАШКА ЗАГОЛОВКА -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-16" data-aos="fade-up">
+            <div class="flex-shrink-0">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-10 h-[2px] bg-bridge-taupe"></span>
+                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs">Портфолио</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-sans font-bold text-bridge-dark leading-tight">Избранный опыт проектов</h2>
             </div>
-            <div class="mt-6 md:mt-0">
-                <a href="projects.html" class="inline-flex items-center bg-bridge-dark text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-lg hover-float">
+            
+            <!-- Соединительная линия (появляется только на ПК) -->
+            <div class="hidden md:block flex-grow h-[1px] bg-gray-200 mx-10"></div>
+            
+            <div class="mt-8 md:mt-0 flex-shrink-0">
+                <a href="projects.html" class="group inline-flex items-center bg-bridge-dark text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-xl hover:shadow-bridge-taupe/20 hover:-translate-y-1">
                     Смотреть детальные кейсы
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <svg class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 font-sans">
-            <!-- Проект 1: Олимпийский -->
-            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
-                    <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="olympic city.jpg" alt="Олимпийский городок" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                    <div class="absolute top-4 left-4 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">EPC+F</span>
-                        <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
+        <!-- ПРЕМИАЛЬНЫЕ КАРТОЧКИ (ОТ КРАЯ ДО КРАЯ) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+            
+            <!-- Проект 1 -->
+            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
+                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
+                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
+                    <img src="olympic city.jpg" alt="Олимпийский городок" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-6 left-6 z-20 flex gap-2">
+                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">EPC+F</span>
+                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2022-2025</span>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Олимпийский городок (Olympic City)</h3>
-                <p class="text-gray-600 font-light mb-4">Строительство современных спортивных объектов для проведения IV Летних Азиатских юношеских игр в г. Ташкенте.</p>
-                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Олимпийский городок (Olympic City)</h3>
+                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">Строительство современных спортивных объектов для проведения IV Летних Азиатских юношеских игр в г. Ташкенте.</p>
+                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Детальный кейс</span>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Проект 2: Tashkent Invest -->
-            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
-                    <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                    <div class="absolute top-4 left-4 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">White Book</span>
-                        <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2025-Наст. время</span>
+            <!-- Проект 2 -->
+            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
+                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
+                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-6 left-6 z-20 flex gap-2">
+                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">White Book</span>
+                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2025-Наст. время</span>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">АО «Tashkent Invest Company»</h3>
-                <p class="text-gray-600 font-light mb-6">Разработка и внедрение системы закупок и управления контрактами для проектов по модели EPC+F.</p>
-                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">АО «Tashkent Invest Company»</h3>
+                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">Разработка и внедрение системы закупок и управления контрактами для инфраструктурных проектов по модели EPC+F.</p>
+                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Детальный кейс</span>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Проект 3: Азербайджан -->
-            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('azerbaijan')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
-                    <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=800&q=80" alt="Азербайджан" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                    <div class="absolute top-4 left-4 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">FIDIC Red Book</span>
-                        <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">АБР</span>
+            <!-- Проект 3 -->
+            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('azerbaijan')">
+                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
+                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=800&q=80" alt="Азербайджан" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-6 left-6 z-20 flex gap-2">
+                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">FIDIC Red Book</span>
+                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">АБР</span>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Реконструкция дорог (Азербайджан)</h3>
-                <p class="text-gray-600 font-light mb-6">Реконструкция 107 км автомобильных дорог 4R105 и 4R100. Заказчик: Азербайджанская компания.</p>
-                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Реконструкция дорог (Азербайджан)</h3>
+                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">Реконструкция 107 км автомобильных дорог 4R105 и 4R100. Заказчик: Азербайджанская компания.</p>
+                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Детальный кейс</span>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Проект 4: Камчик -->
-            <div class="group cursor-pointer bg-white border border-gray-100 p-6 md:p-8 rounded-3xl hover:shadow-[0_20px_40px_-5px_rgba(26,36,33,0.08)] transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="400" onclick="openModal('kamchik')">
-                <div class="w-full h-64 bg-gray-200 rounded-2xl mb-6 overflow-hidden relative shrink-0">
-                    <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
-                    <img src="kamchik.avif" alt="Камчик" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                    <div class="absolute top-4 left-4 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">MDB Harmonised</span>
-                        <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2016-2022</span>
+            <!-- Проект 4 -->
+            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="400" onclick="openModal('kamchik')">
+                <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
+                    <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
+                    <img src="kamchik.avif" alt="Камчик" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-6 left-6 z-20 flex gap-2">
+                        <span class="bg-white/95 backdrop-blur text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm">MDB Harmonised</span>
+                        <span class="bg-bridge-taupe/95 backdrop-blur text-white text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">2016-2022</span>
                     </div>
                 </div>
-                <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Автодорога А-373 (Перевал Камчик)</h3>
-                <p class="text-gray-600 font-light mb-6">Транспортный коридор ЦАРЭС 2. Заказчик: АО EVRASCON.</p>
-                <div class="mt-auto flex items-center text-bridge-taupe font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
-                    Детальный кейс <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h3 class="text-2xl font-bold text-bridge-dark mb-3 group-hover:text-bridge-taupe transition-colors">Автодорога А-373 (Перевал Камчик)</h3>
+                    <p class="text-gray-600 font-light mb-6 flex-grow text-sm md:text-base">Транспортный коридор ЦАРЭС 2. Заказчик: АО EVRASCON.</p>
+                    <div class="pt-5 border-t border-gray-100 flex items-center justify-between">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest group-hover:text-bridge-taupe transition-colors">Детальный кейс</span>
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-bridge-taupe group-hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="mt-10 bg-bridge-light p-8 rounded-2xl border border-gray-200" data-aos="fade-up">
-            <h3 class="text-xl font-bold text-bridge-dark mb-4 font-sans">Проекты систем водоснабжения (Заказчик: ООО Suv-Taraqqiyot)</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
-                <div>
-                    <p class="font-bold text-bridge-dark text-sm">Янгиюль и Жийдакапа</p>
-                    <p class="text-xs text-gray-600 mt-1">Реконструкция систем водоснабжения. Финансирование: World Bank, EBRD. FIDIC Yellow Book.</p>
+        <!-- СТИЛЬНАЯ ПАНЕЛЬ ДЛЯ ВОДНЫХ ПРОЕКТОВ -->
+        <div class="mt-16 bg-gray-50 rounded-[2rem] border border-gray-100 p-8 md:p-10" data-aos="fade-up">
+            <h3 class="text-xl md:text-2xl font-bold text-bridge-dark mb-8">Проекты систем водоснабжения <span class="text-base font-medium text-gray-500 block md:inline md:ml-2 mt-1 md:mt-0">(Заказчик: ООО Suv-Taraqqiyot)</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col">
+                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
+                    <p class="font-bold text-bridge-dark text-base mb-2">Янгиюль и Жийдакапа</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Реконструкция систем водоснабжения. Финансирование: World Bank, EBRD. FIDIC Yellow Book.</p>
                 </div>
-                <div>
-                    <p class="font-bold text-bridge-dark text-sm">Наманган</p>
-                    <p class="text-xs text-gray-600 mt-1">Водоснабжение северной части города (трубопровод 60.07 км). Финансирование: OPEC Fund.</p>
+                <div class="flex flex-col">
+                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
+                    <p class="font-bold text-bridge-dark text-base mb-2">Наманган</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Водоснабжение северной части города (трубопровод 60.07 км). Финансирование: OPEC Fund.</p>
                 </div>
-                <div>
-                    <p class="font-bold text-bridge-dark text-sm">Самаркандская область</p>
-                    <p class="text-xs text-gray-600 mt-1">Строительство водозаборов. Финансирование: АБР.</p>
+                <div class="flex flex-col">
+                    <span class="w-8 h-1 bg-bridge-taupe mb-4 rounded-full"></span>
+                    <p class="font-bold text-bridge-dark text-base mb-2">Самаркандская область</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Строительство водозаборов. Финансирование: АБР.</p>
                 </div>
             </div>
         </div>
