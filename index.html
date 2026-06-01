@@ -35,6 +35,15 @@
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ЯДЕРНЫЙ ФИКС ДЛЯ МОБИЛОК: Жестко блокируем ширину, чтобы меню и анимации не растягивали экран -->
+    <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            position: relative;
+        }
+    </style>
 </head>
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe/20">
 
@@ -107,7 +116,7 @@
                 <span class="bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">Contract Engineering</span>
             </div>
             
-            <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-sans font-bold leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-white text-3xl sm:text-5xl md:text-6xl font-sans font-bold leading-tight mb-6 break-words" data-aos="fade-up" data-aos-delay="100">
                 Консультирование по инфраструктурным контрактам, претензиям и <span class="text-bridge-taupe">разрешению споров</span>
             </h1>
             
@@ -176,16 +185,15 @@
 
 <section id="services" class="py-16 md:py-32 bg-bridge-dark relative font-sans overflow-hidden">
     
-    <!-- ФОНОВОЕ ВИДЕО ДЛЯ УСЛУГ -->
+    <!-- ФОНОВОЕ ВИДЕО ДЛЯ УСЛУГ (БЕЗ ПРОБЕЛОВ В НАЗВАНИИ!) -->
     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
-        <source src="твой_новый_видос.mp4" type="video/mp4">
+        <source src="ultra bridge.mp4" type="video/mp4">
     </video>
     
     <!-- Градиентное затемнение, чтобы белый текст читался идеально -->
     <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/95 via-bridge-dark/70 to-bridge-dark/95 z-[1]"></div>
     
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <!-- Исправлено: items-start для мобилок, mb-12 для мобилок -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20" data-aos="fade-up">
             <div class="max-w-2xl">
                 <div class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-4 flex items-center">
@@ -196,10 +204,7 @@
             <p class="text-gray-400 text-base md:text-lg font-light mt-4 md:mt-0 max-w-md">Bridge Consult предоставляет консультационные услуги в международных инфраструктурных проектах.</p>
         </div>
 
-        <!-- Исправлено: gap-5 для мобилок, gap-6 для ПК -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            <!-- Контрактный инжиниринг -->
-            <!-- Исправлено: p-6 для мобилок, p-10 для ПК. Закругления тоже стали чуть аккуратнее на телефоне -->
             <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Контрактный инжиниринг (FIDIC / EPC)</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
@@ -210,7 +215,6 @@
                 </ul>
             </div>
 
-            <!-- Администрирование контрактов -->
             <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Администрирование строительных контрактов</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
@@ -220,7 +224,6 @@
                 </ul>
             </div>
 
-            <!-- Разрешение споров -->
             <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Разрешение споров и Арбитраж</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
@@ -230,7 +233,6 @@
                 </ul>
             </div>
 
-            <!-- Аналитическая экспертиза и обучение -->
             <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Аналитическая экспертиза и Обучение</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
@@ -244,25 +246,26 @@
 </section>
 
 <section class="py-32 bg-bridge-dark relative overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-bridge-taupe/20 rounded-full blur-[150px] pointer-events-none"></div>
+    <!-- Исправлен w-[800px] на относительные единицы, чтобы не ломать мобилку -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150vw] md:w-[800px] aspect-square max-w-[800px] bg-bridge-taupe/20 rounded-full blur-[100px] md:blur-[150px] pointer-events-none"></div>
     <div class="max-w-5xl mx-auto px-6 relative z-10">
         <div class="text-center mb-20" data-aos="fade-up">
             <span class="text-bridge-taupe font-bold tracking-widest uppercase text-sm mb-4 block animate-pulse">Инновационный подход</span>
-            <h2 class="text-5xl md:text-6xl font-serif font-bold text-white mb-6">Стандарты <span class="text-transparent bg-clip-text bg-gradient-to-r from-bridge-taupe to-[#D4C3A3]">высшей лиги</span></h2>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 break-words">Стандарты <span class="text-transparent bg-clip-text bg-gradient-to-r from-bridge-taupe to-[#D4C3A3]">высшей лиги</span></h2>
             <p class="text-gray-400 text-lg font-light max-w-2xl mx-auto">Интеграция лучших мировых практик урегулирования споров в реальные условия проектов.</p>
         </div>
         <div class="space-y-6" data-aos="fade-up" data-aos-delay="100">
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
-                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
-                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Проформы контрактов FIDIC</span>
-                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-xl md:text-2xl font-serif text-white font-medium tracking-wide">Проформы контрактов FIDIC</span>
+                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
                     <div class="overflow-hidden">
-                        <div class="px-8 pb-10 pt-2 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                        <div class="px-6 md:px-8 pb-10 pt-2 text-gray-300 font-light text-base md:text-lg leading-relaxed border-t border-white/10 mt-2">
                             <p class="mb-6">Международная федерация инженеров-консультантов (FIDIC) предоставляет золотой стандарт типовых контрактов. Мы обладаем глубокой экспертизой в применении:</p>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="p-5 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
@@ -283,32 +286,32 @@
                 </div>
             </div>
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
-                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
-                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Forensic Delay Analysis (FDA)</span>
-                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-xl md:text-2xl font-serif text-white font-medium tracking-wide">Forensic Delay Analysis (FDA)</span>
+                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
                     <div class="overflow-hidden">
-                        <div class="px-8 pb-10 pt-6 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                        <div class="px-6 md:px-8 pb-10 pt-6 text-gray-300 font-light text-base md:text-lg leading-relaxed border-t border-white/10 mt-2">
                             Применяется для ретроспективного анализа задержек в строительстве. Мы используем методы <strong class="text-white">Society of Construction Law (SCL) Protocol</strong>, включая Time Impact Analysis и Time Slice Analysis, чтобы доказать или опровергнуть право подрядчика на продление сроков (EOT) и компенсацию затрат.
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
-                <button class="accordion-btn w-full px-8 py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
-                    <span class="text-2xl font-serif text-white font-medium tracking-wide">Dispute Avoidance Board (DAAB)</span>
-                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
+                    <span class="text-xl md:text-2xl font-serif text-white font-medium tracking-wide">Dispute Avoidance Board (DAAB)</span>
+                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
                     <div class="overflow-hidden">
-                        <div class="px-8 pb-10 pt-6 text-gray-300 font-light text-lg leading-relaxed border-t border-white/10 mt-2">
+                        <div class="px-6 md:px-8 pb-10 pt-6 text-gray-300 font-light text-base md:text-lg leading-relaxed border-t border-white/10 mt-2">
                             Инструмент досудебного урегулирования споров. Мы помогаем структурировать работу Советов (DAAB), подготавливаем позиционные документы (Position Papers) и представляем интересы клиентов на слушаниях Совета, минимизируя риски передачи дела в дорогостоящий международный арбитраж.
                         </div>
                     </div>
@@ -352,30 +355,27 @@
 <section id="portfolio" class="py-24 bg-white font-sans">
     <div class="max-w-7xl mx-auto px-6">
         
-        <!-- ПРЕМИАЛЬНАЯ ПЛАШКА ЗАГОЛОВКА -->
-        <div class="flex flex-col md:flex-row md:items-center justify-between mb-16" data-aos="fade-up">
-            <div class="flex-shrink-0">
+        <!-- ПРЕМИАЛЬНАЯ ПЛАШКА ЗАГОЛОВКА - ИСПРАВЛЕНА ДЛЯ МОБИЛОК -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-16 w-full" data-aos="fade-up">
+            <div class="w-full md:w-auto mb-8 md:mb-0">
                 <div class="flex items-center gap-4 mb-4">
-                    <span class="w-10 h-[2px] bg-bridge-taupe"></span>
-                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs">Портфолио</span>
+                    <span class="w-10 h-[2px] bg-bridge-taupe shrink-0"></span>
+                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs shrink-0">Портфолио</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-sans font-bold text-bridge-dark leading-tight">Избранный опыт проектов</h2>
+                <h2 class="text-3xl md:text-5xl font-sans font-bold text-bridge-dark leading-tight break-words">Избранный опыт проектов</h2>
             </div>
             
-            <!-- Соединительная линия (появляется только на ПК) -->
             <div class="hidden md:block flex-grow h-[1px] bg-gray-200 mx-10"></div>
             
-            <div class="mt-8 md:mt-0 flex-shrink-0">
-                <a href="projects.html" class="group inline-flex items-center bg-bridge-dark text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-xl hover:shadow-bridge-taupe/20 hover:-translate-y-1">
+            <div class="w-full md:w-auto shrink-0">
+                <a href="projects.html" class="group flex items-center justify-center w-full md:w-auto bg-bridge-dark text-white px-8 py-4 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-xl hover:shadow-bridge-taupe/20 hover:-translate-y-1">
                     Смотреть детальные кейсы
-                    <svg class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <svg class="w-5 h-5 ml-3 transform group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
             </div>
         </div>
 
-        <!-- ПРЕМИАЛЬНЫЕ КАРТОЧКИ (ОТ КРАЯ ДО КРАЯ) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            
             <!-- Проект 1 -->
             <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
                 <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
@@ -465,7 +465,6 @@
             </div>
         </div>
         
-        <!-- СТИЛЬНАЯ ПАНЕЛЬ ДЛЯ ВОДНЫХ ПРОЕКТОВ -->
         <div class="mt-16 bg-gray-50 rounded-[2rem] border border-gray-100 p-8 md:p-10" data-aos="fade-up">
             <h3 class="text-xl md:text-2xl font-bold text-bridge-dark mb-8">Проекты систем водоснабжения <span class="text-base font-medium text-gray-500 block md:inline md:ml-2 mt-1 md:mt-0">(Заказчик: ООО Suv-Taraqqiyot)</span></h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -612,7 +611,8 @@
 </section>
 
 <section class="py-32 bg-white relative overflow-hidden font-sans">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-bridge-taupe/10 rounded-full blur-[100px] pointer-events-none"></div>
+    <!-- Исправлен w-[800px] на относительные единицы -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] md:w-[800px] h-[100vw] md:h-[400px] max-w-[800px] max-h-[400px] bg-bridge-taupe/10 rounded-full blur-[100px] pointer-events-none"></div>
     
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16">
@@ -625,7 +625,7 @@
                 Опыт работы с международными <br class="hidden md:block"> финансовыми институтами
             </h2>
             <p class="text-gray-600 text-lg max-w-4xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="150">
-                Руководитель компании обладает статусом <strong>Аккредитованного АБР контрактного менеджера и специалиста по разрешению споров</strong>. Bridge Consult имеет успешный опыт работы с проектами, финансируемыми <strong>Всемирным Банком, ЕБРР, АБР и Фондом ОПЕК</strong>. Эксперты компании регулярно модерируют сессии по использованию Советов по урегулированию споров (DBs) в проектах МФИ и проводят сертифицированные обучающие программы.
+                Руководитель компании обладает статусом <strong>Аккредитованного АБР контрактного менеджера и специалиста по разрешению споров</strong>. Bridge Consult имеет успешный опыт работы с проектами, финансируемыми <strong>Всемирным Банком, ЕБРР, АБР и Фондом ОПЕК</strong>. Эксперты компании регулярно модерируют сессии по использования Советов по урегулированию споров (DBs) в проектах МФИ и проводят сертифицированные обучающие программы.
             </p>
         </div>
         
@@ -687,45 +687,51 @@
     </div>
 </section>
 
-<footer class="bg-bridge-dark pt-20 pb-10 border-t-4 border-bridge-taupe relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-48 -mt-48 pointer-events-none"></div>
+<footer class="bg-bridge-dark pt-16 md:pt-20 pb-8 border-t-4 border-bridge-taupe relative overflow-hidden font-sans">
+    <div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-white/5 rounded-full blur-3xl -mr-32 md:-mr-48 -mt-32 md:-mt-48 pointer-events-none"></div>
+    
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
+            
             <div class="lg:col-span-5">
-                <a href="#" class="flex flex-col mb-6 inline-block">
+                <a href="index.html" class="flex flex-col mb-4 md:mb-6 inline-block">
                     <span class="text-3xl font-bold tracking-tight text-white leading-none">Bridge</span>
-                    <span class="text-xs tracking-widest text-bridge-taupe uppercase font-semibold">Consult</span>
+                    <span class="text-[10px] md:text-xs tracking-widest text-bridge-taupe uppercase font-semibold">Consult</span>
                 </a>
-                <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-8">Ваш надежный партнер в контрактном инжиниринге и разрешении споров. Строим мосты между правовой надежностью и успешной реализацией проектов.</p>
+                <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-6 md:mb-8 text-sm md:text-base">Ваш надежный партнер в контрактном инжиниринге и разрешении споров. Строим мосты между правовой надежностью и успешной реализацией проектов.</p>
             </div>
+            
             <div class="lg:col-span-3">
-                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Навигация</h4>
-                <ul class="space-y-4 text-gray-400 font-light">
-                    <li><a href="#about" class="hover:text-bridge-taupe transition-colors">О компании</a></li>
-                    <li><a href="#services" class="hover:text-bridge-taupe transition-colors">Наши Услуги</a></li>
-                    <li><a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Опыт проектов</a></li>
-                    <li><a href="#team" class="hover:text-bridge-taupe transition-colors">Эксперты</a></li>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Навигация</h4>
+                <ul class="space-y-3 md:space-y-4 text-gray-400 font-light text-sm">
+                    <li><a href="index.html#about" class="hover:text-bridge-taupe transition-colors">О компании</a></li>
+                    <li><a href="index.html#services" class="hover:text-bridge-taupe transition-colors">Наши Услуги</a></li>
+                    <li><a href="projects.html" class="hover:text-bridge-taupe transition-colors">Опыт проектов</a></li>
+                    <li><a href="index.html#team" class="hover:text-bridge-taupe transition-colors">Эксперты</a></li>
                 </ul>
             </div>
+            
             <div class="lg:col-span-4">
-                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Контактные данные</h4>
-                <ul class="space-y-6 text-gray-400 font-light">
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Контактные данные</h4>
+                <ul class="space-y-4 md:space-y-6 text-gray-400 font-light text-sm">
                     <li class="flex items-start">
-                        <svg class="w-6 h-6 text-bridge-taupe mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         <span class="leading-relaxed">100180, Республика Узбекистан,<br>г. Ташкент, Юнусабадский район,<br>ул. Ахмада Дониша, 12 квартал, дом 20А</span>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-6 h-6 text-bridge-taupe mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <a href="tel:+998330001530" class="hover:text-bridge-taupe transition-colors text-lg">+998 33 000 15 30</a>
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <a href="tel:+998330001530" class="hover:text-bridge-taupe transition-colors text-base md:text-lg">+998 33 000 15 30</a>
                     </li>
                     <li class="flex items-center">
-                        <svg class="w-6 h-6 text-bridge-taupe mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <a href="mailto:info@bridgeconsult.uz" class="hover:text-bridge-taupe transition-colors">info@bridgeconsult.uz</a>
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <a href="mailto:info@bridgeconsult.uz" class="hover:text-bridge-taupe transition-colors break-all">info@bridgeconsult.uz</a>
                     </li>
                 </ul>
             </div>
+            
         </div>
-        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-light">
+        
+        <div class="pt-6 md:pt-8 border-t border-gray-800 flex flex-col items-center justify-center text-xs md:text-sm text-gray-500 font-light text-center">
             <p>&copy; 2016-2026 Bridge Consult. Все права защищены.</p>
         </div>
     </div>
@@ -736,9 +742,7 @@
 <script src="main.js"></script>
 <script>
     AOS.init({ once: true, offset: 50 });
-    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-        max: 5, speed: 400, glare: true, "max-glare": 0.2
-    });
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.2 });
 </script>
 
 <div id="projectModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
