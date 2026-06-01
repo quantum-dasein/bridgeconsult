@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="uz" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Наш Опыт | Bridge Consult</title>
+    <title>Loyihalar tajribasi | Bridge Consult</title>
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Bridge Consult | Инфраструктурные контракты и разрешение споров">
-    <meta property="og:description" content="Независимая экспертиза международного уровня. Сопровождение проектов FIDIC и EPC.">
+    <meta property="og:title" content="Bridge Consult | Infratuzilma shartnomalari va nizolarni hal qilish">
+    <meta property="og:description" content="Xalqaro darajadagi mustaqil ekspertiza. FIDIC va EPC loyihalarini kuzatib borish.">
     <meta property="og:image" content="https://bridgeconsult.uz/og-image.jpg">
     <meta name="theme-color" content="#292724">
     
@@ -36,6 +36,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            position: relative;
+        }
         .chapter-number {
             font-size: 20rem;
             line-height: 1;
@@ -49,7 +54,7 @@
         }
     </style>
 </head>
-<body class="font-sans text-bridge-dark antialiased bg-bridge-light relative selection:bg-bridge-taupe/20">
+<body class="font-sans text-bridge-dark antialiased bg-bridge-light relative selection:bg-bridge-taupe/20 overflow-x-hidden">
 
 <div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
     <div class="relative overflow-visible flex items-center justify-center">
@@ -65,10 +70,10 @@
         </a>
         
         <nav class="hidden lg:flex space-x-8">
-            <a href="index.html#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">О компании</a>
-            <a href="index.html#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Услуги</a>
-            <a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Опыт проектов</a>
-            <a href="index.html#team" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Команда</a>
+            <a href="index.html#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Kompaniya haqida</a>
+            <a href="index.html#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Xizmatlar</a>
+            <a href="projects.html" class="nav-link text-sm font-medium text-bridge-taupe transition-colors">Loyihalar tajribasi</a>
+            <a href="index.html#team" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors">Jamoa</a>
         </nav>
 
         <div class="hidden lg:flex items-center space-x-6 ml-4">
@@ -83,16 +88,16 @@
 
             <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ (ПК) -->
             <div class="flex items-center space-x-2 pr-6 border-r border-gray-200 font-bold text-xs uppercase tracking-widest">
-                <a href="projects.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">RU</a>
+                <a href="../projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">RU</a>
                 <span class="text-gray-200">|</span>
-                <a href="en/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">EN</a>
+                <a href="../en/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">EN</a>
                 <span class="text-gray-200">|</span>
-                <a href="uz/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">UZ</a>
+                <a href="projects.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">UZ</a>
             </div>
             
             <div class="flex items-center space-x-5">
                 <a href="tel:+998330001530" class="text-sm font-bold text-bridge-dark hover:text-bridge-taupe transition-colors tracking-wide">+998 33 000 15 30</a>
-                <a href="index.html#contact-form" class="bg-bridge-dark text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md hover:-translate-y-0.5">Оставить заявку</a>
+                <a href="index.html#contact-form" class="bg-bridge-dark text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md hover:-translate-y-0.5">Ariza qoldirish</a>
             </div>
         </div>
 
@@ -104,24 +109,23 @@
     </div>
 
     <div id="mobile-menu" class="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col p-8 transition-transform duration-500 translate-x-full lg:hidden pt-28 overflow-y-auto">
-
         <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ (МОБИЛКА) -->
         <div class="flex items-center justify-center space-x-6 mb-10 pb-6 border-b border-gray-100 font-bold text-sm uppercase tracking-widest font-sans">
-            <a href="projects.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">RU</a>
-            <a href="en/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">EN</a>
-            <a href="uz/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">UZ</a>
+            <a href="../projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">RU</a>
+            <a href="../en/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">EN</a>
+            <a href="projects.html" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">UZ</a>
         </div>
 
-        <div class="flex flex-col space-y-6">
-            <a href="index.html#about" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">О компании</a>
-            <a href="index.html#services" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Услуги</a>
-            <a href="projects.html" class="text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Опыт проектов</a>
-            <a href="index.html#team" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Команда</a>
-            <a href="index.html#contact-form" class="mobile-nav-link text-2xl font-serif font-bold text-bridge-dark border-b border-gray-100 pb-4">Контакты</a>
+        <div class="flex flex-col space-y-6 font-sans">
+            <a href="index.html#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Kompaniya haqida</a>
+            <a href="index.html#services" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Xizmatlar</a>
+            <a href="projects.html" class="text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Loyihalar tajribasi</a>
+            <a href="index.html#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Jamoa</a>
+            <a href="index.html#contact-form" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Kontaktlar</a>
         </div>
-        <div class="mt-12 flex flex-col space-y-4">
+        <div class="mt-12 flex flex-col space-y-4 font-sans">
             <a href="tel:+998330001530" class="text-xl font-semibold text-bridge-dark text-center">+998 33 000 15 30</a>
-            <a href="index.html#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Связаться с нами</a>
+            <a href="index.html#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Bog'lanish</a>
         </div>
     </div>
 </header>
@@ -129,9 +133,9 @@
 <section class="pt-40 pb-20 bg-bridge-dark relative overflow-hidden font-sans">
     <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: linear-gradient(#8A7B66 1px, transparent 1px), linear-gradient(90deg, #8A7B66 1px, transparent 1px); background-size: 40px 40px;"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6" data-aos="fade-up">Опыт реализации проектов</h1>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6" data-aos="fade-up">Loyihalarni amalga oshirish tajribasi</h1>
         <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            Детальный референс-лист проектов с применением проформ контрактов FIDIC и участием международных финансовых институтов.
+            FIDIC shartnoma proformalari va xalqaro moliya institutlari (XMI) ishtirokidagi loyihalarning batafsil referens-varag'i.
         </p>
     </div>
 </section>
@@ -140,85 +144,85 @@
     <div class="max-w-7xl mx-auto px-6">
         
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
-            <div class="chapter-number -left-10 md:-left-20 font-sans">01</div>
+            <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">01</div>
             <div class="lg:w-1/2 w-full relative z-10 group">
                 <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
                     <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="olympic city.jpg" alt="Олимпийский городок" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <img src="olympic city.jpg" alt="Olimpiya shaharchasi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
-                        <span class="bg-white text-bridge-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
+                        <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
+                        <span class="bg-white text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full relative z-10">
-                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Спортивная инфраструктура</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Олимпийский городок (Olympic City)</h2>
-                <p class="text-gray-600 font-light text-lg mb-6">Строительство современных спортивных объектов для проведения IV Летних Азиатских юношеских игр в г. Ташкенте.</p>
+            <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Sport infratuzilmasi</span>
+                <h2 class="text-3xl md:text-4xl font-sans font-bold text-bridge-dark mb-4">Olimpiya shaharchasi (Olympic City)</h2>
+                <p class="text-gray-600 font-light text-lg mb-6">Toshkent shahrida IV yozgi Osiyo o'smirlar o'yinlarini o'tkazish uchun zamonaviy sport inshootlarini qurish.</p>
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 inline-block w-full md:w-auto">
-                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Заказчик:</span> Министерство строительства и ЖКХ РУз</p>
+                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Buyurtmachi:</span> O'zbekiston Respublikasi Qurilish va uy-joy kommunal xo'jaligi vazirligi</p>
                 </div>
             </div>
         </article>
 
         <article class="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
-            <div class="chapter-number -right-10 md:-right-20 font-sans text-right w-full">02</div>
+            <div class="chapter-number -right-10 md:-right-20 font-sans text-right w-full hidden md:block">02</div>
             <div class="lg:w-1/2 w-full relative z-10 group">
                 <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
                     <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
                     <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-dark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F / White Book</span>
+                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F / Oq kitob</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full relative z-10">
-                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Институциональное развитие</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">АО «Tashkent Invest Company»</h2>
-                <p class="text-gray-600 font-light text-lg">Разработка и внедрение системы закупок и управления контрактами для инфраструктурных проектов по модели EPC+F, включая EPC-контракты и контракты на инженерно-консультационные услуги.</p>
+            <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Institutsional rivojlantirish</span>
+                <h2 class="text-3xl md:text-4xl font-sans font-bold text-bridge-dark mb-4">"Tashkent Invest Company" AJ</h2>
+                <p class="text-gray-600 font-light text-lg">EPC+F modeli bo'yicha infratuzilma loyihalari, shu jumladan EPC shartnomalari va muhandislik-maslahat xizmatlari shartnomalari uchun xaridlar va shartnomalarni boshqarish tizimini ishlab chiqish hamda joriy etish.</p>
             </div>
         </article>
 
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
-            <div class="chapter-number -left-10 md:-left-20 font-sans">03</div>
+            <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">03</div>
             <div class="lg:w-1/2 w-full relative z-10 group">
                 <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
                     <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=1200&q=80" alt="Азербайджан" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1518241477755-46b5a34e0050?auto=format&fit=crop&w=1200&q=80" alt="Yo'llarni rekonstruksiya qilish" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-dark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC Red Book</span>
-                        <span class="bg-bridge-taupe text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">АБР</span>
+                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC Qizil kitob</span>
+                        <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">OTB</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full relative z-10">
-                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Дорожное строительство</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Реконструкция дорог</h2>
-                <p class="text-gray-600 font-light text-lg mb-6">SRRP/CW/Lot 1, SRRP/CW/Lot 2 и SRRP/CW/Lot 3 Реконструкция 107 км автомобильной дороги 4R105 (км 5-70) и автомобильной дороги 4R100 (км 128-174).</p>
+            <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Yo'l qurilishi</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Avtomobil yo'llarini rekonstruksiya qilish</h2>
+                <p class="text-gray-600 font-light text-lg mb-6">SRRP/CW/Lot 1, SRRP/CW/Lot 2 va SRRP/CW/Lot 3: 4R105 (5-70 km) va 4R100 (128-174 km) avtomobil yo'llarining 107 kilometrini rekonstruksiya qilish.</p>
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 space-y-3 inline-block w-full md:w-auto">
-                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Заказчик:</span> Азербайджанская компания</p>
-                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Институт:</span> Азиатский Банк Развития (АБР)</p>
+                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Buyurtmachi:</span> Ozarbayjon kompaniyasi</p>
+                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">XMI:</span> Osiyo Taraqqiyot Banki (OTB)</p>
                 </div>
             </div>
         </article>
 
         <article class="flex flex-col lg:flex-row-reverse items-center gap-10 md:gap-16 relative" data-aos="fade-up">
-            <div class="chapter-number -right-10 md:-right-20 font-sans text-right w-full">04</div>
+            <div class="chapter-number -right-10 md:-right-20 font-sans text-right w-full hidden md:block">04</div>
             <div class="lg:w-1/2 w-full relative z-10 group">
                 <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
                     <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="kamchik.avif" alt="Камчик" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <img src="kamchik.avif" alt="Qamchiq" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-dark text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC MDB Harmonised</span>
+                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">MDB Uyg'unlashtirilgan</span>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full relative z-10">
-                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Транспортный коридор</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Автодорога А-373 (Перевал Камчик)</h2>
-                <p class="text-gray-600 font-light text-lg mb-6">Транспортный коридор ЦАРЭС 2 Реконструкция автодороги А-373 Ташкент-Ош (перевал Камчик).</p>
+            <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Transport yo'lagi</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">A-373 Avtomobil yo'li (Qamchiq dovoni)</h2>
+                <p class="text-gray-600 font-light text-lg mb-6">CAREC 2 Transport yo'lagi. A-373 Toshkent-O'sh avtomobil yo'lini (Qamchiq dovoni) rekonstruksiya qilish.</p>
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 inline-block w-full md:w-auto">
-                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Заказчик:</span> АО EVRASCON</p>
+                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Buyurtmachi:</span> EVRASCON AJ</p>
                 </div>
             </div>
         </article>
@@ -228,45 +232,45 @@
 
 <section class="py-20 bg-white border-t border-bridge-taupe/20 font-sans">
     <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-bridge-dark mb-6">Полный референс-лист и профиль компании</h2>
-        <p class="text-gray-600 font-light mb-10 max-w-2xl mx-auto">Скачайте подробную презентацию с описанием нашей методологии, полного списка реализованных проектов и юридических кейсов.</p>
+        <h2 class="text-3xl font-bold text-bridge-dark mb-6">To'liq referens-varaq va kompaniya profili</h2>
+        <p class="text-gray-600 font-light mb-10 max-w-2xl mx-auto">Bizning metodologiyamiz, amalga oshirilgan loyihalarning to'liq ro'yxati va yuridik keyslar tavsiflangan batafsil taqdimotni yuklab oling.</p>
         <a href="Bridge_Consult_–_Infrastructure_Contracts_&_Dispute_Resolution_Advisory.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-bridge-dark text-white px-10 py-5 rounded-full text-sm font-bold uppercase tracking-wider hover:bg-bridge-taupe transition-all duration-300 shadow-xl hover-float">
             <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            Скачать PDF презентацию (12 MB)
+            PDF taqdimotni yuklab olish (12 MB)
         </a>
     </div>
 </section>
 
 <footer class="bg-bridge-dark pt-16 md:pt-20 pb-8 border-t-4 border-bridge-taupe relative overflow-hidden font-sans">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-48 -mt-48 pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-white/5 rounded-full blur-3xl -mr-32 md:-mr-48 -mt-32 md:-mt-48 pointer-events-none"></div>
     
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16">
             
             <div class="lg:col-span-5">
                 <a href="index.html" class="flex flex-col mb-4 md:mb-6 inline-block">
-                    <span class="text-3xl font-bold tracking-tight text-white leading-none">Bridge</span>
+                    <span class="text-3xl font-sans font-bold tracking-tight text-white leading-none">Bridge</span>
                     <span class="text-[10px] md:text-xs tracking-widest text-bridge-taupe uppercase font-semibold">Consult</span>
                 </a>
-                <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-6 md:mb-8 text-sm md:text-base">Ваш надежный партнер в контрактном инжиниринге и разрешении споров. Строим мосты между правовой надежностью и успешной реализацией проектов.</p>
+                <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-6 md:mb-8 text-sm md:text-base">Shartnoma injiniringi va nizolarni hal qilishda sizning ishonchli hamkoringiz. Huquqiy ishonchlilik va loyihalarni muvaffaqiyatli amalga oshirish o'rtasida ko'priklar quramiz.</p>
             </div>
             
             <div class="lg:col-span-3">
-                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Навигация</h4>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Navigatsiya</h4>
                 <ul class="space-y-3 md:space-y-4 text-gray-400 font-light text-sm">
-                    <li><a href="index.html#about" class="hover:text-bridge-taupe transition-colors">О компании</a></li>
-                    <li><a href="index.html#services" class="hover:text-bridge-taupe transition-colors">Наши Услуги</a></li>
-                    <li><a href="projects.html" class="hover:text-bridge-taupe transition-colors">Опыт проектов</a></li>
-                    <li><a href="index.html#team" class="hover:text-bridge-taupe transition-colors">Эксперты</a></li>
+                    <li><a href="index.html#about" class="hover:text-bridge-taupe transition-colors">Kompaniya haqida</a></li>
+                    <li><a href="index.html#services" class="hover:text-bridge-taupe transition-colors">Xizmatlar</a></li>
+                    <li><a href="projects.html" class="hover:text-bridge-taupe transition-colors">Loyihalar tajribasi</a></li>
+                    <li><a href="index.html#team" class="hover:text-bridge-taupe transition-colors">Jamoa</a></li>
                 </ul>
             </div>
             
             <div class="lg:col-span-4">
-                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Контактные данные</h4>
+                <h4 class="text-white font-bold uppercase tracking-widest text-xs md:text-sm mb-4 md:mb-6">Bog'lanish uchun ma'lumotlar</h4>
                 <ul class="space-y-4 md:space-y-6 text-gray-400 font-light text-sm">
                     <li class="flex items-start">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span class="leading-relaxed">100180, Республика Узбекистан,<br>г. Ташкент, Юнусабадский район,<br>ул. Ахмада Дониша, 12 квартал, дом 20А</span>
+                        <span class="leading-relaxed">100180, O'zbekiston Respublikasi,<br>Toshkent sh., Yunusobod tumani,<br>Ahmad Donish ko'chasi, 12-mavze, 20A-uy</span>
                     </li>
                     <li class="flex items-center">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -282,16 +286,85 @@
         </div>
         
         <div class="pt-6 md:pt-8 border-t border-gray-800 flex flex-col items-center justify-center text-xs md:text-sm text-gray-500 font-light text-center">
-            <p>&copy; 2016-2026 Bridge Consult. Все права защищены.</p>
+            <p>&copy; 2016-2026 Bridge Consult. Barcha huquqlar himoyalangan.</p>
         </div>
     </div>
 </footer>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
 <script src="main.js"></script>
 <script>
     AOS.init({ once: true, offset: 50 });
     VanillaTilt.init(document.querySelectorAll(".tilt-card"), { max: 5, speed: 400, glare: true, "max-glare": 0.2 });
+</script>
+
+<div id="projectModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="relative bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl m-4 transform scale-95 transition-transform duration-300" id="modalContent">
+        <button onclick="closeModal()" class="absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full p-2 transition-colors z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <div class="p-10 font-sans">
+            <span id="modalTag" class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-2 block">Kategoriya</span>
+            <h3 id="modalTitle" class="text-3xl font-bold text-bridge-dark mb-6">Loyiha nomi</h3>
+            <div id="modalBody" class="space-y-4 text-gray-600 font-light leading-relaxed"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('projectModal');
+    const modalContent = document.getElementById('modalContent');
+    const mTitle = document.getElementById('modalTitle');
+    const mTag = document.getElementById('modalTag');
+    const mBody = document.getElementById('modalBody');
+
+    const projectsData = {
+        'olympic': {
+            tag: 'EPC+F | 2022-2025',
+            title: 'Olimpiya shaharchasi (Olympic City)',
+            text: '<p>Toshkent shahrida IV yozgi Osiyo o\'smirlar o\'yinlarini o\'tkazish uchun zamonaviy sport inshootlarini qurish.</p><p><strong>Buyurtmachi:</strong> O\'zbekiston Respublikasi Qurilish va uy-joy kommunal xo\'jaligi vazirligi.</p>'
+        },
+        'tashkent': {
+            tag: 'EPC+F / Oq kitob | 2025 - Hozirgi vaqt',
+            title: '"Tashkent Invest Company" AJ',
+            text: '<p>EPC+F modeli bo\'yicha infratuzilma loyihalari, shu jumladan EPC shartnomalari va muhandislik-maslahat xizmatlari shartnomalari uchun xaridlar va shartnomalarni boshqarish tizimini ishlab chiqish hamda joriy etish.</p>'
+        },
+        'road_recon': {
+            tag: 'FIDIC Qizil kitob | OTB',
+            title: 'Avtomobil yo\'llarini rekonstruksiya qilish (4R105 va 4R100)',
+            text: '<p>SRRP/CW/Lot 1, SRRP/CW/Lot 2 va SRRP/CW/Lot 3: 4R105 (5-70 km) va 4R100 (128-174 km) avtomobil yo\'llarining 107 kilometrini rekonstruksiya qilish.</p><p><strong>Buyurtmachi:</strong> Ozarbayjon kompaniyasi.</p><p><strong>Moliyalashtirish:</strong> Osiyo Taraqqiyot Banki (OTB).</p>'
+        },
+        'kamchik': {
+            tag: 'MDB Uyg\'unlashtirilgan | 2016-2022',
+            title: 'A-373 Avtomobil yo\'li (Qamchiq dovoni)',
+            text: '<p>CAREC 2 Transport yo\'lagi. A-373 Toshkent-O\'sh avtomobil yo\'lini (Qamchiq dovoni) rekonstruksiya qilish.</p><p><strong>Buyurtmachi:</strong> EVRASCON AJ.</p>'
+        }
+    };
+
+    function openModal(projectId) {
+        const data = projectsData[projectId];
+        if(!data) return;
+        mTitle.innerHTML = data.title;
+        mTag.innerHTML = data.tag;
+        mBody.innerHTML = data.text;
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.add('opacity-0');
+        modalContent.classList.remove('scale-100');
+        modalContent.classList.add('scale-95');
+        setTimeout(() => { modal.classList.add('hidden'); }, 300);
+        document.body.style.overflow = 'auto';
+    }
 </script>
 </body>
 </html>
