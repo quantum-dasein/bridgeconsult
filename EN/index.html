@@ -1,58 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridge Consult | Infrastructure Contracts & Dispute Resolution</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Basic SEO -->
+        <title>Bridge Consult | Infrastructure Contracts & FIDIC Dispute Resolution</title>
+        <meta name="title" content="Bridge Consult | Infrastructure Contracts & FIDIC Dispute Resolution">
+        <meta name="description" content="Independent consulting firm in Uzbekistan. International expertise: FIDIC and EPC contract management, Forensic Delay Analysis, and construction dispute resolution.">
+        <meta name="keywords" content="FIDIC, EPC contracts, contract engineering, dispute resolution, construction Uzbekistan, construction audit, DAAB, mediation, Larissa Belousova">
+        <meta name="author" content="Bridge Consult">
+        <meta name="robots" content="index, follow">
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bridge Consult | Infrastructure Contracts & Dispute Resolution">
-    <meta property="og:description" content="Independent international expertise. Advisory on FIDIC and EPC projects.">
-    <meta property="og:image" content="https://bridgeconsult.uz/og-image.jpg">
-    <meta name="theme-color" content="#292724">
-
-    <script>
-        (function() {
-            var t = localStorage.getItem('bc-theme');
-            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark-theme');
-            }
-        })();
-    </script>
+        <!-- Canonical & Multilingual (Hreflang) -->
+        <link rel="canonical" href="https://bridgeconsult.uz/EN/">
+        <link rel="alternate" hreflang="ru" href="https://bridgeconsult.uz/">
+        <link rel="alternate" hreflang="en" href="https://bridgeconsult.uz/EN/">
+        <link rel="alternate" hreflang="uz" href="https://bridgeconsult.uz/UZ/">
+        <link rel="alternate" hreflang="x-default" href="https://bridgeconsult.uz/">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/png" href="../favicon.png">
+        <!-- Open Graph / Facebook / LinkedIn -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://bridgeconsult.uz/EN/">
+        <meta property="og:title" content="Bridge Consult | Infrastructure Contracts & Dispute Resolution">
+        <meta property="og:description" content="Independent international expertise. Advisory on FIDIC and EPC projects in Uzbekistan and Central Asia.">
+        <meta property="og:image" content="https://bridgeconsult.uz/og-image.jpg">
+        <meta property="og:site_name" content="Bridge Consult">
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bridge-taupe': '#8A7B66',
-                        'bridge-dark': '#292724',
-                        'bridge-light': '#F5F4F2',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://bridgeconsult.uz/EN/">
+        <meta property="twitter:title" content="Bridge Consult | Infrastructure Contracts">
+        <meta property="twitter:description" content="Independent international expertise. Advisory on FIDIC and EPC projects.">
+        <meta property="twitter:image" content="https://bridgeconsult.uz/og-image.jpg">
+    
+        <meta name="theme-color" content="#292724">
+        
+        <link rel="icon" type="image/png" href="../favicon.png">
+        <link rel="apple-touch-icon" href="../favicon.png">
+    
+        <!-- Schema.org Microdata -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Bridge Consult",
+          "image": "https://bridgeconsult.uz/bridge%202.png",
+          "@id": "https://bridgeconsult.uz",
+          "url": "https://bridgeconsult.uz/EN/",
+          "telephone": "+998330001530",
+          "email": "info@bridgeconsult.uz",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ahmad Donish st., 12 block, 20A",
+            "addressLocality": "Tashkent",
+            "addressRegion": "Yunusabad district",
+            "postalCode": "100180",
+            "addressCountry": "UZ"
+          },
+          "description": "Independent consulting firm specializing in contract engineering, construction contract administration, and dispute resolution in international infrastructure projects.",
+          "founder": {
+            "@type": "Person",
+            "name": "Larissa Belousova"
+          },
+          "areaServed": ["Uzbekistan", "Central Asia"],
+          "priceRange": "$$$"
+        }
+        </script>
+    
+        <script>
+            (function() {
+                var t = localStorage.getItem('bc-theme');
+                if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            })();
+        </script>
+    
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="../style.css">
+        
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'bridge-taupe': '#8A7B66',
+                            'bridge-dark': '#292724',
+                            'bridge-light': '#F5F4F2',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'system-ui', 'sans-serif'],
+                            serif: ['Playfair Display', 'Georgia', 'serif'],
+                        }
                     }
                 }
             }
-        }
-    </script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        html, body {
-            max-width: 100vw;
-            overflow-x: hidden;
-            position: relative;
-        }
-    </style>
-</head>
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                max-width: 100vw;
+                overflow-x: hidden;
+                position: relative;
+            }
+        </style>
+    </head>
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe/20 overflow-x-hidden">
 
 <div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
