@@ -778,10 +778,7 @@
                 <p class="text-gray-400 font-light" data-aos="fade-up" data-aos-delay="300">Свяжитесь с нами для предварительной оценки вашего запроса.</p>
             </div>
             
-            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6 relative z-10">
-                <input type="hidden" name="access_key" value="ТВОЙ_КЛЮЧ_ЗДЕСЬ">
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
+            <form id="ru-contact-form" class="space-y-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div data-aos="fade-right" data-aos-delay="400">
                         <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Ваше Имя</label>
@@ -796,15 +793,58 @@
                     <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Сообщение или Суть запроса</label>
                     <textarea name="message" required rows="4" class="w-full bg-transparent border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-bridge-taupe transition-colors resize-none" placeholder="Опишите вашу ситуацию..."></textarea>
                 </div>
-                
-                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <!-- Статусы -->
+                <div id="ru-form-success" class="hidden text-center py-3 px-4 bg-green-500/10 border border-green-500/30 rounded-xl">
+                    <p class="text-green-400 font-bold">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</p>
+                </div>
+                <div id="ru-form-error" class="hidden text-center py-3 px-4 bg-red-500/10 border border-red-500/30 rounded-xl">
+                    <p class="text-red-400 font-bold">Ошибка при отправке. Попробуйте ещё раз или напишите на info@bridgeconsult.uz</p>
+                </div>
 
                 <div data-aos="zoom-in" data-aos-delay="700" class="pt-2">
-                    <button type="submit" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(138,123,102,0.6)] hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.6)]">
+                    <button type="submit" id="ru-submit-btn" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(138,123,102,0.6)] hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.6)] disabled:opacity-60 disabled:cursor-not-allowed">
                         Отправить запрос
                     </button>
                 </div>
             </form>
+
+            <script>
+            document.getElementById('ru-contact-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const btn = document.getElementById('ru-submit-btn');
+                const success = document.getElementById('ru-form-success');
+                const error = document.getElementById('ru-form-error');
+
+                btn.disabled = true;
+                btn.textContent = 'Отправка...';
+                success.classList.add('hidden');
+                error.classList.add('hidden');
+
+                try {
+                    const res = await fetch('https://formspree.io/f/meedwzjw', {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (res.ok) {
+                        form.reset();
+                        success.classList.remove('hidden');
+                        btn.textContent = '✓ Отправлено';
+                    } else {
+                        error.classList.remove('hidden');
+                        btn.disabled = false;
+                        btn.textContent = 'Отправить запрос';
+                    }
+                } catch (err) {
+                    error.classList.remove('hidden');
+                    btn.disabled = false;
+                    btn.textContent = 'Отправить запрос';
+                }
+            });
+            </script>
         </div>
     </div>
 </section>

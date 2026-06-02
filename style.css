@@ -132,3 +132,48 @@ html {
 }
 /* Убираем гигантские цифры с фона в проектах */
 .chapter-number { display: none !important; }
+/* --- БАЗОВАЯ НАСТРОЙКА --- */
+html, body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* --- ТЕМНАЯ ТЕМА --- */
+html.dark-theme body {
+    background-color: #151413 !important;
+    color: #e4e4e7 !important;
+}
+
+/* 1. ЛОГОТИПЫ И ИКОНКИ (исключаем из инверсии) */
+html.dark-theme img, 
+html.dark-theme svg {
+    filter: none !important; /* Убираем инверсию */
+}
+
+/* 2. КАРТОЧКИ И ФОНЫ */
+html.dark-theme .bg-white,
+html.dark-theme section.bg-white,
+html.dark-theme .bg-bridge-light,
+html.dark-theme .bg-gray-50 {
+    background-color: #1a1918 !important;
+    border-color: #27272a !important;
+}
+
+/* 3. ТЕКСТ (делаем читаемым на темном) */
+html.dark-theme .text-bridge-dark,
+html.dark-theme h1, html.dark-theme h2, html.dark-theme h3 {
+    color: #ffffff !important;
+}
+
+html.dark-theme .text-gray-600,
+html.dark-theme .text-gray-500,
+html.dark-theme p {
+    color: #a1a1aa !important;
+}
+
+/* 4. ФИКС ЛОГОТИПОВ ПАРТНЕРОВ (чтобы они стали белыми на темном) */
+html.dark-theme .logo-wrapper img {
+    filter: brightness(0) invert(1) opacity(0.5) !important;
+}
+html.dark-theme .logo-wrapper:hover img {
+    opacity(1) !important;
+}
