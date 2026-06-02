@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /projects.html
+Allow: /EN/
+Allow: /UZ/
+
+# Указываем поисковикам путь к карте сайта
+Sitemap: https://bridgeconsult.uz/sitemap.xml
