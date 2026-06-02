@@ -127,13 +127,13 @@
 </header>
 
 <section class="pt-40 pb-32 md:pt-48 md:pb-40 bg-bridge-dark relative overflow-hidden font-sans">
-    <!-- ВИДЕО ФОН -->
-    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-60">
-        <source src="drone-highway.mp4" type="video/mp4">
-    </video>
-    
-    <!-- Градиентное затемнение, чтобы белый текст читался идеально -->
-    <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/90 via-bridge-dark/30 to-bridge-dark z-[1]"></div>
+    <!-- Тот самый красивый CSS-фон с градиентами и паттерном -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-bridge-taupe/20 via-bridge-dark to-bridge-dark"></div>
+        <div class="absolute -bottom-1/2 -left-1/4 w-[150%] h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bridge-taupe/10 via-transparent to-transparent blur-[100px]"></div>
+        <!-- Легкий паттерн из точек для текстуры -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]"></div>
+    </div>
     
     <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 tracking-tight" data-aos="fade-up">Опыт реализации проектов</h1>
@@ -212,16 +212,25 @@
 
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
             <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">03</div>
+            
+            <!-- БЛОК С ВИДЕО ДРОНА (Реконструкция дорог) -->
             <div class="lg:w-1/2 w-full relative z-10 group">
-                <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
-                    <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="highway-reconstruction.png" alt="Реконструкция дорог" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
+                <div class="aspect-video w-full bg-bridge-dark rounded-3xl overflow-hidden premium-shadow relative">
+                    
+                    <!-- Полноценный HTML5 плеер со звуком и управлением -->
+                    <video controls playsinline class="w-full h-full object-cover">
+                        <source src="drone-highway.mp4" type="video/mp4">
+                    </video>
+                    
+                    <!-- Плашки -->
+                    <div class="absolute top-6 left-6 z-20 flex gap-2 pointer-events-none">
                         <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC Red Book</span>
                         <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">АБР</span>
                     </div>
                 </div>
             </div>
+        
+            <!-- ТЕКСТОВАЯ ЧАСТЬ -->
             <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
                 <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Дорожное строительство</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Реконструкция дорог</h2>

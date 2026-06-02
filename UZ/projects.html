@@ -129,19 +129,17 @@
         </div>
     </div>
 </header>
-<section class="relative bg-bridge-dark overflow-hidden font-sans min-h-[60vh] flex items-center justify-center pt-24 pb-16">
-    <!-- ВИДЕО ФОН -->
-    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-60">
-        <source src="../drone-highway.mp4" type="video/mp4">
-    </video>
+<section class="pt-40 pb-32 md:pt-48 md:pb-40 bg-bridge-dark relative overflow-hidden font-sans">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-bridge-taupe/20 via-bridge-dark to-bridge-dark"></div>
+        <div class="absolute -bottom-1/2 -left-1/4 w-[150%] h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bridge-taupe/10 via-transparent to-transparent blur-[100px]"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]"></div>
+    </div>
     
-    <!-- Градиентное затемнение (без мыла) -->
-    <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark/90 via-bridge-dark/30 to-bridge-dark z-[1]"></div>
-    
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center mt-16">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 tracking-tight" data-aos="fade-up">Loyihalarni amalga oshirish tajribasi</h1>
         <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-            FIDIC shartnoma proformalari va xalqaro moliya institutlari (XMI) ishtirokidagi loyihalarning batafsil referens-varag'i.
+            FIDIC shartnomalari va xalqaro moliya institutlari ishtirokidagi loyihalarning batafsil ma'lumotnomasi.
         </p>
     </div>
 </section>
@@ -213,23 +211,29 @@
 
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
             <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">03</div>
+            
             <div class="lg:w-1/2 w-full relative z-10 group">
-                <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
-                    <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="../highway-reconstruction.png" alt="Avtomobil yo'llarini rekonstruksiya qilish" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC Qizil kitob</span>
+                <div class="aspect-video w-full bg-bridge-dark rounded-3xl overflow-hidden premium-shadow relative flex items-center justify-center">
+                    
+                    <!-- ВНИМАНИЕ: Если ты переименовал видео, поменяй drone-highway.mp4 на свое новое название! -->
+                    <video controls playsinline class="absolute inset-0 w-full h-full object-cover">
+                        <source src="../drone-highway.mp4" type="video/mp4">
+                    </video>
+                    
+                    <div class="absolute top-6 left-6 z-20 flex gap-2 pointer-events-none">
+                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">FIDIC Red Book</span>
                         <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">OTB</span>
                     </div>
                 </div>
             </div>
+        
             <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
                 <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Yo'l qurilishi</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Avtomobil yo'llarini rekonstruksiya qilish</h2>
-                <p class="text-gray-600 font-light text-lg mb-6">SRRP/CW/Lot 1, SRRP/CW/Lot 2 va SRRP/CW/Lot 3: 4R105 (5-70 km) va 4R100 (128-174 km) avtomobil yo'llarining 107 kilometrini rekonstruksiya qilish.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Yo'llarni rekonstruksiya qilish</h2>
+                <p class="text-gray-600 font-light text-lg mb-6">SRRP/CW/Lot 1, SRRP/CW/Lot 2 va SRRP/CW/Lot 3 4R105 avtomobil yo'lining 107 km qismini (5-70 km) va 4R100 avtomobil yo'lini (128-174 km) rekonstruksiya qilish.</p>
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 space-y-3 inline-block w-full md:w-auto">
                     <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Buyurtmachi:</span> Ozarbayjon kompaniyasi</p>
-                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">XMI:</span> Osiyo Taraqqiyot Banki (OTB)</p>
+                    <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Institut:</span> Osiyo Taraqqiyot Banki (OTB)</p>
                 </div>
             </div>
         </article>
