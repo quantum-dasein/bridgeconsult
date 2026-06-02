@@ -219,6 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // --- ЛОГИКА КНОПКИ "ЧИТАТЬ ПОЛНОСТЬЮ" ДЛЯ МОБИЛЬНЫХ ---
+// --- ЛОГИКА КНОПКИ "ЧИТАТЬ ПОЛНОСТЬЮ" ДЛЯ МОБИЛЬНЫХ ---
 document.addEventListener('DOMContentLoaded', () => {
     const readMoreBtns = document.querySelectorAll('.read-more-btn');
     
@@ -228,20 +229,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = container.querySelector('.team-content');
             const overlay = container.querySelector('.fade-overlay');
             
+            // Подтягиваем переводы из атрибутов (или берем русский по умолчанию)
+            const textMore = btn.getAttribute('data-more') || 'Читать полностью ↓';
+            const textLess = btn.getAttribute('data-less') || 'Скрыть ↑';
+            
             if (content.classList.contains('max-h-[140px]')) {
                 // Разворачиваем текст
                 content.classList.remove('max-h-[140px]');
-                content.classList.add('max-h-[2000px]'); // Большое значение для раскрытия
+                content.classList.add('max-h-[2000px]');
                 overlay.style.opacity = '0';
-                e.target.innerHTML = 'Скрыть ↑';
+                e.target.innerHTML = textLess;
             } else {
                 // Сворачиваем текст
                 content.classList.remove('max-h-[2000px]');
                 content.classList.add('max-h-[140px]');
                 overlay.style.opacity = '1';
-                e.target.innerHTML = 'Читать полностью ↓';
+                e.target.innerHTML = textMore;
                 
-                // Плавный скролл чуть вверх, чтобы карточка осталась в зоне видимости
+                // Плавный скролл чуть вверх
                 setTimeout(() => {
                     container.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 300);
