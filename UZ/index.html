@@ -756,59 +756,85 @@
     </div>
 </section>
 
-  <!-- Status xabarlari -->
-  <div id="uz-form-success" class="hidden text-center py-3 px-4 bg-green-500/10 border border-green-500/30 rounded-xl">
-    <p class="text-green-400 font-bold">✓ Ariza yuborildi! Tez orada siz bilan bog'lanamiz.</p>
-</div>
-<div id="uz-form-error" class="hidden text-center py-3 px-4 bg-red-500/10 border border-red-500/30 rounded-xl">
-    <p class="text-red-400 font-bold">Yuborishda xatolik. Qayta urinib ko'ring yoki info@bridgeconsult.uz ga yozing.</p>
-</div>
+<section id="contact-form" class="py-32 bg-white relative overflow-hidden font-sans">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="bg-bridge-dark rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div class="absolute -top-24 -right-24 w-64 h-64 bg-bridge-taupe rounded-full opacity-20 blur-3xl"></div>
 
-<div data-aos="zoom-in" data-aos-delay="700" class="pt-2">
-    <button type="submit" id="uz-submit-btn" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(138,123,102,0.6)] hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.6)] disabled:opacity-60 disabled:cursor-not-allowed">
-        Arizani yuborish
-    </button>
-</div>
-</form>
+            <div class="text-center mb-10 relative z-10">
+                <h2 class="text-3xl md:text-4xl font-sans font-bold text-white mb-4" data-aos="fade-down" data-aos-delay="200">Ariza qoldirish</h2>
+                <p class="text-gray-400 font-light" data-aos="fade-up" data-aos-delay="300">So'rovingizni dastlabki baholash uchun biz bilan bog'laning.</p>
+            </div>
+            
+            <form id="uz-contact-form" class="space-y-6 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div data-aos="fade-right" data-aos-delay="400">
+                        <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Ismingiz</label>
+                        <input type="text" name="name" required class="w-full bg-transparent border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-bridge-taupe transition-colors" placeholder="Ismingizni kiriting">
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="500">
+                        <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Elektron pochta</label>
+                        <input type="email" name="email" required class="w-full bg-transparent border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-bridge-taupe transition-colors" placeholder="info@company.com">
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="600">
+                    <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Xabar yoki so'rov mazmuni</label>
+                    <textarea name="message" required rows="4" class="w-full bg-transparent border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-bridge-taupe transition-colors resize-none" placeholder="Vaziyatingizni ta'riflab bering..."></textarea>
+                </div>
 
-<script>
-document.getElementById('uz-contact-form').addEventListener('submit', async function(e) {
-e.preventDefault();
-const form = e.target;
-const btn = document.getElementById('uz-submit-btn');
-const success = document.getElementById('uz-form-success');
-const error = document.getElementById('uz-form-error');
+                <!-- Status xabarlari -->
+                <div id="uz-form-success" class="hidden text-center py-3 px-4 bg-green-500/10 border border-green-500/30 rounded-xl">
+                    <p class="text-green-400 font-bold">✓ Ariza yuborildi! Tez orada siz bilan bog'lanamiz.</p>
+                </div>
+                <div id="uz-form-error" class="hidden text-center py-3 px-4 bg-red-500/10 border border-red-500/30 rounded-xl">
+                    <p class="text-red-400 font-bold">Yuborishda xatolik. Qayta urinib ko'ring yoki info@bridgeconsult.uz ga yozing.</p>
+                </div>
 
-btn.disabled = true;
-btn.textContent = 'Yuborilmoqda...';
-success.classList.add('hidden');
-error.classList.add('hidden');
+                <div data-aos="zoom-in" data-aos-delay="700" class="pt-2">
+                    <button type="submit" id="uz-submit-btn" class="w-full bg-bridge-taupe text-white font-bold uppercase tracking-widest py-4 rounded-xl hover:bg-white hover:text-bridge-dark transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(138,123,102,0.6)] hover:shadow-[0_10px_30px_-10px_rgba(255,255,255,0.6)] disabled:opacity-60 disabled:cursor-not-allowed">
+                        Arizani yuborish
+                    </button>
+                </div>
+            </form>
 
-try {
-    const res = await fetch('https://formspree.io/f/meedwzjw', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-    });
+            <script>
+            document.getElementById('uz-contact-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const form = e.target;
+                const btn = document.getElementById('uz-submit-btn');
+                const success = document.getElementById('uz-form-success');
+                const error = document.getElementById('uz-form-error');
 
-    if (res.ok) {
-        form.reset();
-        success.classList.remove('hidden');
-        btn.textContent = '✓ Yuborildi';
-    } else {
-        error.classList.remove('hidden');
-        btn.disabled = false;
-        btn.textContent = 'Arizani yuborish';
-    }
-} catch (err) {
-    error.classList.remove('hidden');
-    btn.disabled = false;
-    btn.textContent = 'Arizani yuborish';
-}
-});
-</script>
-</div>
-</div>
+                btn.disabled = true;
+                btn.textContent = 'Yuborilmoqda...';
+                success.classList.add('hidden');
+                error.classList.add('hidden');
+
+                try {
+                    const res = await fetch('https://formspree.io/f/meedwzjw', {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (res.ok) {
+                        form.reset();
+                        success.classList.remove('hidden');
+                        btn.textContent = '✓ Yuborildi';
+                    } else {
+                        error.classList.remove('hidden');
+                        btn.disabled = false;
+                        btn.textContent = 'Arizani yuborish';
+                    }
+                } catch (err) {
+                    error.classList.remove('hidden');
+                    btn.disabled = false;
+                    btn.textContent = 'Arizani yuborish';
+                }
+            });
+            </script>
+        </div>
+    </div>
 </section>
 
 <footer class="bg-bridge-dark pt-16 md:pt-20 pb-8 border-t-4 border-bridge-taupe relative overflow-hidden font-sans">
