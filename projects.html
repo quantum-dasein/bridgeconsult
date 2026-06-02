@@ -149,19 +149,20 @@
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
             <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">01</div>
             
-            <!-- БЛОК С ВИДЕО -->
-            <div class="lg:w-1/2 w-full relative z-10 group">
-                <div class="aspect-video w-full bg-bridge-dark rounded-3xl overflow-hidden premium-shadow relative">
-                    <div class="absolute inset-0 bg-bridge-dark/20 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-                    <video autoplay loop muted playsinline class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
-                        <source src="olympic-city.mp4" type="video/mp4">
-                    </video>
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
-                        <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
-                    </div>
-                </div>
-            </div>
+<!-- БЛОК С ИНТЕРАКТИВНЫМ ВИДЕО -->
+<div class="lg:w-1/2 w-full relative z-10 group">
+    <div class="aspect-video w-full bg-bridge-dark rounded-3xl overflow-hidden premium-shadow relative">
+        <!-- Полноценный HTML5 плеер со звуком и управлением -->
+        <video controls playsinline class="w-full h-full object-cover">
+            <source src="olympic-city.mp4" type="video/mp4">
+        </video>
+        <!-- Плашки (pointer-events-none чтобы не перекрывали кнопки плеера) -->
+        <div class="absolute top-6 left-6 z-20 flex gap-2 pointer-events-none">
+            <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
+            <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
+        </div>
+    </div>
+</div>
 
             <!-- БЛОК С ТЕКСТОМ И ЭКСПЕРТИЗОЙ -->
             <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">

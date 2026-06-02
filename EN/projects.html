@@ -152,20 +152,42 @@
         
         <article class="flex flex-col lg:flex-row items-center gap-10 md:gap-16 mb-24 relative" data-aos="fade-up">
             <div class="chapter-number -left-10 md:-left-20 font-sans hidden md:block">01</div>
+            
+            <!-- БЛОК С ВИДЕО -->
             <div class="lg:w-1/2 w-full relative z-10 group">
-                <div class="aspect-video w-full bg-gray-200 rounded-3xl overflow-hidden premium-shadow relative">
-                    <div class="absolute inset-0 bg-bridge-dark/10 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src="../olympic city.jpg" alt="Olympic City" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
-                    <div class="absolute top-6 left-6 z-20 flex gap-2">
-                        <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
-                        <span class="bg-white text-bridge-dark text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
+                <div class="aspect-video w-full bg-bridge-dark rounded-3xl overflow-hidden premium-shadow relative">
+                    <video controls playsinline class="w-full h-full object-cover">
+                        <source src="../olympic-city.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute top-6 left-6 z-20 flex gap-2 pointer-events-none">
+                        <span class="bg-bridge-dark text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">EPC+F</span>
+                        <span class="bg-bridge-taupe text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full shadow-lg">2022-2025</span>
                     </div>
                 </div>
             </div>
+
+            <!-- БЛОК С ТЕКСТОМ И ЭКСПЕРТИЗОЙ -->
             <div class="lg:w-1/2 w-full relative z-10 mt-4 md:mt-0">
                 <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-3 block">Sports Infrastructure</span>
-                <h2 class="text-3xl md:text-4xl font-sans font-bold text-bridge-dark mb-4">Olympic City</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-bridge-dark mb-4">Olympic City</h2>
                 <p class="text-gray-600 font-light text-lg mb-6">Construction of modern sports facilities for the IV Asian Youth Games in Tashkent.</p>
+                
+                <!-- Детали из презентации -->
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 rounded-full bg-bridge-taupe mt-2 mr-3 shrink-0"></span>
+                        <span class="text-sm text-gray-600"><strong class="text-bridge-dark">Energy Efficiency:</strong> Integration of BIPV and VAPV photovoltaic panels on roofs and parking lots.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 rounded-full bg-bridge-taupe mt-2 mr-3 shrink-0"></span>
+                        <span class="text-sm text-gray-600"><strong class="text-bridge-dark">International Standards:</strong> A 50-meter competition pool meeting FINA standards and a UCI-standard velodrome.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 rounded-full bg-bridge-taupe mt-2 mr-3 shrink-0"></span>
+                        <span class="text-sm text-gray-600"><strong class="text-bridge-dark">Adaptive Design:</strong> Rainwater harvesting system, ecological pools, and sunken green spaces.</span>
+                    </li>
+                </ul>
+
                 <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 inline-block w-full md:w-auto">
                     <p class="text-bridge-dark font-medium"><span class="text-gray-400 font-bold text-xs uppercase tracking-widest mr-3">Employer:</span> Ministry of Construction and Housing and Communal Economy of the Republic of Uzbekistan</p>
                 </div>
