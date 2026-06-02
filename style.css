@@ -431,16 +431,22 @@ html.dark-theme #portfolio .portfolio-photo-card.photo-bw img.grayscale {
     filter: grayscale(100%) !important;
 }
 
-/* Медиа: интервью — ч/б, клик по фото → цвет */
-#media .media-photo-card .media-photo-wrap {
-    cursor: pointer;
-}
+/* --- МЕДИА-КАРТОЧКИ (ЭФФЕКТЫ ПРИ НАВЕДЕНИИ) --- */
+/* Светлая тема: по умолчанию ч/б, при наведении — цвет */
 #media .media-photo-card .media-photo-wrap img {
     filter: grayscale(100%);
-    transition: filter 0.5s ease, transform 0.7s ease;
+    transition: filter 0.4s ease, transform 0.7s ease;
 }
-#media .media-photo-card.photo-color .media-photo-wrap img {
+#media .media-photo-card:hover .media-photo-wrap img {
+    filter: grayscale(0%);
+}
+
+/* Темная тема: по умолчанию цветное, при наведении — ч/б */
+html.dark-theme #media .media-photo-card .media-photo-wrap img {
     filter: grayscale(0%) !important;
+}
+html.dark-theme #media .media-photo-card:hover .media-photo-wrap img {
+    filter: grayscale(100%) !important;
 }
 
 /* Career Centre: светлая панель под логотип в тёмной теме */

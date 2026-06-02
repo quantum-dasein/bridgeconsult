@@ -10,16 +10,16 @@
     <meta property="og:description" content="Независимая экспертиза международного уровня. Сопровождение проектов FIDIC и EPC.">
     <meta property="og:image" content="https://bridgeconsult.uz/og-image.jpg">
     <meta name="theme-color" content="#292724">
-
-    <!-- Anti-flicker: тёмная тема до загрузки CSS -->
-    <script>
-        (function() {
-            var t = localStorage.getItem('bc-theme');
-            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark-theme');
-            }
-        })();
-    </script>
+<!-- Anti-flicker: всегда светлая по умолчанию -->
+<script>
+    (function() {
+        var t = localStorage.getItem('bc-theme');
+        // Включаем темную ТОЛЬКО если пользователь сам её сохранил
+        if (t === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    })();
+</script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

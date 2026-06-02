@@ -47,21 +47,9 @@ function initPortfolioPhotoToggle() {
         });
     });
 }
-
-function initMediaPhotoToggle() {
-    document.querySelectorAll('#media .media-photo-card .media-photo-wrap').forEach((wrap) => {
-        wrap.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            wrap.closest('.media-photo-card')?.classList.toggle('photo-color');
-        });
-    });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initPortfolioPhotoToggle();
-    initMediaPhotoToggle();
 
     // Умная шапка (сжимается при скролле; в тёмной теме не подменяем фон на белый)
     const header = document.querySelector('header');
