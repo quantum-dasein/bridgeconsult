@@ -10,6 +10,15 @@
     <meta property="og:description" content="Independent international expertise. Advisory on FIDIC and EPC projects.">
     <meta property="og:image" content="https://bridgeconsult.uz/og-image.jpg">
     <meta name="theme-color" content="#292724">
+
+    <script>
+        (function() {
+            var t = localStorage.getItem('bc-theme');
+            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -56,7 +65,7 @@
 <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[101]">
         <a href="#" class="block relative z-[101] shrink-0">
-            <img src="../bridge 2.svg" alt="Bridge Consult" class="h-10 md:h-12 object-contain relative z-[101]">
+            <img src="../bridge 2.svg" alt="Bridge Consult" class="site-logo h-10 md:h-12 object-contain relative z-[101]">
         </a>
         
         <nav class="hidden lg:flex space-x-6">
@@ -101,6 +110,15 @@
                 <span class="text-gray-200">|</span>
                 <a href="../UZ/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">UZ</a>
             </div>
+
+            <button id="theme-toggle" type="button" title="Toggle theme" class="shrink-0 text-gray-500 hover:text-bridge-taupe focus:outline-none">
+                <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                </svg>
+            </button>
             
             <div class="flex items-center space-x-3">
                 <a href="tel:+998330001530" class="text-sm font-bold text-bridge-dark hover:text-bridge-taupe transition-colors tracking-wide whitespace-nowrap">+998 33 000 15 30</a>
@@ -120,6 +138,14 @@
             <a href="../index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">RU</a>
             <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">EN</a>
             <a href="../UZ/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">UZ</a>
+            <button id="mobile-theme-toggle" type="button" class="text-gray-400 hover:text-bridge-taupe transition-colors focus:outline-none ml-2" title="Toggle theme">
+                <svg id="mobile-theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="mobile-theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                </svg>
+            </button>
         </div>
         <div class="flex flex-col space-y-6 font-sans">
             <a href="#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">About Us</a>
@@ -284,9 +310,9 @@
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
                 <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
                     <span class="text-xl md:text-2xl font-sans text-white font-medium tracking-wide">FIDIC Contract Forms</span>
-                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    <div class="accordion-toggle-icon relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="accordion-icon-line w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="accordion-icon-line vertical-line w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
@@ -314,9 +340,9 @@
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
                 <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
                     <span class="text-xl md:text-2xl font-sans text-white font-medium tracking-wide">Forensic Delay Analysis (FDA)</span>
-                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    <div class="accordion-toggle-icon relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="accordion-icon-line w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="accordion-icon-line vertical-line w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
@@ -330,9 +356,9 @@
             <div class="accordion-item group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/60 hover:shadow-[0_0_40px_-10px_rgba(138,123,102,0.4)]">
                 <button class="accordion-btn w-full px-6 md:px-8 py-6 md:py-8 flex items-center justify-between text-left focus:outline-none cursor-pointer">
                     <span class="text-xl md:text-2xl font-sans text-white font-medium tracking-wide">Dispute Avoidance Board (DAAB)</span>
-                    <div class="relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
-                        <div class="w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
-                        <div class="w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500 vertical-line"></div>
+                    <div class="accordion-toggle-icon relative w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/10">
+                        <div class="accordion-icon-line w-4 md:w-5 h-[2px] bg-white absolute transition-transform duration-500"></div>
+                        <div class="accordion-icon-line vertical-line w-[2px] h-4 md:h-5 bg-white absolute transition-transform duration-500"></div>
                     </div>
                 </button>
                 <div class="accordion-content grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]" style="grid-template-rows: 0fr;">
@@ -402,7 +428,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             <!-- Project 1 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
+            <div class="portfolio-photo-card group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="100" onclick="openModal('olympic')">
                 <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
                     <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
                     <img src="../olympic city.jpg" alt="Olympic City" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
@@ -424,7 +450,7 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
+            <div class="portfolio-photo-card group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="200" onclick="openModal('tashkent')">
                 <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
                     <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
                     <img src="../tashkent-invest-company.png" alt="Tashkent Invest" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
@@ -446,7 +472,7 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('kamchik')">
+            <div class="portfolio-photo-card group cursor-pointer bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-bridge-taupe/10 transition-all duration-500 hover:-translate-y-2 flex flex-col" data-aos="fade-up" data-aos-delay="300" onclick="openModal('kamchik')">
                 <div class="relative h-64 md:h-72 overflow-hidden bg-bridge-dark">
                     <div class="absolute inset-0 bg-bridge-dark/30 group-hover:bg-bridge-dark/10 transition-colors z-10"></div>
                     <img src="../kamchik.avif" alt="Kamchik Pass" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700">
@@ -686,9 +712,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- Article 1: UzReport -->
-            <a href="https://uzreport.news/economy/what-is-fidic-and-does-uzbekistan-need-it-" target="_blank" class="group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative h-72 overflow-hidden bg-bridge-dark shrink-0 flex items-center justify-center">
-                    <img src="../larisa-belousova-uznews.png" alt="Larissa Belousova" class="w-full h-full object-contain p-4 grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105">
+            <a href="https://uzreport.news/economy/what-is-fidic-and-does-uzbekistan-need-it-" target="_blank" class="media-photo-card group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="media-photo-wrap relative h-72 overflow-hidden bg-bridge-dark shrink-0 flex items-center justify-center" title="Click photo for color">
+                    <img src="../larisa-belousova-uznews.png" alt="Larissa Belousova" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20">
                         <span class="bg-white text-bridge-dark text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">UzReport.news</span>
                     </div>
@@ -703,9 +729,9 @@
             </a>
 
             <!-- Article 2: Career Centre -->
-            <a href="https://careercentre.uz/about-company.php?id=610" target="_blank" class="group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative h-72 overflow-hidden bg-gray-50 shrink-0 border-b border-gray-100 flex items-center justify-center">
-                    <img src="../careercentreuz.svg" alt="Career Centre" class="w-2/3 h-1/2 object-contain transition-transform duration-700 group-hover:scale-105">
+            <a href="https://careercentre.uz/about-company.php?id=610" target="_blank" class="media-career-card group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="media-logo-panel relative h-72 overflow-hidden bg-gray-50 shrink-0 border-b border-gray-100 flex items-center justify-center">
+                    <img src="../careercentreuz.svg" alt="Career Centre" class="media-brand-logo w-2/3 h-1/2 object-contain transition-transform duration-700 group-hover:scale-105">
                     <div class="absolute top-6 left-6 z-20">
                         <span class="bg-bridge-dark text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">CareerCentre.uz</span>
                     </div>
@@ -748,8 +774,10 @@
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-2">
                 <img src="../EBRD-Logo-1991.webp" alt="EBRD" class="h-20 md:h-28 w-auto object-contain">
             </div>
-            <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-3">
-                <img src="../ADB logo stacked.png" alt="Asian Development Bank" class="h-24 md:h-32 w-auto object-contain">
+            <div class="logo-wrapper logo-wrapper-adb w-full flex justify-center opacity-80 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-3">
+                <span class="partner-logo-adb-shell">
+                    <img src="../ADB logo stacked.png" alt="Asian Development Bank" class="partner-logo-adb h-20 md:h-28 w-auto object-contain">
+                </span>
             </div>
             <div class="logo-wrapper w-full flex justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500 hover:scale-110 cursor-pointer logo-float-4">
                 <span class="font-sans font-bold text-3xl md:text-4xl text-bridge-dark text-center leading-none tracking-tighter flex flex-col">Tashkent<span class="text-bridge-taupe">Invest</span></span>

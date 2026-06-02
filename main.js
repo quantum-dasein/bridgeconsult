@@ -1,10 +1,76 @@
 // Логика сайта
 
+const THEME_STORAGE_KEY = 'bc-theme';
+
+function isDarkTheme() {
+    return document.documentElement.classList.contains('dark-theme');
+}
+
+function applyTheme(theme) {
+    const dark = theme === 'dark';
+    document.documentElement.classList.toggle('dark-theme', dark);
+    localStorage.setItem(THEME_STORAGE_KEY, dark ? 'dark' : 'light');
+    updateThemeIcons();
+}
+
+function updateThemeIcons() {
+    const dark = isDarkTheme();
+    const pairs = [
+        ['theme-toggle-dark-icon', 'theme-toggle-light-icon'],
+        ['mobile-theme-toggle-dark-icon', 'mobile-theme-toggle-light-icon'],
+    ];
+    pairs.forEach(([moonId, sunId]) => {
+        const moon = document.getElementById(moonId);
+        const sun = document.getElementById(sunId);
+        if (moon) moon.classList.toggle('hidden', dark);
+        if (sun) sun.classList.toggle('hidden', !dark);
+    });
+}
+
+function initThemeToggle() {
+    updateThemeIcons();
+
+    const toggle = () => applyTheme(isDarkTheme() ? 'light' : 'dark');
+
+    document.getElementById('theme-toggle')?.addEventListener('click', toggle);
+    document.getElementById('mobile-theme-toggle')?.addEventListener('click', toggle);
+}
+
+function initPortfolioPhotoToggle() {
+    document.querySelectorAll('#portfolio .portfolio-photo-card').forEach((card) => {
+        const photoWrap = card.querySelector('.relative.overflow-hidden');
+        if (!photoWrap) return;
+
+        photoWrap.addEventListener('click', (e) => {
+            e.stopPropagation();
+            card.classList.toggle('photo-bw');
+        });
+    });
+}
+
+function initMediaPhotoToggle() {
+    document.querySelectorAll('#media .media-photo-card .media-photo-wrap').forEach((wrap) => {
+        wrap.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            wrap.closest('.media-photo-card')?.classList.toggle('photo-color');
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Умная шапка (сжимается при скролле)
+    initThemeToggle();
+    initPortfolioPhotoToggle();
+    initMediaPhotoToggle();
+
+    // Умная шапка (сжимается при скролле; в тёмной теме не подменяем фон на белый)
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', () => {
+            if (isDarkTheme()) {
+                header.classList.toggle('header-scrolled', window.scrollY > 50);
+                return;
+            }
             if (window.scrollY > 50) {
                 header.classList.add('header-scrolled');
                 header.classList.replace('bg-white/95', 'bg-white');
@@ -163,32 +229,4 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.add('translate-x-full');
         });
     });
-});
-// --- ТЕМНАЯ ТЕМА (DARK MODE) ---
-const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-const themeToggleBtn = document.getElementById('theme-toggle');
-
-// Проверяем, какая тема была сохранена
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.remove('hidden');
-    document.documentElement.classList.add('dark-theme');
-} else {
-    themeToggleDarkIcon.classList.remove('hidden');
-}
-
-themeToggleBtn.addEventListener('click', function() {
-    // Меняем иконки
-    themeToggleDarkIcon.classList.toggle('hidden');
-    themeToggleLightIcon.classList.toggle('hidden');
-
-    // Если сейчас темная тема -> делаем светлую
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.remove('dark-theme');
-        localStorage.setItem('color-theme', 'light');
-    } else {
-        // Если светлая -> делаем темную
-        document.documentElement.classList.add('dark-theme');
-        localStorage.setItem('color-theme', 'dark');
-    }
 });
