@@ -218,3 +218,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// --- ЛОГИКА КНОПКИ "ЧИТАТЬ ПОЛНОСТЬЮ" ДЛЯ МОБИЛЬНЫХ ---
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const container = e.target.closest('.team-desc-container');
+            const content = container.querySelector('.team-content');
+            const overlay = container.querySelector('.fade-overlay');
+            
+            if (content.classList.contains('max-h-[140px]')) {
+                // Разворачиваем текст
+                content.classList.remove('max-h-[140px]');
+                content.classList.add('max-h-[2000px]'); // Большое значение для раскрытия
+                overlay.style.opacity = '0';
+                e.target.innerHTML = 'Скрыть ↑';
+            } else {
+                // Сворачиваем текст
+                content.classList.remove('max-h-[2000px]');
+                content.classList.add('max-h-[140px]');
+                overlay.style.opacity = '1';
+                e.target.innerHTML = 'Читать полностью ↓';
+                
+                // Плавный скролл чуть вверх, чтобы карточка осталась в зоне видимости
+                setTimeout(() => {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 300);
+            }
+        });
+    });
+});

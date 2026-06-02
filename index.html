@@ -258,8 +258,10 @@
             <p class="text-gray-400 text-base md:text-lg font-light mt-4 md:mt-0 max-w-md">Bridge Consult предоставляет консультационные услуги в международных инфраструктурных проектах.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+        <!-- Контейнер услуг: карусель на мобильных, сетка на ПК -->
+        <div class="flex md:grid md:grid-cols-2 gap-5 md:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none hide-scrollbar pb-8 md:pb-0 -mx-6 px-6 md:mx-0 md:px-0">
+            
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Контрактный инжиниринг (FIDIC / EPC)</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Структурирование, документация и тендеры:</strong> Подготовка полного пакета документации для закупочных процедур, включая технические спецификации и критерии оценки.</li>
@@ -269,7 +271,7 @@
                 </ul>
             </div>
 
-            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Администрирование строительных контрактов</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Управление претензиями:</strong> Профессиональный анализ, подготовка и защита позиции клиента, превентивные меры по недопущению споров.</li>
@@ -278,7 +280,7 @@
                 </ul>
             </div>
 
-            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Разрешение споров и Арбитраж</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Советы по урегулированию споров (DAAB/DAB):</strong> Представительство сторон, консультационная поддержка и предоставление экспертов.</li>
@@ -287,7 +289,7 @@
                 </ul>
             </div>
 
-            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+            <div class="glass-card rounded-2xl md:rounded-3xl p-6 md:p-10 hover-float relative overflow-hidden group min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="text-xl md:text-2xl font-sans font-bold text-white mb-4 md:mb-6 relative z-10">Аналитическая экспертиза и Обучение</h3>
                 <ul class="space-y-3 md:space-y-4 text-gray-300 font-light text-[13px] md:text-sm relative z-10 leading-relaxed">
                     <li><strong class="text-white">Оценка финансовых рисков:</strong> Forensic Delay Analysis (анализ задержек) и Quantum Calculation (расчет вариаций и убытков).</li>
@@ -526,6 +528,7 @@
             <p class="text-gray-500 max-w-3xl mx-auto text-lg font-light">Фундамент BRIDGE CONSULT — это уникальный опыт наших специалистов. Мы объединили профессионалов с десятилетиями практики в инженерном деле, юриспруденции и международном арбитраже.</p>
         </div>
 
+        <!-- 1. ЛАРИСА БЕЛОУСОВА -->
         <div class="bg-white rounded-3xl p-8 md:p-12 premium-shadow mb-10 flex flex-col lg:flex-row gap-10 hover-float" data-aos="fade-up" data-aos-delay="100">
             <div class="lg:w-1/3">
                 <div class="aspect-[4/5] w-full rounded-2xl overflow-hidden photo-reveal tilt-card">
@@ -536,23 +539,35 @@
                 <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs mb-2">Основатель и Директор компании</span>
                 <h3 class="text-3xl font-sans font-bold text-bridge-dark mb-4">Лариса Константиновна Белоусова</h3>
                 <p class="font-bold text-bridge-dark text-base mb-4">Инфраструктурные контракты | FIDIC | EPC | Международный арбитраж</p>
-                <div class="text-gray-600 font-light leading-relaxed text-sm">
-                    <p class="font-bold text-bridge-dark mb-2">Профессиональная аккредитация и консультационная деятельность:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Член Комитета IMC FIDIC</li>
-                        <li>FCCE - Сертифицированный инженер-консультант FIDIC</li>
-                        <li>FCCP - Сертифицированный профессиональный консультант FIDIC</li>
-                        <li>Аккредитованный АБР контрактный менеджер и специалист по разрешению споров</li>
-                        <li>MCIArb - Член Королевского института арбитров</li>
-                        <li>Член Международной ассоциации строительного арбитража (ICAA)</li>
-                        <li>Участник программы Next Generation</li>
-                        <li>Лицензированный профессионал и практик Совета по спорам (DB)</li>
-                        <li>Dispute Resolution Board Foundation (DRBF) Развивающиеся рынки</li>
-                        <li>Независимый практикующий медиатор</li>
-                        <li>PCQI - Практик Королевского института качества (CQI), Великобритания</li>
-                        <li>Сертифицированный профессионал ICAgile (ICP)</li>
-                    </ul>
+                
+                <!-- Контейнер с обрезкой текста -->
+                <div class="team-desc-container relative">
+                    <div class="team-content overflow-hidden max-h-[140px] md:max-h-none transition-[max-height] duration-500 ease-in-out relative">
+                        <div class="text-gray-600 font-light leading-relaxed text-sm">
+                            <p class="font-bold text-bridge-dark mb-2">Профессиональная аккредитация и консультационная деятельность:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Член Комитета IMC FIDIC</li>
+                                <li>FCCE - Сертифицированный инженер-консультант FIDIC</li>
+                                <li>FCCP - Сертифицированный профессиональный консультант FIDIC</li>
+                                <li>Аккредитованный АБР контрактный менеджер и специалист по разрешению споров</li>
+                                <li>MCIArb - Член Королевского института арбитров</li>
+                                <li>Член Международной ассоциации строительного арбитража (ICAA)</li>
+                                <li>Участник программы Next Generation</li>
+                                <li>Лицензированный профессионал и практик Совета по спорам (DB)</li>
+                                <li>Dispute Resolution Board Foundation (DRBF) Развивающиеся рынки</li>
+                                <li>Независимый практикующий медиатор</li>
+                                <li>PCQI - Практик Королевского института качества (CQI), Великобритания</li>
+                                <li>Сертифицированный профессионал ICAgile (ICP)</li>
+                            </ul>
+                        </div>
+                        <div class="fade-overlay absolute bottom-0 left-0 w-full h-16 md:hidden transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                    <button type="button" class="read-more-btn block md:hidden text-bridge-taupe text-[10px] font-bold uppercase tracking-widest mt-4 focus:outline-none transition-colors hover:text-bridge-dark">
+                        Читать полностью ↓
+                    </button>
                 </div>
+
+                <!-- Кнопка CV всегда на виду -->
                 <div class="mt-8">
                     <a href="larisa-belousova-cv.pdf" target="_blank" class="inline-flex items-center gap-2 bg-bridge-dark text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-all duration-300 shadow-lg hover:-translate-y-1">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
@@ -563,6 +578,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- 2. АННА УБАЙДУЛЛАЕВА -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="200">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -573,25 +589,35 @@
                         <h3 class="text-2xl font-sans font-bold text-bridge-dark leading-tight">Доктор Анна Владимировна Убайдуллаева</h3>
                     </div>
                 </div>
-                <div class="text-gray-600 font-light leading-relaxed text-sm">
-                    <p class="font-bold text-bridge-dark mb-4 text-base">Международный арбитраж | Институциональные реформы | Регулирование цифровой экономики</p>
-                    <p class="font-bold text-bridge-dark mb-2">Профессиональная аккредитация и консультационная деятельность:</p>
-                    <ul class="list-disc pl-5 mb-4 space-y-1">
-                        <li>Международный арбитр Ташкентского международного арбитражного центра (TIAC) и Венского международного арбитражного центра (VIAC).</li>
-                        <li>Резидент Азиатского международного арбитражного центра (AIAC).</li>
-                        <li>Консультант в проектах Всемирного банка по правовым и институциональным реформам.</li>
-                        <li>Член Рабочей группы при Министерстве высшего образования, науки и инноваций Республики Узбекистан по разработке правовых основы цифровой экономики и искусственного интеллекта.</li>
-                    </ul>
-                    <p class="font-bold text-bridge-dark mb-2">Профессиональная практика включает:</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>международный арбитраж и медиацию</li>
-                        <li>разрешение споров по трансграничным коммерческим делам</li>
-                        <li>консультационную поддержку в международных проектах и институциональных реформах</li>
-                        <li>правовые основы цифровой экономики и искусственного интеллекта</li>
-                    </ul>
+                
+                <div class="team-desc-container relative">
+                    <div class="team-content overflow-hidden max-h-[140px] md:max-h-none transition-[max-height] duration-500 ease-in-out relative">
+                        <div class="text-gray-600 font-light leading-relaxed text-sm">
+                            <p class="font-bold text-bridge-dark mb-4 text-base">Международный арбитраж | Институциональные реформы | Регулирование цифровой экономики</p>
+                            <p class="font-bold text-bridge-dark mb-2">Профессиональная аккредитация и консультационная деятельность:</p>
+                            <ul class="list-disc pl-5 mb-4 space-y-1">
+                                <li>Международный арбитр Ташкентского международного арбитражного центра (TIAC) и Венского международного арбитражного центра (VIAC).</li>
+                                <li>Резидент Азиатского международного арбитражного центра (AIAC).</li>
+                                <li>Консультант в проектах Всемирного банка по правовым и институциональным реформам.</li>
+                                <li>Член Рабочей группы при Министерстве высшего образования, науки и инноваций Республики Узбекистан по разработке правовых основы цифровой экономики и искусственного интеллекта.</li>
+                            </ul>
+                            <p class="font-bold text-bridge-dark mb-2">Профессиональная практика включает:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>международный арбитраж и медиацию</li>
+                                <li>разрешение споров по трансграничным коммерческим делам</li>
+                                <li>консультационную поддержку в международных проектах и институциональных реформах</li>
+                                <li>правовые основы цифровой экономики и искусственного интеллекта</li>
+                            </ul>
+                        </div>
+                        <div class="fade-overlay absolute bottom-0 left-0 w-full h-16 md:hidden transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                    <button type="button" class="read-more-btn block md:hidden text-bridge-taupe text-[10px] font-bold uppercase tracking-widest mt-4 focus:outline-none transition-colors hover:text-bridge-dark">
+                        Читать полностью ↓
+                    </button>
                 </div>
             </div>
 
+            <!-- 3. ЭРНЕСТ БЕЛОУСОВ -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col" data-aos="fade-up" data-aos-delay="300">
                 <div class="flex items-center gap-6 mb-8">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -602,10 +628,20 @@
                         <h3 class="text-2xl font-sans font-bold text-bridge-dark leading-tight">Эрнест Белоусов</h3>
                     </div>
                 </div>
-                <p class="text-gray-600 font-bold leading-relaxed mb-4">Ведущий специалист по контрактам FIDIC | Управление инфраструктурными проектами</p>
-                <p class="text-gray-600 font-light leading-relaxed">Эрнест Белоусов — эксперт в области управления международными строительными контрактами, специализирующийся на сопровождении сложных инфраструктурных проектов. Обладая глубокими компетенциями в работе с проформами FIDIC (Red, Yellow, Silver Books), Эрнест обеспечивает эффективное администрирование контрактов и строгое соблюдение международных инженерных стандартов.</p>
+                
+                <div class="team-desc-container relative">
+                    <div class="team-content overflow-hidden max-h-[140px] md:max-h-none transition-[max-height] duration-500 ease-in-out relative">
+                        <p class="text-gray-600 font-bold leading-relaxed mb-4">Ведущий специалист по контрактам FIDIC | Управление инфраструктурными проектами</p>
+                        <p class="text-gray-600 font-light leading-relaxed">Эрнест Белоусов — эксперт в области управления международными строительными контрактами, специализирующийся на сопровождении сложных инфраструктурных проектов. Обладая глубокими компетенциями в работе с проформами FIDIC (Red, Yellow, Silver Books), Эрнест обеспечивает эффективное администрирование контрактов и строгое соблюдение международных инженерных стандартов.</p>
+                        <div class="fade-overlay absolute bottom-0 left-0 w-full h-16 md:hidden transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                    <button type="button" class="read-more-btn block md:hidden text-bridge-taupe text-[10px] font-bold uppercase tracking-widest mt-4 focus:outline-none transition-colors hover:text-bridge-dark">
+                        Читать полностью ↓
+                    </button>
+                </div>
             </div>
 
+            <!-- 4. ЛЮЦИЯ АХМЕДИЕВА -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="400">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -616,13 +652,23 @@
                         <h3 class="text-2xl font-sans font-bold text-bridge-dark leading-tight">Люция Шамильевна Ахмедиева</h3>
                     </div>
                 </div>
-                <div class="text-gray-600 font-light leading-relaxed text-sm">
-                    <p class="font-bold text-bridge-dark mb-4 text-base">Сметное дело | Оценка стоимости | Тендерная документация</p>
-                    <p class="mb-3">Люция Шамильевна Ахмедиева имеет более чем 40-летний опыт работы в области контроля объемов и технического управления в строительной отрасли Узбекистана. Ее профессиональный опыт включает подготовку тендерной, проектной и сметной документации, ведомостей объемов работ (BoQ), оценку стоимости и контроль бюджета крупных инфраструктурных проектов.</p>
-                    <p>Она также участвовала в проверке объемов работ, оптимизации затрат, администрировании контрактов и техни поддержки при разрешении контрактных вопросов и претензий, включая проекты, связанные со строительством участков стратегических автомагистралей в Узбекистане.</p>
+                
+                <div class="team-desc-container relative">
+                    <div class="team-content overflow-hidden max-h-[140px] md:max-h-none transition-[max-height] duration-500 ease-in-out relative">
+                        <div class="text-gray-600 font-light leading-relaxed text-sm">
+                            <p class="font-bold text-bridge-dark mb-4 text-base">Сметное дело | Оценка стоимости | Тендерная документация</p>
+                            <p class="mb-3">Люция Шамильевна Ахмедиева имеет более чем 40-летний опыт работы в области контроля объемов и технического управления в строительной отрасли Узбекистана. Ее профессиональный опыт включает подготовку тендерной, проектной и сметной документации, ведомостей объемов работ (BoQ), оценку стоимости и контроль бюджета крупных инфраструктурных проектов.</p>
+                            <p>Она также участвовала в проверке объемов работ, оптимизации затрат, администрировании контрактов и технической поддержке при разрешении контрактных вопросов и претензий, включая проекты, связанные со строительством участков стратегических автомагистралей в Узбекистане.</p>
+                        </div>
+                        <div class="fade-overlay absolute bottom-0 left-0 w-full h-16 md:hidden transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                    <button type="button" class="read-more-btn block md:hidden text-bridge-taupe text-[10px] font-bold uppercase tracking-widest mt-4 focus:outline-none transition-colors hover:text-bridge-dark">
+                        Читать полностью ↓
+                    </button>
                 </div>
             </div>
 
+            <!-- 5. ОЛЬГА МИТРОФАНОВА -->
             <div class="bg-white rounded-3xl p-8 md:p-10 premium-shadow hover-float flex flex-col font-sans" data-aos="fade-up" data-aos-delay="500">
                 <div class="flex items-center gap-6 mb-6">
                     <div class="w-24 h-24 rounded-full overflow-hidden shrink-0 photo-reveal tilt-card">
@@ -633,11 +679,20 @@
                         <h3 class="text-2xl font-sans font-bold text-bridge-dark leading-tight">Митрофанова Ольга Николаевна</h3>
                     </div>
                 </div>
-                <div class="text-gray-600 font-light leading-relaxed text-sm">
-                    <p class="font-bold text-bridge-dark mb-4 text-base">Системы качества в строительстве | Сертификация материалов | ISO 9001</p>
-                    <p class="mb-3">Более 50 лет опыта работы в строительном инжиниринге и управлении качеством. Участие в крупномасштабных инфраструктурных проектах, финансируемых международными финансовыми институтами, включая Азиатский банк развития (АБР) и Всемирный банк.</p>
-                    <p class="mb-3">Профессиональная деятельность в области обеспечения качества, сертификации материалов и контроля соответствия в строительных и инфраструктурных проектов.</p>
-                    <p>Сертифицированный специалист по сертификации строительных материалов и системам менеджмента качества. Сертифицированный аудитор систем менеджмента качества ISO 9001:2015.</p>
+                
+                <div class="team-desc-container relative">
+                    <div class="team-content overflow-hidden max-h-[140px] md:max-h-none transition-[max-height] duration-500 ease-in-out relative">
+                        <div class="text-gray-600 font-light leading-relaxed text-sm">
+                            <p class="font-bold text-bridge-dark mb-4 text-base">Системы качества в строительстве | Сертификация материалов | ISO 9001</p>
+                            <p class="mb-3">Более 50 лет опыта работы в строительном инжиниринге и управлении качеством. Участие в крупномасштабных инфраструктурных проектах, финансируемых международными финансовыми институтами, включая Азиатский банк развития (АБР) и Всемирный банк.</p>
+                            <p class="mb-3">Профессиональная деятельность в области обеспечения качества, сертификации материалов и контроля соответствия в строительных и инфраструктурных проектов.</p>
+                            <p>Сертифицированный специалист по сертификации строительных материалов и системам менеджмента качества. Сертифицированный аудитор систем менеджмента качества ISO 9001:2015.</p>
+                        </div>
+                        <div class="fade-overlay absolute bottom-0 left-0 w-full h-16 md:hidden transition-opacity duration-300 pointer-events-none"></div>
+                    </div>
+                    <button type="button" class="read-more-btn block md:hidden text-bridge-taupe text-[10px] font-bold uppercase tracking-widest mt-4 focus:outline-none transition-colors hover:text-bridge-dark">
+                        Читать полностью ↓
+                    </button>
                 </div>
             </div>
         </div>
