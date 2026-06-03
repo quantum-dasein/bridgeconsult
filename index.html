@@ -121,7 +121,34 @@
                 position: relative;
             }
         </style>
+        <meta name="geo.region" content="UZ-TO">
+        <meta name="geo.placename" content="Tashkent, Uzbekistan">
+        <meta name="geo.position" content="41.2995;69.2401">
+        <meta name="ICBM" content="41.2995, 69.2401">
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Bridge Consult",
+          "url": "https://bridgeconsult.uz",
+          "logo": "https://bridgeconsult.uz/bridge%202.png",
+          "telephone": "+998330001530",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Ахмада Дониша, 12 квартал, дом 20А",
+            "addressLocality": "Ташкент",
+            "addressCountry": "UZ"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Лариса Константиновна Белоусова",
+            "jobTitle": "Основатель и Директор Bridge Consult"
+          }
+        }
+        </script>
     </head>
+    
 <body class="font-sans text-bridge-dark antialiased bg-white selection:bg-bridge-taupe/20 overflow-x-hidden">
 
 <div id="preloader" class="fixed inset-0 z-[999999] bg-bridge-dark flex items-center justify-center transition-all duration-1000 ease-in-out">
@@ -924,8 +951,136 @@
         </div>
     </div>
 </section>
+<!-- ======================================================== -->
+<!-- FAQ СЕКЦИЯ: ПРЕМИУМ ДИЗАЙН (УРОВЕНЬ БОГ)                 -->
+<!-- ======================================================== -->
+<section id="faq" class="py-32 bg-bridge-dark relative overflow-hidden font-sans border-t border-white/10">
+    <!-- Фоновое свечение -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-bridge-taupe/10 rounded-full blur-[150px] pointer-events-none"></div>
 
-<!-- 3. БЛОК ФОРМЫ (ОСТАВИТЬ ЗАЯВКУ) -->
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <span class="w-8 h-px bg-bridge-taupe"></span>
+                <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs">База знаний</span>
+                <span class="w-8 h-px bg-bridge-taupe"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-sans font-bold text-white mb-6">Часто задаваемые вопросы</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light">Ключевые аспекты работы с контрактами FIDIC, EPC и разрешением инфраструктурных споров.</p>
+        </div>
+
+        <div class="space-y-5 faq-container">
+            <!-- Вопрос 1 -->
+            <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up">
+                <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
+                    <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">Что такое FIDIC и зачем он нужен в строительных проектах?</h3>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/20 icon-container">
+                        <span class="absolute w-4 h-[2px] bg-white transition-transform duration-500 horiz-line"></span>
+                        <span class="absolute w-[2px] h-4 bg-white transition-transform duration-500 vert-line"></span>
+                    </div>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] faq-content">
+                    <p class="px-6 md:px-10 pb-8 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+                        FIDIC — Международная федерация инженеров-консультантов, разработавшая стандартные проформы контрактов. Их применение обеспечивает правовую надёжность, объективное распределение рисков и абсолютную прозрачность для заказчиков, подрядчиков и МФИ (АБР, ЕБРР, Всемирный банк).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="100">
+                <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
+                    <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">В чём разница между Red Book, Yellow Book и Silver Book?</h3>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/20 icon-container">
+                        <span class="absolute w-4 h-[2px] bg-white transition-transform duration-500 horiz-line"></span>
+                        <span class="absolute w-[2px] h-4 bg-white transition-transform duration-500 vert-line"></span>
+                    </div>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] faq-content">
+                    <p class="px-6 md:px-10 pb-8 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+                        <strong class="text-white">Red Book</strong> — проектирование выполняет заказчик. <strong class="text-white">Yellow Book</strong> — подрядчик самостоятельно проектирует и строит. <strong class="text-white">Silver Book (EPC/Turnkey)</strong> — контракт «под ключ», где подрядчик берёт на себя все риски и гарантирует конечный результат при фиксированной стоимости.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="200">
+                <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
+                    <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">Что такое Forensic Delay Analysis (анализ задержек)?</h3>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/20 icon-container">
+                        <span class="absolute w-4 h-[2px] bg-white transition-transform duration-500 horiz-line"></span>
+                        <span class="absolute w-[2px] h-4 bg-white transition-transform duration-500 vert-line"></span>
+                    </div>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] faq-content">
+                    <p class="px-6 md:px-10 pb-8 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+                        Это детальное ретроспективное исследование причин срыва сроков проекта. С помощью строгих международных методов (SCL Protocol) наш эксперт устанавливает, кто несёт ответственность за задержку, юридически обосновывая ваше право на продление сроков (EOT) и финансовую компенсацию.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="300">
+                <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
+                    <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">Что такое DAAB (Совет по урегулированию споров)?</h3>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/20 icon-container">
+                        <span class="absolute w-4 h-[2px] bg-white transition-transform duration-500 horiz-line"></span>
+                        <span class="absolute w-[2px] h-4 bg-white transition-transform duration-500 vert-line"></span>
+                    </div>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] faq-content">
+                    <p class="px-6 md:px-10 pb-8 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+                        DAAB — это эффективный механизм досудебного разрешения разногласий прямо в процессе строительства. Независимые эксперты выносят обязательные для исполнения решения "на месте", что позволяет сэкономить миллионы долларов и годы времени на разбирательствах в международном арбитраже.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="400">
+                <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
+                    <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">Что такое EPC-контракт?</h3>
+                    <div class="relative w-12 h-12 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition-all duration-500 group-hover:border-bridge-taupe group-hover:bg-bridge-taupe/20 icon-container">
+                        <span class="absolute w-4 h-[2px] bg-white transition-transform duration-500 horiz-line"></span>
+                        <span class="absolute w-[2px] h-4 bg-white transition-transform duration-500 vert-line"></span>
+                    </div>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] faq-content">
+                    <p class="px-6 md:px-10 pb-8 text-gray-400 font-light leading-relaxed text-base md:text-lg">
+                        EPC — это контракт «под ключ» (Engineering, Procurement, Construction). Все риски и ответственность за инжиниринг, закупку оборудования и строительство ложатся исключительно на генподрядчика. Идеальный стандарт для крупных инфраструктурных и энергетических проектов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипт премиум анимации -->
+    <script>
+        function togglePremiumFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const content = item.querySelector('.faq-content');
+            const vertLine = item.querySelector('.vert-line');
+            const horizLine = item.querySelector('.horiz-line');
+            const iconContainer = item.querySelector('.icon-container');
+
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = '0px');
+            document.querySelectorAll('.vert-line').forEach(el => el.style.transform = 'scaleY(1)');
+            document.querySelectorAll('.horiz-line').forEach(el => el.style.transform = 'scaleX(1)');
+            document.querySelectorAll('.icon-container').forEach(el => {
+                el.classList.remove('border-bridge-taupe', 'bg-bridge-taupe/20');
+                el.classList.add('border-white/20');
+            });
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                vertLine.style.transform = 'scaleY(0)';
+                horizLine.style.transform = 'scaleX(1.2)';
+                iconContainer.classList.remove('border-white/20');
+                iconContainer.classList.add('border-bridge-taupe', 'bg-bridge-taupe/20');
+            }
+        }
+    </script>
+</section>
 <section id="contact-form" class="py-32 bg-white relative overflow-hidden font-sans">
     <div class="max-w-4xl mx-auto px-6 relative z-10">
         <div class="bg-bridge-dark rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
