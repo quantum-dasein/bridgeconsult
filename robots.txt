@@ -6,4 +6,4 @@ Allow: /EN/
 Allow: /UZ/
 
 # Указываем поисковикам путь к карте сайта
-Sitemap: https://bridgeconsult.uz/sitemap.xml
+Sitemap: https://www.bridgeconsult.uz/sitemap.xml
