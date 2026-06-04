@@ -809,11 +809,10 @@
 <!-- ======================================================== -->
 <section id="trainings" class="py-16 bg-bridge-dark relative overflow-hidden font-sans border-y border-white/5">
 
-    <!-- Точечная текстура фона -->
-    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(138,123,102,0.13) 1px, transparent 1px); background-size: 36px 36px; opacity: 0.55;"></div>
+    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#292724_80%)] pointer-events-none"></div>
 
-    <!-- 3D ГОЛОГРАММА НА ФОНЕ -->
-    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] z-0 pointer-events-none opacity-15 mix-blend-screen" style="mask-image: radial-gradient(circle, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);">
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] z-0 pointer-events-none opacity-25 mix-blend-screen" style="mask-image: radial-gradient(circle, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);">
         <model-viewer
             src="TrainingModel.glb"
             auto-rotate auto-rotate-delay="0"
@@ -826,36 +825,27 @@
         ></model-viewer>
     </div>
 
-    <!-- Мягкое свечение за видео -->
-    <div class="absolute top-1/2 right-1/3 transform -translate-y-1/2 w-[420px] h-[260px] rounded-full pointer-events-none z-0" style="background: rgba(138,123,102,0.06); filter: blur(90px);"></div>
+    <div class="absolute top-1/2 right-1/3 transform -translate-y-1/2 w-[420px] h-[260px] rounded-full pointer-events-none z-0" style="background: rgba(138,123,102,0.08); filter: blur(90px);"></div>
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-        <!-- Eyebrow -->
         <div class="flex items-center gap-3 mb-10">
             <div style="width: 1px; height: 2rem; background: linear-gradient(to bottom, transparent, #8A7B66);"></div>
             <span class="text-bridge-taupe font-bold tracking-[0.2em] uppercase text-[9px]">Институциональное развитие</span>
         </div>
 
-        <!-- Основная сетка: относительный родитель для вертикального разделителя -->
         <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
-            <!-- Вертикальный разделитель между колонками (только desktop) -->
             <div class="hidden lg:block absolute inset-y-0 pointer-events-none z-0" style="left: 50%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(138,123,102,0.18) 25%, rgba(138,123,102,0.18) 75%, transparent);"></div>
 
-            <!-- ═══════════════════════════════════ -->
-            <!-- ЛЕВАЯ ЧАСТЬ: ТЕКСТ                 -->
-            <!-- ═══════════════════════════════════ -->
             <div data-aos="fade-right">
 
-                <!-- Заголовок с цветовой иерархией -->
                 <h2 class="font-sans font-bold leading-[1.05] mb-5" style="letter-spacing: -0.02em;">
                     <span class="block text-[2.5rem] md:text-[3.2rem] text-white">FIDIC</span>
                     <span class="block text-[2.5rem] md:text-[3.2rem]" style="color: #c5bdb3;">сертифицированные</span>
                     <span class="block text-[2.5rem] md:text-[3.2rem]" style="color: #8A7B66;">тренинги</span>
                 </h2>
 
-                <!-- Декоративный разделитель -->
                 <div class="flex items-center gap-2 mb-6">
                     <div class="w-8 h-px bg-bridge-taupe"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-bridge-taupe opacity-50"></div>
@@ -865,37 +855,30 @@
                     Эксперты Bridge Consult проводят профильные семинары по практическому применению проформ FIDIC, управлению рисками и администрированию контрактов для заказчиков и инженеров.
                 </p>
 
-                <!-- Единая горизонтальная полоска со статистикой -->
-                <div class="flex items-stretch rounded-xl overflow-hidden mb-5" style="background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.08);">
-                    <div class="flex-1 px-6 py-4" style="border-right: 1px solid rgba(255,255,255,0.08);">
-                        <div class="text-[1.6rem] font-bold text-white leading-none mb-1.5" style="font-family: 'Playfair Display', Georgia, serif;">26</div>
-                        <div class="text-[9px] text-gray-500 uppercase tracking-wider">Программ 2026</div>
-                        <div class="text-[8px] uppercase tracking-wider mt-0.5" style="color: #8A7B66; letter-spacing: 0.1em;">Корп. обучение</div>
+                <div class="flex flex-col gap-4 mb-10 max-w-md">
+                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-bridge-taupe/30">
+                        <div class="w-10 h-10 rounded-full bg-bridge-taupe/10 border border-bridge-taupe/20 flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-5 h-5 text-bridge-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-1.5">Корпоративное обучение</h4>
+                            <p class="text-gray-500 text-[11px] leading-relaxed">Индивидуальные программы адаптации вашей проектной команды под международные стандарты и требования МФИ.</p>
+                        </div>
                     </div>
-                    <div class="flex-1 px-6 py-4 flex flex-col justify-center">
-                        <svg class="w-4 h-4 mb-1.5" style="color: #8A7B66;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                        <div class="text-[9px] text-gray-500 uppercase tracking-wider">Наши тренеры</div>
-                        <div class="text-[8px] uppercase tracking-wider mt-0.5" style="color: #8A7B66; letter-spacing: 0.1em;">Эксперты FIDIC</div>
+
+                    <div class="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/5 backdrop-blur-sm transition-colors hover:bg-white/10 hover:border-bridge-taupe/30">
+                        <div class="w-10 h-10 rounded-full bg-bridge-taupe/10 border border-bridge-taupe/20 flex items-center justify-center shrink-0 mt-0.5">
+                            <svg class="w-5 h-5 text-bridge-taupe" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-1.5">Аккредитованные эксперты</h4>
+                            <p class="text-gray-500 text-[11px] leading-relaxed">Семинары проводят сертифицированные инженеры-консультанты FIDIC с реальным опытом разрешения строительных споров.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Мини-строка аудитории с прогресс-баром -->
-                <div class="mb-8 max-w-xs">
-                    <div class="flex items-center justify-between mb-1.5">
-                        <span class="text-[9px] text-gray-500 uppercase tracking-wider font-bold">Заполнение потоков 2026</span>
-                        <span class="text-[9px] font-bold" style="color: #8A7B66;">78%</span>
-                    </div>
-                    <div class="w-full rounded-full overflow-hidden" style="height: 2px; background: rgba(255,255,255,0.07);">
-                        <div class="h-full rounded-full" style="width: 78%; background: linear-gradient(to right, rgba(138,123,102,0.5), #8A7B66);"></div>
-                    </div>
-                    <p class="text-[8px] text-gray-600 mt-1.5 uppercase tracking-wider">Для заказчиков · Инженеров · Юристов</p>
-                </div>
-
-                <!-- CTA -->
                 <a href="#contact-form" class="trainings-cta group inline-flex items-center gap-3 font-bold uppercase text-xs" style="color: #8A7B66; letter-spacing: 0.15em; text-decoration: none;">
-                    <span>Смотреть программу</span>
+                    <span>Связаться с нами</span>
                     <span class="trainings-cta-line inline-block h-px" style="width: 1.25rem; background: #8A7B66; transition: width 0.3s ease;"></span>
                     <svg class="trainings-cta-arrow w-3.5 h-3.5" style="transition: transform 0.3s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -904,36 +887,26 @@
 
             </div>
 
-            <!-- ═══════════════════════════════════ -->
-            <!-- ПРАВАЯ ЧАСТЬ: ВИДЕО + FLOAT CARDS  -->
-            <!-- ═══════════════════════════════════ -->
             <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
 
-                <!-- Внешний враппер с паддингом под плавающие карточки -->
                 <div class="relative w-full" style="max-width: 500px; padding: 22px 22px 0 0;">
 
-                    <!-- ── Плавающая карточка: ФОРМАТ (верхний правый) ── -->
                     <div style="position: absolute; top: 0; right: 0; z-index: 30; background: rgba(26,24,22,0.92); border: 1px solid rgba(138,123,102,0.45); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(0,0,0,0.45);">
                         <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Формат</div>
                         <div style="font-size: 11px; color: #fff; font-weight: 700; font-family: Inter, sans-serif; white-space: nowrap;">Live · Онлайн · Офлайн</div>
                     </div>
 
-                    <!-- Видео-враппер с L-скобками -->
                     <div class="relative">
 
-                        <!-- Угловые L-скобки -->
                         <div style="position: absolute; top: -10px; left: -10px; width: 20px; height: 20px; border-top: 1.5px solid rgba(138,123,102,0.55); border-left: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; border-top: 1.5px solid rgba(138,123,102,0.55); border-right: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; bottom: -10px; left: -10px; width: 20px; height: 20px; border-bottom: 1.5px solid rgba(138,123,102,0.55); border-left: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; bottom: -10px; right: -10px; width: 20px; height: 20px; border-bottom: 1.5px solid rgba(138,123,102,0.55); border-right: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
 
-                        <!-- Свечение позади -->
                         <div style="position: absolute; inset: 1rem; background: rgba(138,123,102,0.14); filter: blur(28px); border-radius: 1rem; z-index: -1;"></div>
 
-                        <!-- Карточка видео -->
                         <div style="position: relative; border-radius: 1rem; overflow: hidden; background: black; z-index: 10; border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 20px 60px rgba(0,0,0,0.65);">
 
-                            <!-- Линия-акцент сверху -->
                             <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.85), transparent); z-index: 20; pointer-events: none;"></div>
 
                             <div class="aspect-video">
@@ -942,7 +915,6 @@
                                 </video>
                             </div>
 
-                            <!-- Бейдж FIDIC Training -->
                             <div style="position: absolute; top: 12px; left: 12px; z-index: 20; pointer-events: none; display: flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 4px 10px;">
                                 <div style="width: 5px; height: 5px; border-radius: 50%; background: #8A7B66;"></div>
                                 <span style="font-size: 8px; color: rgba(255,255,255,0.85); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-family: Inter, sans-serif;">FIDIC Training</span>
@@ -950,7 +922,6 @@
 
                         </div>
 
-                        <!-- ── Плавающая карточка: СЕРТИФИКАЦИЯ (нижний левый) ── -->
                         <div style="position: absolute; bottom: -18px; left: -18px; z-index: 30; background: rgba(138,123,102,0.12); border: 1px solid rgba(138,123,102,0.42); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
                             <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Сертификация</div>
                             <div style="display: flex; align-items: center; gap: 5px;">
@@ -961,7 +932,6 @@
 
                     </div>
 
-                    <!-- Тематические теги под видео -->
                     <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 6px;">
                         <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">Red Book</span>
                         <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">Yellow Book</span>
