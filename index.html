@@ -809,10 +809,15 @@
 <!-- ======================================================== -->
 <section id="trainings" class="py-16 bg-bridge-dark relative overflow-hidden font-sans border-y border-white/5">
 
-    <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
-    <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#292724_80%)] pointer-events-none"></div>
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] bg-bridge-taupe/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-[20%] -right-[10%] w-[40vw] h-[40vw] bg-white/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-[20%] left-[20%] w-[60vw] h-[60vw] bg-bridge-taupe/15 rounded-full mix-blend-screen filter blur-[130px] animate-blob animation-delay-4000"></div>
+        
+        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);"></div>
+    </div>
 
-    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] z-0 pointer-events-none opacity-25 mix-blend-screen" style="mask-image: radial-gradient(circle, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);">
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] z-0 pointer-events-none opacity-30 mix-blend-screen" style="mask-image: radial-gradient(circle, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);">
         <model-viewer
             src="TrainingModel.glb"
             auto-rotate auto-rotate-delay="0"
@@ -825,11 +830,9 @@
         ></model-viewer>
     </div>
 
-    <div class="absolute top-1/2 right-1/3 transform -translate-y-1/2 w-[420px] h-[260px] rounded-full pointer-events-none z-0" style="background: rgba(138,123,102,0.08); filter: blur(90px);"></div>
-
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-        <div class="flex items-center gap-3 mb-10">
+        <div class="flex items-center gap-3 mb-10" data-aos="fade-right">
             <div style="width: 1px; height: 2rem; background: linear-gradient(to bottom, transparent, #8A7B66);"></div>
             <span class="text-bridge-taupe font-bold tracking-[0.2em] uppercase text-[9px]">Институциональное развитие</span>
         </div>
@@ -838,7 +841,7 @@
 
             <div class="hidden lg:block absolute inset-y-0 pointer-events-none z-0" style="left: 50%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(138,123,102,0.18) 25%, rgba(138,123,102,0.18) 75%, transparent);"></div>
 
-            <div data-aos="fade-right">
+            <div data-aos="fade-right" data-aos-delay="100">
 
                 <h2 class="font-sans font-bold leading-[1.05] mb-5" style="letter-spacing: -0.02em;">
                     <span class="block text-[2.5rem] md:text-[3.2rem] text-white">FIDIC</span>
@@ -887,56 +890,54 @@
 
             </div>
 
-            <div class="relative flex justify-center lg:justify-end" data-aos="fade-left">
+            <div class="relative flex justify-center lg:justify-end">
 
                 <div class="relative w-full" style="max-width: 500px; padding: 22px 22px 0 0;">
 
-                    <div style="position: absolute; top: 0; right: 0; z-index: 30; background: rgba(26,24,22,0.92); border: 1px solid rgba(138,123,102,0.45); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(0,0,0,0.45);">
-                        <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Формат</div>
-                        <div style="font-size: 11px; color: #fff; font-weight: 700; font-family: Inter, sans-serif; white-space: nowrap;">Live · Онлайн · Офлайн</div>
+                    <div data-aos="fade-down-left" data-aos-delay="400" class="absolute top-0 right-0 z-30 animate-float-smooth">
+                        <div style="background: rgba(26,24,22,0.92); border: 1px solid rgba(138,123,102,0.45); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(0,0,0,0.45);">
+                            <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Формат</div>
+                            <div style="font-size: 11px; color: #fff; font-weight: 700; font-family: Inter, sans-serif; white-space: nowrap;">Live · Онлайн · Офлайн</div>
+                        </div>
                     </div>
 
-                    <div class="relative">
+                    <div class="relative" data-aos="zoom-in-up" data-aos-delay="200">
 
                         <div style="position: absolute; top: -10px; left: -10px; width: 20px; height: 20px; border-top: 1.5px solid rgba(138,123,102,0.55); border-left: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; border-top: 1.5px solid rgba(138,123,102,0.55); border-right: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; bottom: -10px; left: -10px; width: 20px; height: 20px; border-bottom: 1.5px solid rgba(138,123,102,0.55); border-left: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
                         <div style="position: absolute; bottom: -10px; right: -10px; width: 20px; height: 20px; border-bottom: 1.5px solid rgba(138,123,102,0.55); border-right: 1.5px solid rgba(138,123,102,0.55); z-index: 20; pointer-events: none;"></div>
 
-                        <div style="position: absolute; inset: 1rem; background: rgba(138,123,102,0.14); filter: blur(28px); border-radius: 1rem; z-index: -1;"></div>
-
                         <div style="position: relative; border-radius: 1rem; overflow: hidden; background: black; z-index: 10; border: 1px solid rgba(255,255,255,0.11); box-shadow: 0 20px 60px rgba(0,0,0,0.65);">
-
                             <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.85), transparent); z-index: 20; pointer-events: none;"></div>
-
                             <div class="aspect-video">
                                 <video controls playsinline preload="metadata" poster="poster-training.jpg" class="w-full h-full object-cover">
                                     <source src="fidic-training.mp4" type="video/mp4">
                                 </video>
                             </div>
-
                             <div style="position: absolute; top: 12px; left: 12px; z-index: 20; pointer-events: none; display: flex; align-items: center; gap: 6px; background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 4px 10px;">
-                                <div style="width: 5px; height: 5px; border-radius: 50%; background: #8A7B66;"></div>
+                                <div class="w-[5px] h-[5px] rounded-full bg-bridge-taupe animate-pulse"></div>
                                 <span style="font-size: 8px; color: rgba(255,255,255,0.85); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-family: Inter, sans-serif;">FIDIC Training</span>
                             </div>
-
                         </div>
 
-                        <div style="position: absolute; bottom: -18px; left: -18px; z-index: 30; background: rgba(138,123,102,0.12); border: 1px solid rgba(138,123,102,0.42); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-                            <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Сертификация</div>
-                            <div style="display: flex; align-items: center; gap: 5px;">
-                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#8A7B66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-                                <span style="font-size: 11px; color: #fff; font-weight: 700; font-family: Inter, sans-serif; white-space: nowrap;">FIDIC Certified</span>
+                        <div data-aos="fade-up-right" data-aos-delay="600" class="absolute bottom-[-18px] left-[-18px] z-30 animate-float-delayed">
+                            <div style="background: rgba(138,123,102,0.12); border: 1px solid rgba(138,123,102,0.42); border-radius: 14px; padding: 10px 14px; backdrop-filter: blur(16px); box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
+                                <div style="font-size: 8px; color: rgba(138,123,102,0.8); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 3px; font-family: Inter, sans-serif; font-weight: 700;">Сертификация</div>
+                                <div style="display: flex; align-items: center; gap: 5px;">
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#8A7B66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                                    <span style="font-size: 11px; color: #fff; font-weight: 700; font-family: Inter, sans-serif; white-space: nowrap;">FIDIC Certified</span>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 6px;">
-                        <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">Red Book</span>
-                        <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">Yellow Book</span>
-                        <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">EPC / Silver</span>
-                        <span style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif;">DAAB</span>
+                    <div class="mt-8 flex flex-wrap gap-2 relative z-20">
+                        <span data-aos="zoom-in" data-aos-delay="700" style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif; transition: all 0.3s ease;" class="hover:bg-bridge-taupe/20 cursor-default">Red Book</span>
+                        <span data-aos="zoom-in" data-aos-delay="800" style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif; transition: all 0.3s ease;" class="hover:bg-bridge-taupe/20 cursor-default">Yellow Book</span>
+                        <span data-aos="zoom-in" data-aos-delay="900" style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif; transition: all 0.3s ease;" class="hover:bg-bridge-taupe/20 cursor-default">EPC / Silver</span>
+                        <span data-aos="zoom-in" data-aos-delay="1000" style="font-size: 9px; color: rgba(138,123,102,0.9); background: rgba(138,123,102,0.09); border: 1px solid rgba(138,123,102,0.25); border-radius: 100px; padding: 4px 12px; letter-spacing: 0.07em; text-transform: uppercase; font-weight: 700; font-family: Inter, sans-serif; transition: all 0.3s ease;" class="hover:bg-bridge-taupe/20 cursor-default">DAAB</span>
                     </div>
 
                 </div>
@@ -946,65 +947,30 @@
     </div>
 
     <style>
+        /* CTA Кнопка */
         .trainings-cta:hover .trainings-cta-line { width: 2.5rem !important; }
         .trainings-cta:hover .trainings-cta-arrow { transform: translateX(4px); }
+
+        /* Анимация Живых Пятен (Blob Aurora) */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 10s infinite alternate; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        /* Анимация Левитации плашек */
+        @keyframes float-smooth {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float-smooth { animation: float-smooth 5s ease-in-out infinite; }
+        /* Задержка, чтобы они не летали синхронно */
+        .animate-float-delayed { animation: float-smooth 6s ease-in-out 2s infinite; }
     </style>
-</section>
-
-<!-- 1. БЛОК СМИ И ПУБЛИКАЦИЙ (ЖУРНАЛЬНЫЙ СТИЛЬ) -->
-<section id="media" class="py-32 bg-bridge-light relative overflow-hidden font-sans border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16" data-aos="fade-up">
-            <div class="max-w-2xl">
-                <div class="flex items-center gap-4 mb-4">
-                    <span class="w-8 h-px bg-bridge-taupe"></span>
-                    <span class="text-bridge-taupe font-bold tracking-widest uppercase text-xs">Медиа и Экспертиза</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold text-bridge-dark">Публикации о нас</h2>
-            </div>
-            <div class="hidden md:block pb-2">
-                <p class="text-gray-500 font-light text-lg">Экспертное мнение и профиль компетенций</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- Статья 1: UzReport -->
-            <a href="https://uzreport.news/economy/what-is-fidic-and-does-uzbekistan-need-it-" target="_blank" class="media-photo-card group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="media-photo-wrap relative h-72 overflow-hidden bg-bridge-dark shrink-0 flex items-center justify-center" title="Нажмите на фото для цветного режима">
-                    <img src="larisa-belousova-uznews.png" alt="Лариса Белоусова" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute top-6 left-6 z-20">
-                        <span class="bg-white text-bridge-dark text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">UzReport.news</span>
-                    </div>
-                </div>
-                <!-- Текст -->
-                <div class="p-10 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-bold text-bridge-dark mb-4 group-hover:text-bridge-taupe transition-colors leading-tight">Что такое FIDIC и нужен ли он Узбекистану?</h3>
-                    <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">Развернутое интервью с директором BRIDGE CONSULT Ларисой Белоусовой о значении международных стандартов для инфраструктурных проектов страны.</p>
-                    <div class="flex items-center text-bridge-taupe text-sm font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                        Читать интервью <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Статья 2: Career Centre -->
-            <a href="https://careercentre.uz/about-company.php?id=610" target="_blank" class="media-career-card group bg-white rounded-3xl overflow-hidden premium-shadow hover-float flex flex-col border border-gray-100 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="media-logo-panel relative h-72 overflow-hidden bg-gray-50 shrink-0 border-b border-gray-100 flex items-center justify-center">
-                    <img src="careercentreuz.svg" alt="Career Centre" class="media-brand-logo w-2/3 h-1/2 object-contain transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute top-6 left-6 z-20">
-                        <span class="bg-bridge-dark text-white text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">CareerCentre.uz</span>
-                    </div>
-                </div>
-                <!-- Текст -->
-                <div class="p-10 flex flex-col flex-grow">
-                    <h3 class="text-2xl font-bold text-bridge-dark mb-4 group-hover:text-bridge-taupe transition-colors leading-tight">Профиль компетенций BRIDGE Consult</h3>
-                    <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">Детальный независимый обзор корпоративной экспертизы: от контрактного структурирования и Forensic Delay Analysis до разрешения споров и медиации.</p>
-                    <div class="flex items-center text-bridge-taupe text-sm font-bold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                        Изучить профиль <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
 </section>
 
 <!-- 2. БЛОК БАНКОВ (ДОВЕРИЕ НА ВЫСШЕМ УРОВНЕ) -->
