@@ -127,101 +127,83 @@
 </div>
 
 <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[101]">
-        <a href="#" class="block relative z-[101] shrink-0">
-            <img src="../bridge 2.svg" alt="Bridge Consult" class="site-logo h-10 md:h-12 object-contain relative z-[101]">
+    <div class="max-w-[1400px] mx-auto px-4 xl:px-6 h-20 flex items-center justify-between relative z-[101]">
+        
+        <a href="#" class="block relative z-[101] shrink-0 mr-4 lg:mr-8">
+            <img src="../bridge 2.svg" alt="Bridge Consult" class="site-logo h-9 md:h-11 w-auto object-contain relative z-[101]">
         </a>
         
-        <nav class="hidden lg:flex space-x-6">
+        <nav class="hidden xl:flex items-center space-x-4 lg:space-x-6 shrink-0">
             <a href="#about" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors whitespace-nowrap">About Us</a>
             <a href="#services" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors whitespace-nowrap">Services</a>
-            <a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors whitespace-nowrap">Project Experience</a>
-        
-            <!-- Dropdown -->
+            <a href="projects.html" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors whitespace-nowrap">Projects</a>
+            <a href="#faq" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors whitespace-nowrap">Knowledge Base</a>
             <div class="relative group">
-                <button class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap">
+                <button type="button" class="nav-link text-sm font-medium hover:text-bridge-taupe transition-colors flex items-center gap-1 cursor-pointer whitespace-nowrap">
                     Company
-                    <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
+                    <svg class="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
-                <div class="absolute top-full left-0 mt-3 w-52 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <a href="#team" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1">
-                        Team &amp; Training
-                    </a>
-                    <a href="#media" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1">
-                        Media &amp; Publications
-                    </a>
+                <div class="absolute top-full left-0 mt-3 w-56 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <a href="#team" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1 whitespace-nowrap">Team & Training</a>
+                    <a href="#media" class="flex items-center gap-2 px-4 py-3 text-sm text-bridge-dark hover:text-bridge-taupe hover:bg-bridge-light transition-colors rounded-xl mx-1 whitespace-nowrap">Media & Publications</a>
                 </div>
             </div>
         </nav>
 
-        <div class="hidden lg:flex items-center space-x-4 ml-4">
-            <div class="flex items-center space-x-3 pr-4 border-r border-gray-200">
-                <a href="https://www.linkedin.com/in/larissalk" target="_blank" class="w-10 h-10 rounded-full bg-bridge-light flex items-center justify-center text-bridge-taupe hover:bg-bridge-taupe hover:text-white transition-all duration-300 shadow-sm hover:shadow-md" title="LinkedIn">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://t.me/fidicuzb" target="_blank" class="w-10 h-10 rounded-full bg-bridge-light flex items-center justify-center text-bridge-taupe hover:bg-bridge-taupe hover:text-white transition-all duration-300 shadow-sm hover:shadow-md" title="Telegram">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.84 1.18-5.2 3.45-.49.33-.94.5-1.35.49-.45-.01-1.3-.25-1.94-.46-.78-.26-1.4-.4-1.34-.84.03-.23.36-.47.98-.72 3.85-1.68 6.42-2.78 7.71-3.32 3.67-1.53 4.43-1.8 4.93-1.81.11 0 .36.03.49.13.11.09.14.22.15.34.01.07.01.18 0 .22z"/></svg>
-                </a>
+        <div class="hidden xl:flex items-center shrink-0">
+            <div class="hidden 2xl:flex items-center space-x-2 pr-4 mr-4 border-r border-gray-200 shrink-0">
+                <a href="https://www.linkedin.com/in/larissalk" target="_blank" class="w-9 h-9 rounded-full bg-bridge-light flex items-center justify-center text-bridge-taupe hover:bg-bridge-taupe hover:text-white transition-all duration-300 shadow-sm" title="LinkedIn"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                <a href="https://t.me/fidicuzb" target="_blank" class="w-9 h-9 rounded-full bg-bridge-light flex items-center justify-center text-bridge-taupe hover:bg-bridge-taupe hover:text-white transition-all duration-300 shadow-sm" title="Telegram"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.84 1.18-5.2 3.45-.49.33-.94.5-1.35.49-.45-.01-1.3-.25-1.94-.46-.78-.26-1.4-.4-1.34-.84.03-.23.36-.47.98-.72 3.85-1.68 6.42-2.78 7.71-3.32 3.67-1.53 4.43-1.8 4.93-1.81.11 0 .36.03.49.13.11.09.14.22.15.34.01.07.01.18 0 .22z"/></svg></a>
             </div>
-
-            <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ -->
-            <div class="flex items-center space-x-2 pr-4 border-r border-gray-200 font-bold text-xs uppercase tracking-widest">
-                <a href="../index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">RU</a>
-                <span class="text-gray-200">|</span>
-                <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5">EN</a>
-                <span class="text-gray-200">|</span>
-                <a href="../UZ/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">UZ</a>
-            </div>
-
-            <button id="theme-toggle" type="button" title="Toggle theme" class="shrink-0 text-gray-500 hover:text-bridge-taupe focus:outline-none">
-                <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
-                </svg>
-            </button>
             
-            <div class="flex items-center space-x-3">
-                <a href="tel:+998330001530" class="text-sm font-bold text-bridge-dark hover:text-bridge-taupe transition-colors tracking-wide whitespace-nowrap">+998 33 000 15 30</a>
-                <a href="#contact-form" class="bg-bridge-dark text-white px-5 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md hover:-translate-y-0.5 whitespace-nowrap">Request Consultation</a>
+            <div class="flex items-center space-x-1.5 pr-4 mr-4 border-r border-gray-200 font-bold text-xs uppercase tracking-widest shrink-0">
+                <a href="../index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5 whitespace-nowrap">RU</a>
+                <span class="text-gray-200">|</span>
+                <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-0.5 whitespace-nowrap">EN</a>
+                <span class="text-gray-200">|</span>
+                <a href="../UZ/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5 whitespace-nowrap">UZ</a>
+            </div>
+
+            <div class="flex items-center space-x-4 shrink-0">
+                <button id="theme-toggle" type="button" title="Toggle theme" class="shrink-0 text-gray-500 hover:text-bridge-taupe focus:outline-none pr-1">
+                    <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                </button>
+                <a href="tel:+998330001530" class="text-xs font-bold text-bridge-dark hover:text-bridge-taupe transition-colors tracking-wide whitespace-nowrap">+998 33 000 15 30</a>
+                <a href="#contact-form" class="bg-bridge-dark text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md whitespace-nowrap">Contact Us</a>
             </div>
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden flex flex-col justify-between w-7 h-5 text-bridge-dark focus:outline-none relative z-[101] cursor-pointer">
+        <button id="mobile-menu-btn" class="xl:hidden flex flex-col justify-between w-7 h-5 text-bridge-dark focus:outline-none relative z-[101] cursor-pointer shrink-0">
             <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-1"></span>
             <span class="w-full h-[2px] bg-current transition-all duration-300 burger-line-2"></span>
             <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-3"></span>
         </button>
     </div>
 
-    <div id="mobile-menu" class="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col p-8 transition-transform duration-500 translate-x-full lg:hidden pt-28 overflow-y-auto">
+    <!-- Мобильное меню -->
+    <div id="mobile-menu" class="fixed inset-0 w-full h-[100dvh] bg-white z-[100] flex flex-col p-8 transition-transform duration-500 translate-x-full xl:hidden pt-28 overflow-y-auto">
         <div class="flex items-center justify-center space-x-6 mb-10 pb-6 border-b border-gray-100 font-bold text-sm uppercase tracking-widest font-sans">
             <a href="../index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">RU</a>
             <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">EN</a>
             <a href="../UZ/index.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">UZ</a>
-            <button id="mobile-theme-toggle" type="button" class="text-gray-400 hover:text-bridge-taupe transition-colors focus:outline-none ml-2" title="Toggle theme">
-                <svg id="mobile-theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
-                <svg id="mobile-theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
-                </svg>
+            <button id="mobile-theme-toggle" type="button" class="text-gray-400 hover:text-bridge-taupe transition-colors focus:outline-none ml-2">
+                <svg id="mobile-theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg id="mobile-theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
             </button>
         </div>
         <div class="flex flex-col space-y-6 font-sans">
             <a href="#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">About Us</a>
             <a href="#services" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Services</a>
-            <a href="projects.html" class="text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Project Experience</a>
-            <a href="#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Team &amp; Training</a>
-            <a href="#media" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Media &amp; Publications</a>
-            <a href="#contact-form" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Contact</a>
+            <a href="projects.html" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Projects</a>
+            <a href="#faq" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Knowledge Base</a>
+            <a href="#team" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Team & Training</a>
+            <a href="#media" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Media</a>
+            <a href="#contact-form" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-4">Contact Us</a>
         </div>
         <div class="mt-12 flex flex-col space-y-4 font-sans">
             <a href="tel:+998330001530" class="text-xl font-semibold text-bridge-dark text-center">+998 33 000 15 30</a>
-            <a href="#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Contact Us</a>
+            <a href="#contact-form" class="mobile-nav-link text-center bg-bridge-taupe text-white py-4 rounded-xl text-sm font-bold uppercase tracking-widest shadow-md">Get in Touch</a>
         </div>
     </div>
 </header>
@@ -905,7 +887,10 @@
 <!-- FAQ SECTION: PREMIUM DESIGN                              -->
 <!-- ======================================================== -->
 <section id="faq" class="py-32 bg-bridge-dark relative overflow-hidden font-sans border-t border-white/10">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-bridge-taupe/10 rounded-full blur-[150px] pointer-events-none"></div>
+    
+    <div id="vanta-faq-bg-en" class="absolute inset-0 z-0"></div>
+
+    <div class="absolute inset-0 bg-gradient-to-b from-bridge-dark via-bridge-dark/70 to-bridge-dark z-[1] pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto px-6 relative z-10">
         <div class="text-center mb-20" data-aos="fade-up">
@@ -919,7 +904,6 @@
         </div>
 
         <div class="space-y-5 faq-container">
-            <!-- Question 1 -->
             <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up">
                 <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
                     <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">What is FIDIC and why is it needed in construction projects?</h3>
@@ -935,7 +919,6 @@
                 </div>
             </div>
 
-            <!-- Question 2 -->
             <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="100">
                 <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
                     <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">What is the difference between the Red Book, Yellow Book, and Silver Book?</h3>
@@ -951,7 +934,6 @@
                 </div>
             </div>
 
-            <!-- Question 3 -->
             <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="200">
                 <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
                     <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">What is Forensic Delay Analysis?</h3>
@@ -967,7 +949,6 @@
                 </div>
             </div>
 
-            <!-- Question 4 -->
             <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="300">
                 <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
                     <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">What is DAAB (Dispute Avoidance/Adjudication Board)?</h3>
@@ -983,7 +964,6 @@
                 </div>
             </div>
 
-            <!-- Question 5 -->
             <div class="faq-item group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden transition-all duration-500 hover:border-bridge-taupe/50 hover:bg-white/10 hover:shadow-[0_0_30px_-10px_rgba(138,123,102,0.3)]" data-aos="fade-up" data-aos-delay="400">
                 <button class="w-full px-6 md:px-10 py-7 flex items-center justify-between text-left focus:outline-none cursor-pointer" onclick="togglePremiumFaq(this)">
                     <h3 class="text-lg md:text-xl font-bold text-white pr-4 group-hover:text-bridge-taupe transition-colors">What is an EPC contract?</h3>
@@ -1027,6 +1007,31 @@
                 iconContainer.classList.add('border-bridge-taupe', 'bg-bridge-taupe/20');
             }
         }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (document.getElementById("vanta-faq-bg-en")) {
+                VANTA.NET({
+                    el: "#vanta-faq-bg-en",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    color: 0x8a7b66,       
+                    backgroundColor: 0x1a1a1a, 
+                    points: 10.00,         
+                    maxDistance: 24.00,    
+                    spacing: 20.00,        
+                    showDots: true
+                });
+            }
+        });
     </script>
 </section>
 <!-- CONTACT FORM -->
@@ -1120,7 +1125,7 @@
             
             <div class="lg:col-span-5">
                 <a href="index.html" class="flex flex-col mb-4 md:mb-6 inline-block">
-                    <span class="text-3xl font-sans font-bold tracking-tight text-white leading-none">Bridge</span>
+                    <span class="text-3xl font-bold tracking-tight text-white leading-none">Bridge</span>
                     <span class="text-[10px] md:text-xs tracking-widest text-bridge-taupe uppercase font-semibold">Consult</span>
                 </a>
                 <p class="text-gray-400 font-light leading-relaxed max-w-sm mb-6 md:mb-8 text-sm md:text-base">Your reliable partner in contract engineering and dispute resolution. Building bridges between legal certainty and successful project implementation.</p>
@@ -1132,6 +1137,8 @@
                     <li><a href="#about" class="hover:text-bridge-taupe transition-colors">About Us</a></li>
                     <li><a href="#services" class="hover:text-bridge-taupe transition-colors">Services & Standards</a></li>
                     <li><a href="projects.html" class="hover:text-bridge-taupe transition-colors">Project Experience</a></li>
+                    <!-- ДОБАВЛЕНА БАЗА ЗНАНИЙ -->
+                    <li><a href="#faq" class="hover:text-bridge-taupe transition-colors">Knowledge Base (FAQ)</a></li>
                     <li><a href="#team" class="hover:text-bridge-taupe transition-colors">Team & Training</a></li>
                     <li><a href="#media" class="hover:text-bridge-taupe transition-colors">Media & Publications</a></li>
                 </ul>
@@ -1154,9 +1161,7 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
-        
         <div class="pt-6 md:pt-8 border-t border-gray-800 flex flex-col items-center justify-center text-xs md:text-sm text-gray-500 font-light text-center">
             <p>&copy; 2016-2026 Bridge Consult. All rights reserved.</p>
         </div>
