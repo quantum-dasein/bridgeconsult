@@ -1115,77 +1115,62 @@
 </section>
 <section id="contact-form" class="relative overflow-hidden font-sans" style="background: #1a1816;">
 
-    <!-- ── Фоновый театральный свет ──────────────────── -->
     <div class="absolute inset-0 z-0 pointer-events-none">
-        <!-- Тёплое свечение слева (за статуей) -->
-        <div style="
-            position: absolute; left: -5%; top: 10%; 
-            width: 55%; height: 80%;
-            background: radial-gradient(ellipse at 40% 50%, rgba(138,123,102,0.18) 0%, rgba(138,123,102,0.06) 45%, transparent 75%);
-        "></div>
-        <!-- Контрастная тень справа -->
-        <div style="
-            position: absolute; right: 0; top: 0; 
-            width: 50%; height: 100%;
-            background: linear-gradient(to right, transparent, rgba(15,13,11,0.4));
-        "></div>
-        <!-- Тонкая горизонтальная линия-разделитель сверху -->
-        <div style="
-            position: absolute; top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(to right, transparent, rgba(138,123,102,0.4) 30%, rgba(138,123,102,0.4) 70%, transparent);
-        "></div>
-        <!-- Тонкая линия снизу -->
-        <div style="
-            position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(to right, transparent, rgba(138,123,102,0.3) 30%, rgba(138,123,102,0.3) 70%, transparent);
-        "></div>
-        <!-- Мелкая сетка (атмосфера) -->
-        <div style="
-            position: absolute; inset: 0; opacity: 0.025;
-            background-image: 
-                linear-gradient(rgba(138,123,102,1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138,123,102,1) 1px, transparent 1px);
-            background-size: 60px 60px;
-        "></div>
+        <div style="position: absolute; left: -5%; top: 10%; width: 55%; height: 80%; background: radial-gradient(ellipse at 40% 50%, rgba(138,123,102,0.18) 0%, rgba(138,123,102,0.06) 45%, transparent 75%);"></div>
+        <div style="position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(15,13,11,0.4));"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.4) 30%, rgba(138,123,102,0.4) 70%, transparent);"></div>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.3) 30%, rgba(138,123,102,0.3) 70%, transparent);"></div>
+        
+        <div style="position: absolute; inset: 0; opacity: 0.025; background-image: linear-gradient(rgba(138,123,102,1) 1px, transparent 1px), linear-gradient(90deg, rgba(138,123,102,1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+        <div class="dust-container absolute inset-0 overflow-hidden pointer-events-none opacity-60 mix-blend-screen"></div>
+        
+        <style>
+            .dust-container::after {
+                content: '';
+                position: absolute;
+                width: 3px; height: 3px;
+                background: transparent;
+                box-shadow: 
+                    15vw 20vh 1px #8A7B66, 45vw 60vh 2px #8A7B66, 
+                    75vw 30vh 1px #8A7B66, 20vw 80vh 2px #8A7B66, 
+                    80vw 80vh 1px #8A7B66, 50vw 10vh 2px #8A7B66,
+                    30vw 40vh 1px #8A7B66, 60vw 90vh 1px #8A7B66,
+                    85vw 50vh 2px #8A7B66, 10vw 60vh 1px #8A7B66;
+                animation: floatDust 25s linear infinite;
+                border-radius: 50%;
+            }
+            @keyframes floatDust {
+                0% { transform: translateY(0) scale(1); opacity: 0; }
+                20% { opacity: 0.8; }
+                80% { opacity: 0.8; }
+                100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+            }
+            .statue-levitate {
+                animation: levitate 6s ease-in-out infinite;
+            }
+            @keyframes levitate {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-12px); }
+            }
+        </style>
     </div>
 
-    <!-- ── Основной контейнер ─────────────────────────── -->
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div style="display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; min-height: 680px; align-items: stretch;">
 
-            <!-- ── КОЛОНКА ЛЕВАЯ: 3D Статуя ───────────── -->
             <div class="statue-col" style="
-                position: relative; 
-                display: flex; flex-direction: column; 
+                position: relative; display: flex; flex-direction: column; 
                 align-items: center; justify-content: flex-end;
-                padding: 3rem 2rem 0 2rem;
-                border-right: 1px solid rgba(138,123,102,0.15);
+                padding: 3rem 2rem 0 2rem; border-right: 1px solid rgba(138,123,102,0.15);
             ">
-                <!-- Заголовок над статуей -->
                 <div style="position: absolute; top: 3rem; left: 2rem; right: 2rem; text-align: center;">
-                    <span style="
-                        font-size: 10px; font-weight: 700; letter-spacing: 0.3em;
-                        text-transform: uppercase; color: rgba(138,123,102,0.7);
-                        display: block; margin-bottom: 0.5rem;
-                    ">Справедливость</span>
-                    <div style="
-                        width: 2rem; height: 1px; 
-                        background: rgba(138,123,102,0.5);
-                        margin: 0 auto;
-                    "></div>
+                    <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(138,123,102,0.7); display: block; margin-bottom: 0.5rem;">Справедливость</span>
+                    <div style="width: 2rem; height: 1px; background: rgba(138,123,102,0.5); margin: 0 auto;"></div>
                 </div>
 
-                <!-- Кольцо-аура за статуей -->
-                <div style="
-                    position: absolute; 
-                    bottom: 0; left: 50%; transform: translateX(-50%);
-                    width: 340px; height: 340px;
-                    background: radial-gradient(ellipse, rgba(138,123,102,0.15) 0%, rgba(138,123,102,0.05) 50%, transparent 75%);
-                    border-radius: 50%;
-                    pointer-events: none;
-                "></div>
+                <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 340px; height: 340px; background: radial-gradient(ellipse, rgba(138,123,102,0.15) 0%, rgba(138,123,102,0.05) 50%, transparent 75%); border-radius: 50%; pointer-events: none;"></div>
 
-                <!-- model-viewer — 3D статуя -->
                 <model-viewer
                     src="JusticeStatue.glb"
                     alt="Статуя Фемиды — символ справедливости и разрешения споров"
@@ -1200,234 +1185,75 @@
                     exposure="2.2"
                     shadow-intensity="0.6"
                     shadow-softness="1"
-                    style="
-                        display: block;
-                        width: 100%;
-                        height: 500px;
-                        background: transparent;
-                        --poster-color: transparent;
-                    "
+                    class="statue-levitate"
+                    style="display: block; width: 100%; height: 500px; background: transparent; --poster-color: transparent;"
                 >
-                    <!-- Слот загрузки -->
-                    <div slot="poster" style="
-                        display: flex; align-items: center; justify-content: center;
-                        height: 100%; background: transparent;
-                    ">
+                    <div slot="poster" style="display: flex; align-items: center; justify-content: center; height: 100%; background: transparent;">
                         <div style="text-align: center;">
-                            <div class="statue-loader" style="
-                                width: 40px; height: 40px;
-                                border: 2px solid rgba(138,123,102,0.2);
-                                border-top-color: rgba(138,123,102,0.8);
-                                border-radius: 50%;
-                                animation: spin 1s linear infinite;
-                                margin: 0 auto 12px;
-                            "></div>
-                            <span style="
-                                color: rgba(138,123,102,0.5); 
-                                font-size: 10px; letter-spacing: 0.25em;
-                                text-transform: uppercase;
-                                font-family: Inter, sans-serif;
-                            ">Загрузка...</span>
+                            <div class="statue-loader" style="width: 40px; height: 40px; border: 2px solid rgba(138,123,102,0.2); border-top-color: rgba(138,123,102,0.8); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 12px;"></div>
+                            <span style="color: rgba(138,123,102,0.5); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; font-family: Inter, sans-serif;">Загрузка...</span>
                         </div>
                     </div>
                 </model-viewer>
 
-                <!-- Подпись под статуей -->
-                <div style="
-                    text-align: center; 
-                    padding: 1rem 0 2.5rem;
-                    position: relative; z-index: 2;
-                ">
-                    <p style="
-                        color: rgba(138,123,102,0.5); 
-                        font-size: 10px; letter-spacing: 0.2em;
-                        text-transform: uppercase; font-family: Inter, sans-serif;
-                        font-weight: 600;
-                    ">Фемида · Богиня правосудия</p>
-                    <p style="
-                        color: rgba(255,255,255,0.2); 
-                        font-size: 10px; margin-top: 4px;
-                        font-family: Inter, sans-serif;
-                    ">Вращайте модель мышью</p>
+                <div style="text-align: center; padding: 1rem 0 2.5rem; position: relative; z-index: 2;">
+                    <p style="color: rgba(138,123,102,0.5); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-family: Inter, sans-serif; font-weight: 600;">Фемида · Богиня правосудия</p>
+                    <p style="color: rgba(255,255,255,0.2); font-size: 10px; margin-top: 4px; font-family: Inter, sans-serif;">Вращайте модель мышью</p>
                 </div>
             </div>
 
-            <!-- ── КОЛОНКА ПРАВАЯ: Форма ───────────────── -->
-            <div style="
-                display: flex; align-items: center;
-                padding: 4rem 3rem 4rem 3.5rem;
-            " data-aos="fade-left" data-aos-duration="1000">
-
+            <div style="display: flex; align-items: center; padding: 4rem 3rem 4rem 3.5rem;" data-aos="fade-left" data-aos-duration="1000">
                 <div style="width: 100%; max-width: 480px;">
 
-                    <!-- Заголовок формы -->
                     <div style="margin-bottom: 2.5rem;">
-                        <span style="
-                            display: block; 
-                            font-size: 10px; font-weight: 700;
-                            letter-spacing: 0.3em; text-transform: uppercase;
-                            color: rgba(138,123,102,0.8);
-                            margin-bottom: 0.75rem;
-                            font-family: Inter, sans-serif;
-                        ">Свяжитесь с нами</span>
-                        <h2 style="
-                            font-size: clamp(1.75rem, 3vw, 2.5rem);
-                            font-weight: 700; color: #ffffff;
-                            line-height: 1.15; margin: 0 0 0.75rem;
-                            font-family: Inter, sans-serif;
-                        ">Оставить заявку</h2>
-                        <p style="
-                            color: rgba(255,255,255,0.4);
-                            font-size: 0.95rem; line-height: 1.6;
-                            font-family: Inter, sans-serif; font-weight: 300;
-                            margin: 0;
-                        ">Свяжитесь с нами для предварительной оценки вашего запроса.</p>
+                        <span style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(138,123,102,0.8); margin-bottom: 0.75rem; font-family: Inter, sans-serif;">Свяжитесь с нами</span>
+                        <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; color: #ffffff; line-height: 1.15; margin: 0 0 0.75rem; font-family: Inter, sans-serif;">Оставить заявку</h2>
+                        <p style="color: rgba(255,255,255,0.4); font-size: 0.95rem; line-height: 1.6; font-family: Inter, sans-serif; font-weight: 300; margin: 0;">Свяжитесь с нами для предварительной оценки вашего запроса.</p>
                     </div>
 
-                    <!-- Форма -->
                     <form id="ru-contact-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
 
-                        <!-- Имя + Email -->
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <div>
-                                <label style="
-                                    display: block; font-size: 10px; font-weight: 700;
-                                    letter-spacing: 0.15em; text-transform: uppercase;
-                                    color: rgba(255,255,255,0.3); margin-bottom: 0.5rem;
-                                    font-family: Inter, sans-serif;
-                                ">Ваше Имя</label>
-                                <input type="text" name="name" required
-                                    placeholder="Напишите Ваше Имя"
-                                    class="bc-input"
-                                    style="
-                                        width: 100%; box-sizing: border-box;
-                                        background: rgba(255,255,255,0.04);
-                                        border: 1px solid rgba(255,255,255,0.08);
-                                        border-radius: 0.75rem;
-                                        padding: 0.75rem 1rem;
-                                        color: #fff; font-size: 0.9rem;
-                                        font-family: Inter, sans-serif;
-                                        outline: none;
-                                        transition: border-color 0.2s, background 0.2s;
-                                    "
-                                >
+                                <label style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.5rem; font-family: Inter, sans-serif;">Ваше Имя</label>
+                                <input type="text" name="name" required placeholder="Напишите Ваше Имя" class="bc-input" style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; padding: 0.75rem 1rem; color: #fff; font-size: 0.9rem; font-family: Inter, sans-serif; outline: none; transition: all 0.3s ease;">
                             </div>
                             <div>
-                                <label style="
-                                    display: block; font-size: 10px; font-weight: 700;
-                                    letter-spacing: 0.15em; text-transform: uppercase;
-                                    color: rgba(255,255,255,0.3); margin-bottom: 0.5rem;
-                                    font-family: Inter, sans-serif;
-                                ">Email</label>
-                                <input type="email" name="email" required
-                                    placeholder="info@company.com"
-                                    class="bc-input"
-                                    style="
-                                        width: 100%; box-sizing: border-box;
-                                        background: rgba(255,255,255,0.04);
-                                        border: 1px solid rgba(255,255,255,0.08);
-                                        border-radius: 0.75rem;
-                                        padding: 0.75rem 1rem;
-                                        color: #fff; font-size: 0.9rem;
-                                        font-family: Inter, sans-serif;
-                                        outline: none;
-                                        transition: border-color 0.2s, background 0.2s;
-                                    "
-                                >
+                                <label style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.5rem; font-family: Inter, sans-serif;">Email</label>
+                                <input type="email" name="email" required placeholder="info@company.com" class="bc-input" style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; padding: 0.75rem 1rem; color: #fff; font-size: 0.9rem; font-family: Inter, sans-serif; outline: none; transition: all 0.3s ease;">
                             </div>
                         </div>
 
-                        <!-- Сообщение -->
                         <div>
-                            <label style="
-                                display: block; font-size: 10px; font-weight: 700;
-                                letter-spacing: 0.15em; text-transform: uppercase;
-                                color: rgba(255,255,255,0.3); margin-bottom: 0.5rem;
-                                font-family: Inter, sans-serif;
-                            ">Сообщение или Суть запроса</label>
-                            <textarea name="message" required rows="4"
-                                placeholder="Опишите вашу ситуацию..."
-                                class="bc-input"
-                                style="
-                                    width: 100%; box-sizing: border-box;
-                                    background: rgba(255,255,255,0.04);
-                                    border: 1px solid rgba(255,255,255,0.08);
-                                    border-radius: 0.75rem;
-                                    padding: 0.75rem 1rem;
-                                    color: #fff; font-size: 0.9rem;
-                                    font-family: Inter, sans-serif;
-                                    outline: none; resize: none;
-                                    transition: border-color 0.2s, background 0.2s;
-                                "
-                            ></textarea>
+                            <label style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.5rem; font-family: Inter, sans-serif;">Сообщение или Суть запроса</label>
+                            <textarea name="message" required rows="4" placeholder="Опишите вашу ситуацию..." class="bc-input" style="width: 100%; box-sizing: border-box; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 0.75rem; padding: 0.75rem 1rem; color: #fff; font-size: 0.9rem; font-family: Inter, sans-serif; outline: none; resize: none; transition: all 0.3s ease;"></textarea>
                         </div>
 
-                        <!-- Статус: успех -->
                         <div id="ru-form-success" style="display:none; text-align:center; padding: 0.75rem 1rem; background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); border-radius: 0.75rem;">
                             <p style="color: #4ade80; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">✓ Заявка отправлена! Мы свяжемся с вами в ближайшее время.</p>
                         </div>
-                        <!-- Статус: ошибка -->
                         <div id="ru-form-error" style="display:none; text-align:center; padding: 0.75rem 1rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 0.75rem;">
                             <p style="color: #f87171; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">Ошибка при отправке. Напишите на info@bridgeconsult.uz</p>
                         </div>
 
-                        <!-- Кнопка отправки -->
-                        <button type="submit" id="ru-submit-btn" style="
-                            width: 100%;
-                            background: #8A7B66;
-                            color: #fff;
-                            font-weight: 700; font-size: 12px;
-                            letter-spacing: 0.2em; text-transform: uppercase;
-                            padding: 1rem 1.5rem;
-                            border: none; border-radius: 0.75rem;
-                            cursor: pointer;
-                            transition: all 0.4s ease;
-                            font-family: Inter, sans-serif;
-                            position: relative; overflow: hidden;
-                            box-shadow: 0 8px 24px -8px rgba(138,123,102,0.5);
-                        "
-                        onmouseover="this.style.background='#fff'; this.style.color='#292724'; this.style.boxShadow='0 8px 32px -8px rgba(255,255,255,0.3)';"
-                        onmouseout="this.style.background='#8A7B66'; this.style.color='#fff'; this.style.boxShadow='0 8px 24px -8px rgba(138,123,102,0.5)';"
-                        >
-                            Отправить запрос
-                        </button>
+                        <button type="submit" id="ru-submit-btn" style="width: 100%; background: #8A7B66; color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 1.5rem; border: none; border-radius: 0.75rem; cursor: pointer; transition: all 0.4s ease; font-family: Inter, sans-serif; position: relative; overflow: hidden; box-shadow: 0 8px 24px -8px rgba(138,123,102,0.5);" onmouseover="this.style.background='#fff'; this.style.color='#292724'; this.style.boxShadow='0 8px 32px -8px rgba(255,255,255,0.3)';" onmouseout="this.style.background='#8A7B66'; this.style.color='#fff'; this.style.boxShadow='0 8px 24px -8px rgba(138,123,102,0.5)';">Отправить запрос</button>
 
-                        <!-- Контакты под кнопкой -->
-                        <div style="
-                            display: flex; align-items: center; gap: 1.5rem;
-                            padding-top: 0.5rem;
-                            border-top: 1px solid rgba(255,255,255,0.06);
-                        ">
-                            <a href="tel:+998330001530" style="
-                                color: rgba(255,255,255,0.4); font-size: 0.8rem;
-                                font-family: Inter, sans-serif; text-decoration: none;
-                                transition: color 0.2s;
-                            "
-                            onmouseover="this.style.color='rgba(138,123,102,0.9)'"
-                            onmouseout="this.style.color='rgba(255,255,255,0.4)'"
-                            >+998 33 000 15 30</a>
+                        <div style="display: flex; align-items: center; gap: 1.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06);">
+                            <a href="tel:+998330001530" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">+998 33 000 15 30</a>
                             <span style="color: rgba(255,255,255,0.1); font-size: 0.8rem;">·</span>
-                            <a href="mailto:info@bridgeconsult.uz" style="
-                                color: rgba(255,255,255,0.4); font-size: 0.8rem;
-                                font-family: Inter, sans-serif; text-decoration: none;
-                                transition: color 0.2s;
-                            "
-                            onmouseover="this.style.color='rgba(138,123,102,0.9)'"
-                            onmouseout="this.style.color='rgba(255,255,255,0.4)'"
-                            >info@bridgeconsult.uz</a>
+                            <a href="mailto:info@bridgeconsult.uz" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">info@bridgeconsult.uz</a>
                         </div>
-
                     </form>
                 </div>
             </div>
-        </div><!-- /grid -->
-    </div><!-- /container -->
+        </div>
+    </div>
 
-    <!-- ── Стили input focus + адаптив ───────────────── -->
     <style>
         .bc-input:focus {
-            border-color: rgba(138,123,102,0.6) !important;
-            background: rgba(138,123,102,0.06) !important;
+            border-color: rgba(138,123,102,0.8) !important;
+            background: rgba(138,123,102,0.08) !important;
+            box-shadow: 0 0 15px rgba(138, 123, 102, 0.3), inset 0 0 10px rgba(138, 123, 102, 0.1) !important;
         }
         .bc-input::placeholder { color: rgba(255,255,255,0.2); }
         .bc-input:-webkit-autofill,
@@ -1440,29 +1266,16 @@
         }
         /* Адаптив: на мобильных — одна колонка, статуя сверху */
         @media (max-width: 1023px) {
-            #contact-form > div > div[style*="grid-template-columns"] {
-                grid-template-columns: 1fr !important;
-            }
-            .statue-col {
-                border-right: none !important;
-                border-bottom: 1px solid rgba(138,123,102,0.15);
-                padding: 2rem 1rem 0 !important;
-            }
-            .statue-col model-viewer {
-                height: 320px !important;
-            }
-            #contact-form > div > div[style*="grid-template-columns"] > div:last-child {
-                padding: 2.5rem 1.5rem !important;
-            }
+            #contact-form > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+            .statue-col { border-right: none !important; border-bottom: 1px solid rgba(138,123,102,0.15); padding: 2rem 1rem 0 !important; }
+            .statue-col model-viewer { height: 320px !important; }
+            #contact-form > div > div[style*="grid-template-columns"] > div:last-child { padding: 2.5rem 1.5rem !important; }
         }
         @media (max-width: 640px) {
-            #contact-form > div > div[style*="grid-template-columns"] > div:last-child form > div:first-child {
-                grid-template-columns: 1fr !important;
-            }
+            #contact-form > div > div[style*="grid-template-columns"] > div:last-child form > div:first-child { grid-template-columns: 1fr !important; }
         }
     </style>
 
-    <!-- ── Скрипт отправки формы ──────────────────────── -->
     <script>
     document.getElementById('ru-contact-form').addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -1504,7 +1317,6 @@
         }
     });
     </script>
-
 </section>
 
 <!-- 4. ФУТЕР -->
