@@ -468,5 +468,42 @@
         document.body.style.overflow = 'auto';
     }
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Блокируем рывок наверх для активного языка (и других ссылок href="#")
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            link.addEventListener('click', e => e.preventDefault());
+        });
+
+        // 2. ПРЕМИУМ UX: Сохраняем позицию экрана при переключении языка
+        // Находим все ссылки с текстом RU, EN или UZ, которые ведут на другие страницы
+        const langLinks = Array.from(document.querySelectorAll('a')).filter(a => 
+            ['RU', 'EN', 'UZ'].includes(a.textContent.trim()) && a.getAttribute('href') !== '#'
+        );
+
+        // Перед переходом на другой язык - запоминаем, на сколько пикселей мы проскроллили
+        langLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                sessionStorage.setItem('langSwitchScrollPosition', window.scrollY);
+            });
+        });
+
+        // 3. Восстанавливаем позицию после загрузки новой страницы
+        const savedScroll = sessionStorage.getItem('langSwitchScrollPosition');
+        if (savedScroll !== null) {
+            // Временно отключаем плавный скролл, чтобы страница прыгнула вниз моментально и незаметно
+            document.documentElement.style.scrollBehavior = 'auto';
+            window.scrollTo(0, parseInt(savedScroll));
+            
+            // Через мгновение возвращаем плавный скролл обратно
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = 'smooth';
+            }, 50);
+            
+            // Удаляем запись, чтобы при обычном обновлении страницы не скроллило
+            sessionStorage.removeItem('langSwitchScrollPosition');
+        }
+    });
+</script>
 </body>
 </html>
