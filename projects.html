@@ -170,6 +170,14 @@
               animation: neonBreathe 3s ease-in-out infinite;
             }
           </style>
+          <script>
+            (function() {
+                var t = localStorage.getItem('bc-theme');
+                if (t === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                }
+            })();
+        </script>
     </head>
 <body class="font-sans text-bridge-dark antialiased bg-bridge-light relative selection:bg-bridge-taupe/20">
     <script>
@@ -437,18 +445,14 @@ document.body && (document.body.style.width = '100%');
                 <a href="UZ/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-0.5">UZ</a>
             </div>
 
-            <button id="theme-toggle" type="button" title="Сменить тему" class="shrink-0 text-gray-500 hover:text-bridge-taupe focus:outline-none pr-1"><svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button>
-            <div class="flex items-center space-x-3">
-                <a href="tel:+998330001530" class="text-xs font-bold text-bridge-dark hover:text-bridge-taupe transition-colors">+998 33 000 15 30</a>
-                <a href="index.html#contact-form" class="bg-bridge-dark text-white px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-bridge-taupe transition-colors shadow-md whitespace-nowrap">Оставить заявку</a>
-            </div>
-        </div>
-
-        <button id="mobile-menu-btn" class="xl:hidden flex flex-col justify-between w-7 h-5 text-bridge-dark focus:outline-none relative z-[101]">
-            <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-1"></span>
-            <span class="w-full h-[2px] bg-current transition-all duration-300 burger-line-2"></span>
-            <span class="w-full h-[2px] bg-current transition-all duration-300 origin-left burger-line-3"></span>
-        </button>
+            <button id="theme-toggle" type="button" title="Сменить тему" class="shrink-0 text-gray-500 hover:text-bridge-taupe focus:outline-none pr-1">
+                <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                </svg>
+            </button>
     </div>
 
     <!-- МОБИЛЬНОЕ МЕНЮ RU -->
@@ -457,6 +461,16 @@ document.body && (document.body.style.width = '100%');
             <a href="#" class="text-bridge-taupe border-b-2 border-bridge-taupe pb-1">RU</a>
             <a href="EN/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">EN</a>
             <a href="UZ/projects.html" class="text-gray-400 hover:text-bridge-taupe transition-colors pb-1">UZ</a>
+            
+            <!-- Добавленная мобильная кнопка -->
+            <button id="mobile-theme-toggle" type="button" class="text-gray-400 hover:text-bridge-taupe transition-colors focus:outline-none ml-2" title="Сменить тему">
+                <svg id="mobile-theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="mobile-theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                </svg>
+            </button>
         </div>
         <div class="flex flex-col space-y-5 font-sans pb-8">
             <a href="index.html#about" class="mobile-nav-link text-2xl font-bold text-bridge-dark border-b border-gray-100 pb-3">О компании</a>
