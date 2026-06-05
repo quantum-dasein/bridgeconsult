@@ -164,20 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btn)       btn.addEventListener('click', toggle);
     if (mobileBtn) mobileBtn.addEventListener('click', toggle);
 });
-
-window.addEventListener('load', () => {
-    const preloaderLogo = document.getElementById('preloader-logo');
-    if (preloaderLogo) {
-        setTimeout(() => {
-            preloaderLogo.style.transform = 'translateY(0)';
-            preloaderLogo.style.opacity = '1';
-        }, 100);
-    }
-    setTimeout(hidePreloader, 1500); 
-});
-
-// Если окно грузится слишком долго (баг браузера), убиваем прелоадер через 2.5 секунды принудительно
-setTimeout(hidePreloader, 2500);
 // Автоматическое закрытие мобильного меню при клике на ссылку
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
