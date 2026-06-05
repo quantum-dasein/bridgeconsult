@@ -1390,32 +1390,30 @@
 <section id="contact-form" class="relative overflow-hidden font-sans" style="background: #1a1816;">
 
     <!-- ── Theatrical background lighting ────────────── -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
-        <div style="
-            position: absolute; left: -5%; top: 10%;
-            width: 55%; height: 80%;
-            background: radial-gradient(ellipse at 40% 50%, rgba(138,123,102,0.18) 0%, rgba(138,123,102,0.06) 45%, transparent 75%);
-        "></div>
-        <div style="
-            position: absolute; right: 0; top: 0;
-            width: 50%; height: 100%;
-            background: linear-gradient(to right, transparent, rgba(15,13,11,0.4));
-        "></div>
-        <div style="
-            position: absolute; top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(to right, transparent, rgba(138,123,102,0.4) 30%, rgba(138,123,102,0.4) 70%, transparent);
-        "></div>
-        <div style="
-            position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(to right, transparent, rgba(138,123,102,0.3) 30%, rgba(138,123,102,0.3) 70%, transparent);
-        "></div>
-        <div style="
-            position: absolute; inset: 0; opacity: 0.025;
-            background-image:
-                linear-gradient(rgba(138,123,102,1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138,123,102,1) 1px, transparent 1px);
-            background-size: 60px 60px;
-        "></div>
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div style="position: absolute; left: -5%; top: 10%; width: 55%; height: 80%; background: radial-gradient(ellipse at 40% 50%, rgba(138,123,102,0.18) 0%, rgba(138,123,102,0.06) 45%, transparent 75%);"></div>
+        <div style="position: absolute; right: 0; top: 0; width: 50%; height: 100%; background: linear-gradient(to right, transparent, rgba(15,13,11,0.4));"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.4) 30%, rgba(138,123,102,0.4) 70%, transparent);"></div>
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(138,123,102,0.3) 30%, rgba(138,123,102,0.3) 70%, transparent);"></div>
+        <div style="position: absolute; inset: 0; opacity: 0.03; background-image: linear-gradient(rgba(138,123,102,1) 1px, transparent 1px), linear-gradient(90deg, rgba(138,123,102,1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+        <div class="absolute inset-0 flex items-center justify-center select-none opacity-30 mix-blend-overlay">
+            <span style="font-family: 'Playfair Display', serif; font-size: 22vw; font-weight: 700; color: rgba(138,123,102,0.08); white-space: nowrap; letter-spacing: 0.05em;">FIDIC</span>
+        </div>
+        <div id="magnetic-glow-en" class="absolute w-[800px] h-[800px] rounded-full pointer-events-none transition-opacity duration-500" style="background: radial-gradient(circle, rgba(138,123,102,0.06) 0%, transparent 60%); transform: translate(-50%, -50%); opacity: 0; z-index: 1;"></div>
+        <div class="dust-container-en absolute inset-0 overflow-hidden pointer-events-none opacity-60 mix-blend-screen z-10"></div>
+        <style>
+            .dust-container-en::after {
+                content: ''; position: absolute; width: 3px; height: 3px; background: transparent;
+                box-shadow: 15vw 20vh 1px #8A7B66, 45vw 60vh 2px #8A7B66, 75vw 30vh 1px #8A7B66, 20vw 80vh 2px #8A7B66, 80vw 80vh 1px #8A7B66, 50vw 10vh 2px #8A7B66, 30vw 40vh 1px #8A7B66, 60vw 90vh 1px #8A7B66, 85vw 50vh 2px #8A7B66, 10vw 60vh 1px #8A7B66;
+                animation: floatDust-en 25s linear infinite; border-radius: 50%;
+            }
+            @keyframes floatDust-en {
+                0% { transform: translateY(0) scale(1); opacity: 0; }
+                20% { opacity: 0.8; }
+                80% { opacity: 0.8; }
+                100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+            }
+        </style>
     </div>
 
     <!-- ── Main container ────────────────────────────── -->
@@ -1529,8 +1527,7 @@
                 padding: 4rem 3rem 4rem 3.5rem;
             " data-aos="fade-left" data-aos-duration="1000">
 
-                <div style="width: 100%; max-width: 480px;">
-
+<div style="width: 100%; max-width: 500px; background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); border-radius: 2rem; padding: 3rem; box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);">
                     <!-- Form heading -->
                     <div style="margin-bottom: 2.5rem;">
                         <span style="
@@ -1731,7 +1728,22 @@
             }
         }
     </style>
-
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const section = document.getElementById('contact-form');
+        const glow = document.getElementById('magnetic-glow-en');
+        if (!section || !glow) return;
+        section.addEventListener('mousemove', (e) => {
+            const rect = section.getBoundingClientRect();
+            glow.style.left = (e.clientX - rect.left) + 'px';
+            glow.style.top  = (e.clientY - rect.top)  + 'px';
+            glow.style.opacity = '1';
+        });
+        section.addEventListener('mouseleave', () => {
+            glow.style.opacity = '0';
+        });
+    });
+    </script>
     <!-- ── Form submission script ────────────────────── -->
     <script>
     document.getElementById('en-contact-form').addEventListener('submit', async function(e) {
