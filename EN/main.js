@@ -129,14 +129,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Анимация Прелоадера с жесткой защитой от зависания
-const hidePreloader = () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        preloader.style.opacity = '0';
-        preloader.style.visibility = 'hidden';
-        document.body.style.overflow = 'auto';
-    }
-};
+// Переключение темы
+document.addEventListener('DOMContentLoaded', () => {
+    const btn        = document.getElementById('theme-toggle');
+    const mobileBtn  = document.getElementById('mobile-theme-toggle');
+    const darkIcon   = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon  = document.getElementById('theme-toggle-light-icon');
+    const mDarkIcon  = document.getElementById('mobile-theme-toggle-dark-icon');
+    const mLightIcon = document.getElementById('mobile-theme-toggle-light-icon');
+
+    const isDark = () => document.documentElement.classList.contains('dark-theme');
+
+    const applyIcons = () => {
+        if (isDark()) {
+            if (darkIcon)   darkIcon.classList.add('hidden');
+            if (lightIcon)  lightIcon.classList.remove('hidden');
+            if (mDarkIcon)  mDarkIcon.classList.add('hidden');
+            if (mLightIcon) mLightIcon.classList.remove('hidden');
+        } else {
+            if (darkIcon)   darkIcon.classList.remove('hidden');
+            if (lightIcon)  lightIcon.classList.add('hidden');
+            if (mDarkIcon)  mDarkIcon.classList.remove('hidden');
+            if (mLightIcon) mLightIcon.classList.add('hidden');
+        }
+    };
+
+    const toggle = () => {
+        document.documentElement.classList.toggle('dark-theme');
+        localStorage.setItem('bc-theme', isDark() ? 'dark' : 'light');
+        applyIcons();
+    };
+
+    applyIcons();
+    if (btn)       btn.addEventListener('click', toggle);
+    if (mobileBtn) mobileBtn.addEventListener('click', toggle);
+});
 
 window.addEventListener('load', () => {
     const preloaderLogo = document.getElementById('preloader-logo');
