@@ -142,7 +142,11 @@
           localStorage.setItem(KEY_LS, String(Date.now()));
           sessionStorage.setItem(KEY_SS, '1');
           document.documentElement.style.overflow = 'hidden';
-          document.body && (document.body.style.overflow = 'hidden');
+document.documentElement.style.height = '100%';
+document.body && (document.body.style.overflow = 'hidden');
+document.body && (document.body.style.height = '100%');
+document.body && (document.body.style.position = 'fixed');
+document.body && (document.body.style.width = '100%');
         
           document.addEventListener('DOMContentLoaded', function() {
             var preloader    = document.getElementById('preloader');
@@ -224,6 +228,10 @@
                       setTimeout(function() {
                         if (preloader) preloader.style.transform = 'translateY(-100%)';
                         document.body.style.overflow = '';
+document.body.style.height = '';
+document.body.style.position = '';
+document.body.style.width = '';
+document.documentElement.style.height = '';
                         setTimeout(function() { if (preloader) preloader.remove(); }, 1800);
                       }, 900);
                     });
