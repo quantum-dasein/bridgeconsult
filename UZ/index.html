@@ -1417,31 +1417,28 @@ document.documentElement.style.height = '';
         
         <div style="position: absolute; inset: 0; opacity: 0.03; background-image: linear-gradient(rgba(138,123,102,1) 1px, transparent 1px), linear-gradient(90deg, rgba(138,123,102,1) 1px, transparent 1px); background-size: 60px 60px;"></div>
 
-        <!-- ГИГАНТСКАЯ ТИПОГРАФИКА НА ФОНЕ -->
         <div class="absolute inset-0 flex items-center justify-center select-none opacity-30 mix-blend-overlay">
             <span style="font-family: 'Playfair Display', serif; font-size: 22vw; font-weight: 700; color: rgba(138,123,102,0.08); white-space: nowrap; letter-spacing: 0.05em;">FIDIC</span>
         </div>
 
-        <!-- ИНТЕРАКТИВНЫЙ СВЕТ КУРСА -->
         <div id="magnetic-glow-uz" class="absolute w-[800px] h-[800px] rounded-full pointer-events-none transition-opacity duration-500" style="background: radial-gradient(circle, rgba(138,123,102,0.06) 0%, transparent 60%); transform: translate(-50%, -50%); opacity: 0; z-index: 1;"></div>
 
-        <!-- Золотая пыль -->
-        <div class="dust-container absolute inset-0 overflow-hidden pointer-events-none opacity-60 mix-blend-screen z-10"></div>
+        <div class="dust-container-uz absolute inset-0 overflow-hidden pointer-events-none opacity-60 mix-blend-screen z-10"></div>
         
         <style>
-            .dust-container::after {
+            .dust-container-uz::after {
                 content: ''; position: absolute; width: 3px; height: 3px; background: transparent;
                 box-shadow: 15vw 20vh 1px #8A7B66, 45vw 60vh 2px #8A7B66, 75vw 30vh 1px #8A7B66, 20vw 80vh 2px #8A7B66, 80vw 80vh 1px #8A7B66, 50vw 10vh 2px #8A7B66, 30vw 40vh 1px #8A7B66, 60vw 90vh 1px #8A7B66, 85vw 50vh 2px #8A7B66, 10vw 60vh 1px #8A7B66;
-                animation: floatDust 25s linear infinite; border-radius: 50%;
+                animation: floatDust-uz 25s linear infinite; border-radius: 50%;
             }
-            @keyframes floatDust {
+            @keyframes floatDust-uz {
                 0% { transform: translateY(0) scale(1); opacity: 0; }
                 20% { opacity: 0.8; }
                 80% { opacity: 0.8; }
                 100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
             }
-            .statue-levitate { animation: levitate 6s ease-in-out infinite; }
-            @keyframes levitate {
+            .statue-levitate-uz { animation: levitate-uz 6s ease-in-out infinite; }
+            @keyframes levitate-uz {
                 0%, 100% { transform: translateY(0); }
                 50% { transform: translateY(-12px); }
             }
@@ -1476,12 +1473,12 @@ document.documentElement.style.height = '';
                     exposure="2.2"
                     shadow-intensity="0.6"
                     shadow-softness="1"
-                    class="statue-levitate cursor-grab active:cursor-grabbing"
+                    class="statue-levitate-uz cursor-grab active:cursor-grabbing"
                     style="display: block; width: 100%; height: 500px; background: transparent; --poster-color: transparent;"
                 >
                     <div slot="poster" style="display: flex; align-items: center; justify-content: center; height: 100%; background: transparent;">
                         <div style="text-align: center;">
-                            <div class="statue-loader" style="width: 40px; height: 40px; border: 2px solid rgba(138,123,102,0.2); border-top-color: rgba(138,123,102,0.8); border-radius: 50%; animation: spin-uz 1s linear infinite; margin: 0 auto 12px;"></div>
+                            <div style="width: 40px; height: 40px; border: 2px solid rgba(138,123,102,0.2); border-top-color: rgba(138,123,102,0.8); border-radius: 50%; animation: spin-uz 1s linear infinite; margin: 0 auto 12px;"></div>
                             <span style="color: rgba(138,123,102,0.5); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; font-family: Inter, sans-serif;">Yuklanmoqda...</span>
                         </div>
                     </div>
@@ -1531,11 +1528,21 @@ document.documentElement.style.height = '';
 
                         <button type="submit" id="uz-submit-btn" style="width: 100%; background: #8A7B66; color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 1.5rem; margin-top: 0.5rem; border: none; border-radius: 0.75rem; cursor: pointer; transition: all 0.4s ease; font-family: Inter, sans-serif; position: relative; overflow: hidden; box-shadow: 0 8px 24px -8px rgba(138,123,102,0.5);" onmouseover="this.style.background='#fff'; this.style.color='#292724'; this.style.boxShadow='0 8px 32px -8px rgba(255,255,255,0.3)';" onmouseout="this.style.background='#8A7B66'; this.style.color='#fff'; this.style.boxShadow='0 8px 24px -8px rgba(138,123,102,0.5)';">Arizani yuborish</button>
 
-                        <div style="display: flex; align-items: center; gap: 1.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06);">
-                            <a href="tel:+998330001530" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">+998 33 000 15 30</a>
+                        <!-- ✅ FIXED: flex-wrap so phone+email don't squish on mobile -->
+                        <div style="
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: 0.4rem 1rem;
+                            padding-top: 0.5rem;
+                            border-top: 1px solid rgba(255,255,255,0.06);
+                        ">
+                            <a href="tel:+998330001530" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s; white-space: nowrap;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">+998 33 000 15 30</a>
                             <span style="color: rgba(255,255,255,0.1); font-size: 0.8rem;">·</span>
-                            <a href="mailto:info@bridgeconsult.uz" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">info@bridgeconsult.uz</a>
+                            <a href="mailto:info@bridgeconsult.uz" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s; word-break: break-all;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">info@bridgeconsult.uz</a>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -1559,7 +1566,7 @@ document.documentElement.style.height = '';
             #contact-form > div.max-w-7xl > div { grid-template-columns: 1fr !important; }
             .statue-col-uz { border-right: none !important; border-bottom: 1px solid rgba(138,123,102,0.15); padding: 2rem 1rem 0 !important; }
             .statue-col-uz model-viewer { height: 350px !important; }
-            #contact-form > div.max-w-7xl > div > div:last-child { padding: 2.5rem 1rem !important; justify-content: center;}
+            #contact-form > div.max-w-7xl > div > div:last-child { padding: 2.5rem 1rem !important; justify-content: center; }
             #contact-form > div.max-w-7xl > div > div:last-child > div { padding: 2rem !important; }
         }
         @media (max-width: 640px) {
@@ -1567,22 +1574,17 @@ document.documentElement.style.height = '';
         }
     </style>
 
-    <!-- ── Скрипты (Форма + Интерактивный свет курсора) ──────────────────────── -->
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         const section = document.getElementById('contact-form');
         const glow = document.getElementById('magnetic-glow-uz');
-        
+        if (!section || !glow) return;
         section.addEventListener('mousemove', (e) => {
             const rect = section.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            glow.style.left = `${x}px`;
-            glow.style.top = `${y}px`;
+            glow.style.left = `${e.clientX - rect.left}px`;
+            glow.style.top  = `${e.clientY - rect.top}px`;
             glow.style.opacity = '1';
         });
-
         section.addEventListener('mouseleave', () => {
             glow.style.opacity = '0';
         });

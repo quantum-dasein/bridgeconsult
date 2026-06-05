@@ -1410,6 +1410,19 @@ document.documentElement.style.height = '';
   ╚══════════════════════════════════════════════════════════╝
 -->
 
+<!--
+╔══════════════════════════════════════════════════════════╗
+  ║  ENGLISH VERSION — EN/index.html                        ║
+  ║  IMPORTANT: GLB path is ../JusticeStatue.glb            ║
+  ║  because EN page is in /EN/ subfolder!                  ║
+  ║                                                          ║
+  ║  Add to <head> of EN/index.html:                        ║
+  ║  <script type="module" src="https://ajax.googleapis     ║
+  ║  .com/ajax/libs/model-viewer/3.5.0/                     ║
+  ║  model-viewer.min.js"></script>                          ║
+  ╚══════════════════════════════════════════════════════════╝
+-->
+
 <section id="contact-form" class="relative overflow-hidden font-sans" style="background: #1a1816;">
 
     <!-- ── Theatrical background lighting ────────────── -->
@@ -1479,7 +1492,7 @@ document.documentElement.style.height = '';
                 <!-- model-viewer — 3D statue -->
                 <!-- NOTE: path is ../JusticeStatue.glb because EN page is in /EN/ subfolder -->
                 <model-viewer
-                src="JusticeStatue.glb"
+                    src="../JusticeStatue.glb"
                     alt="Statue of Themis — symbol of justice and dispute resolution"
                     auto-rotate
                     auto-rotate-delay="800"
@@ -1550,7 +1563,7 @@ document.documentElement.style.height = '';
                 padding: 4rem 3rem 4rem 3.5rem;
             " data-aos="fade-left" data-aos-duration="1000">
 
-<div style="width: 100%; max-width: 500px; background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); border-radius: 2rem; padding: 3rem; box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);">
+                <div style="width: 100%; max-width: 500px; background: rgba(255,255,255,0.02); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); border-radius: 2rem; padding: 3rem; box-shadow: 0 30px 60px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);">
                     <!-- Form heading -->
                     <div style="margin-bottom: 2.5rem;">
                         <span style="
@@ -1682,16 +1695,20 @@ document.documentElement.style.height = '';
                             Submit Request
                         </button>
 
-                        <!-- Contact details under button -->
+                        <!-- ✅ FIXED: Contact details — flex-wrap so phone+email don't squish on mobile -->
                         <div style="
-                            display: flex; align-items: center; gap: 1.5rem;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: 0.4rem 1rem;
                             padding-top: 0.5rem;
                             border-top: 1px solid rgba(255,255,255,0.06);
                         ">
                             <a href="tel:+998330001530" style="
                                 color: rgba(255,255,255,0.4); font-size: 0.8rem;
                                 font-family: Inter, sans-serif; text-decoration: none;
-                                transition: color 0.2s;
+                                transition: color 0.2s; white-space: nowrap;
                             "
                             onmouseover="this.style.color='rgba(138,123,102,0.9)'"
                             onmouseout="this.style.color='rgba(255,255,255,0.4)'"
@@ -1700,7 +1717,7 @@ document.documentElement.style.height = '';
                             <a href="mailto:info@bridgeconsult.uz" style="
                                 color: rgba(255,255,255,0.4); font-size: 0.8rem;
                                 font-family: Inter, sans-serif; text-decoration: none;
-                                transition: color 0.2s;
+                                transition: color 0.2s; word-break: break-all;
                             "
                             onmouseover="this.style.color='rgba(138,123,102,0.9)'"
                             onmouseout="this.style.color='rgba(255,255,255,0.4)'"
@@ -1751,7 +1768,8 @@ document.documentElement.style.height = '';
             }
         }
     </style>
-<script>
+
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
         const section = document.getElementById('contact-form');
         const glow = document.getElementById('magnetic-glow-en');
