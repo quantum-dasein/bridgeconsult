@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
-Allow: /index.html
-Allow: /projects.html
-Allow: /EN/
-Allow: /UZ/
 
-# Указываем поисковикам путь к карте сайта
+Disallow: /bureau-veritas.htm
+Disallow: /larisa-belousova-cv.pdf
+Disallow: /Bridge_Consult_*
+
 Sitemap: https://www.bridgeconsult.uz/sitemap.xml
