@@ -129,41 +129,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Анимация Прелоадера с жесткой защитой от зависания
-// Переключение темы
-document.addEventListener('DOMContentLoaded', () => {
-    const btn        = document.getElementById('theme-toggle');
-    const mobileBtn  = document.getElementById('mobile-theme-toggle');
-    const darkIcon   = document.getElementById('theme-toggle-dark-icon');
-    const lightIcon  = document.getElementById('theme-toggle-light-icon');
-    const mDarkIcon  = document.getElementById('mobile-theme-toggle-dark-icon');
-    const mLightIcon = document.getElementById('mobile-theme-toggle-light-icon');
+const hidePreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        document.body.style.overflow = 'auto';
+    }
+};
 
-    const isDark = () => document.documentElement.classList.contains('dark-theme');
-
-    const applyIcons = () => {
-        if (isDark()) {
-            if (darkIcon)   darkIcon.classList.add('hidden');
-            if (lightIcon)  lightIcon.classList.remove('hidden');
-            if (mDarkIcon)  mDarkIcon.classList.add('hidden');
-            if (mLightIcon) mLightIcon.classList.remove('hidden');
-        } else {
-            if (darkIcon)   darkIcon.classList.remove('hidden');
-            if (lightIcon)  lightIcon.classList.add('hidden');
-            if (mDarkIcon)  mDarkIcon.classList.remove('hidden');
-            if (mLightIcon) mLightIcon.classList.add('hidden');
-        }
-    };
-
-    const toggle = () => {
-        document.documentElement.classList.toggle('dark-theme');
-        localStorage.setItem('bc-theme', isDark() ? 'dark' : 'light');
-        applyIcons();
-    };
-
-    applyIcons();
-    if (btn)       btn.addEventListener('click', toggle);
-    if (mobileBtn) mobileBtn.addEventListener('click', toggle);
+window.addEventListener('load', () => {
+    const preloaderLogo = document.getElementById('preloader-logo');
+    if (preloaderLogo) {
+        setTimeout(() => {
+            preloaderLogo.style.transform = 'translateY(0)';
+            preloaderLogo.style.opacity = '1';
+        }, 100);
+    }
+    setTimeout(hidePreloader, 1500); 
 });
+
+// Если окно грузится слишком долго (баг браузера), убиваем прелоадер через 2.5 секунды принудительно
+setTimeout(hidePreloader, 2500);
 // Автоматическое закрытие мобильного меню при клике на ссылку
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
