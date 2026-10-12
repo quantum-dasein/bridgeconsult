@@ -60,7 +60,7 @@
           "@id": "https://bridgeconsult.uz",
           "url": "https://www.bridgeconsult.uz/EN/",
           "telephone": "+998330001530",
-          "email": "info@bridgeconsult.uz",
+          "email": "bridgeconsultuzb@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Ahmad Donish st., 12 block, 20A",
@@ -1767,7 +1767,7 @@ document.documentElement.style.height = '';
                         </div>
                         <!-- Status: error -->
                         <div id="en-form-error" style="display:none; text-align:center; padding: 0.75rem 1rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 0.75rem;">
-                            <p style="color: #f87171; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">Submission failed. Please email info@bridgeconsult.uz</p>
+                            <p style="color: #f87171; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">Submission failed. Please email bridgeconsultuzb@gmail.com</p>
                         </div>
 
                         <!-- Submit button -->
@@ -1809,14 +1809,14 @@ document.documentElement.style.height = '';
                             onmouseout="this.style.color='rgba(255,255,255,0.4)'"
                             >+998 33 000 15 30</a>
                             <span style="color: rgba(255,255,255,0.1); font-size: 0.8rem;">·</span>
-                            <a href="mailto:info@bridgeconsult.uz" style="
+                            <a href="mailto:bridgeconsultuzb@gmail.com" style="
                                 color: rgba(255,255,255,0.4); font-size: 0.8rem;
                                 font-family: Inter, sans-serif; text-decoration: none;
                                 transition: color 0.2s; word-break: break-all;
                             "
                             onmouseover="this.style.color='rgba(138,123,102,0.9)'"
                             onmouseout="this.style.color='rgba(255,255,255,0.4)'"
-                            >info@bridgeconsult.uz</a>
+                            >bridgeconsultuzb@gmail.com</a>
                         </div>
 
                     </form>
@@ -1896,12 +1896,23 @@ document.documentElement.style.height = '';
         err.style.display = 'none';
 
         try {
-            const res = await fetch('https://formspree.io/f/meedwzjw', {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
+            // Telegram bot + Formspree email in parallel; success if either delivers
+            const data = new FormData(form);
+            const payload = Object.fromEntries(data);
+            payload.page = location.href;
+            const results = await Promise.allSettled([
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }),
+                fetch('https://formspree.io/f/meedwzjw', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                })
+            ]);
+            if (results.some(r => r.status === 'fulfilled' && r.value.ok)) {
                 form.reset();
                 ok.style.display = 'block';
                 btn.textContent = '✓ Sent';
@@ -1966,7 +1977,7 @@ document.documentElement.style.height = '';
                     </li>
                     <li class="flex items-center">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <a href="mailto:info@bridgeconsult.uz" class="hover:text-bridge-taupe transition-colors break-all">info@bridgeconsult.uz</a>
+                        <a href="mailto:bridgeconsultuzb@gmail.com" class="hover:text-bridge-taupe transition-colors break-all">bridgeconsultuzb@gmail.com</a>
                     </li>
                 </ul>
             </div>

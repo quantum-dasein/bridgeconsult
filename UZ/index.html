@@ -63,7 +63,7 @@
           "@id": "https://bridgeconsult.uz",
           "url": "https://www.bridgeconsult.uz/UZ/",
           "telephone": "+998330001530",
-          "email": "info@bridgeconsult.uz",
+          "email": "bridgeconsultuzb@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Ahmad Donish ko'chasi, 12-mavze, 20A-uy",
@@ -1618,7 +1618,7 @@ document.documentElement.style.height = '';
                             <p style="color: #4ade80; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">✓ Ariza yuborildi! Tez orada siz bilan bog'lanamiz.</p>
                         </div>
                         <div id="uz-form-error" style="display:none; text-align:center; padding: 0.75rem 1rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); border-radius: 0.75rem;">
-                            <p style="color: #f87171; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">Yuborishda xatolik. info@bridgeconsult.uz ga yozing.</p>
+                            <p style="color: #f87171; font-weight: 700; font-family: Inter, sans-serif; margin: 0; font-size: 0.9rem;">Yuborishda xatolik. bridgeconsultuzb@gmail.com ga yozing.</p>
                         </div>
 
                         <button type="submit" id="uz-submit-btn" style="width: 100%; background: #8A7B66; color: #fff; font-weight: 700; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; padding: 1rem 1.5rem; margin-top: 0.5rem; border: none; border-radius: 0.75rem; cursor: pointer; transition: all 0.4s ease; font-family: Inter, sans-serif; position: relative; overflow: hidden; box-shadow: 0 8px 24px -8px rgba(138,123,102,0.5);" onmouseover="this.style.background='#fff'; this.style.color='#292724'; this.style.boxShadow='0 8px 32px -8px rgba(255,255,255,0.3)';" onmouseout="this.style.background='#8A7B66'; this.style.color='#fff'; this.style.boxShadow='0 8px 24px -8px rgba(138,123,102,0.5)';">Arizani yuborish</button>
@@ -1635,7 +1635,7 @@ document.documentElement.style.height = '';
                         ">
                             <a href="tel:+998330001530" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s; white-space: nowrap;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">+998 33 000 15 30</a>
                             <span style="color: rgba(255,255,255,0.1); font-size: 0.8rem;">·</span>
-                            <a href="mailto:info@bridgeconsult.uz" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s; word-break: break-all;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">info@bridgeconsult.uz</a>
+                            <a href="mailto:bridgeconsultuzb@gmail.com" style="color: rgba(255,255,255,0.4); font-size: 0.8rem; font-family: Inter, sans-serif; text-decoration: none; transition: color 0.2s; word-break: break-all;" onmouseover="this.style.color='rgba(138,123,102,0.9)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">bridgeconsultuzb@gmail.com</a>
                         </div>
 
                     </form>
@@ -1699,12 +1699,23 @@ document.documentElement.style.height = '';
         err.style.display = 'none';
 
         try {
-            const res = await fetch('https://formspree.io/f/meedwzjw', {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
+            // Telegram bot + Formspree email in parallel; success if either delivers
+            const data = new FormData(form);
+            const payload = Object.fromEntries(data);
+            payload.page = location.href;
+            const results = await Promise.allSettled([
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }),
+                fetch('https://formspree.io/f/meedwzjw', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                })
+            ]);
+            if (results.some(r => r.status === 'fulfilled' && r.value.ok)) {
                 form.reset();
                 ok.style.display = 'block';
                 btn.textContent = '✓ Yuborildi';
@@ -1766,7 +1777,7 @@ document.documentElement.style.height = '';
                     </li>
                     <li class="flex items-center">
                         <svg class="w-5 h-5 md:w-6 md:h-6 text-bridge-taupe mr-3 md:mr-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        <a href="mailto:info@bridgeconsult.uz" class="hover:text-bridge-taupe transition-colors break-all">info@bridgeconsult.uz</a>
+                        <a href="mailto:bridgeconsultuzb@gmail.com" class="hover:text-bridge-taupe transition-colors break-all">bridgeconsultuzb@gmail.com</a>
                     </li>
                 </ul>
             </div>
